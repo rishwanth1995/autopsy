@@ -19,6 +19,8 @@
     </target>
 	
 	<property name="VERSION" value="4.6.0"/>
+	<condition property="os.family" value="unix"><os family="unix"/></condition>
+	<condition property="os.family" value="windows"><os family="windows"/></condition>
     
     <target name="get-thirdparty-dependencies" description="get third-party dependencies"> 
         <!--Copy openCV dependencies to release-->
@@ -48,23 +50,51 @@
         <condition property="tskFound">
             <isset property="env.TSK_HOME"/>
         </condition>
-        <fail unless="tskFound" message="TSK_HOME must be set as an environment variable."/>
+        <if>
+         <equals arg1="${os.family}" arg2="windows"/>
+         <then>
+             <fail unless="tskFound" message="TSK_HOME must be set as an environment variable."/>
+         </then>   
+        </if>
         <echo> TSK_HOME: ${env.TSK_HOME}</echo>
     </target>  
-    
+   
     <target name="getTSKJars" depends="findTSK">
+	 <if>
+		<equals arg1="${os.family}" arg2="windows"/>
+	<then>
         <property environment="env"/>
         <copy file="${env.TSK_HOME}/bindings/java/dist/sleuthkit-postgresql-${VERSION}.jar" 
               tofile="${ext.dir}/sleuthkit-postgresql-${VERSION}.jar"/>
-        <copy file="${env.TSK_HOME}/bindings/java/lib/sqlite-jdbc-3.8.11.jar"
-              tofile="${ext.dir}/sqlite-jdbc-3.8.11.jar"/>
+        <copy file="${env.TSK_HOME}/bindings/java/lib/sqlite-jdbc-3.21.0.1.jar"
+              tofile="${ext.dir}/sqlite-jdbc-3.21.0.1.jar"/>
         <copy file="${env.TSK_HOME}/bindings/java/lib/postgresql-9.4.1211.jre7.jar" 
               tofile="${ext.dir}/postgresql-9.4.1211.jre7.jar"/>
         <copy file="${env.TSK_HOME}/bindings/java/lib/mchange-commons-java-0.2.9.jar"
               tofile="${ext.dir}/mchange-commons-java-0.2.9.jar"/>
         <copy file="${env.TSK_HOME}/bindings/java/lib/c3p0-0.9.5.jar"
               tofile="${ext.dir}/c3p0-0.9.5.jar"/>
+	</then>
+	<else>
+	 <property environment="env"/>
+		<copy file="/usr/share/java/sleuthkit-${VERSION}.jar" 
+		      tofile="${ext.dir}/sleuthkit-postgresql-${VERSION}.jar"/>
+		<copy file="/usr/share/java/sqlite-jdbc-3.21.0.1.jar"
+		      tofile="${ext.dir}/sqlite-jdbc-3.21.0.1.jar"/>
+		<copy todir="${ext.dir}">
+    			<fileset dir="/usr/share/java">
+      				<include name="postgresql*.jar"/>
+    			</fileset>
+  		</copy>
+		<copy todir="${ext.dir}">
+    			<fileset dir="/usr/share/java">
+      				<include name="c3p0*.jar"/>
+    			</fileset>
+  		</copy>
+	</else>
+	</if>
     </target>
+
 
     <target name="download-binlist">
         <get src="https://raw.githubusercontent.com/binlist/data/master/ranges.csv" 
