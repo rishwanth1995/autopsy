@@ -353,6 +353,10 @@
                 <binary-origin>release/modules/ext/sevenzipjbinding.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
+                <runtime-relative-path>ext/postgresql.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/postgresql.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
                 <runtime-relative-path>ext/mchange-commons-java-0.2.9.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/mchange-commons-java-0.2.9.jar</binary-origin>
             </class-path-extension>
@@ -369,10 +373,6 @@
                 <binary-origin>release/modules/ext/metadata-extractor-2.10.1.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
-                <runtime-relative-path>ext/c3p0-0.9.1.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/c3p0-0.9.1.2.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
                 <runtime-relative-path>ext/tika-core-1.17.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/tika-core-1.17.jar</binary-origin>
             </class-path-extension>
@@ -383,6 +383,10 @@
             <class-path-extension>
                 <runtime-relative-path>ext/curator-client-2.8.0.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/curator-client-2.8.0.jar</binary-origin>
+            </class-path-extension>
+            <class-path-extension>
+                <runtime-relative-path>ext/c3p0.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/c3p0.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/tika-parsers-1.17.jar</runtime-relative-path>
@@ -399,10 +403,6 @@
             <class-path-extension>
                 <runtime-relative-path>ext/sleuthkit-postgresql-4.6.0.jar</runtime-relative-path>
                 <binary-origin>release/modules/ext/sleuthkit-postgresql-4.6.0.jar</binary-origin>
-            </class-path-extension>
-            <class-path-extension>
-                <runtime-relative-path>ext/postgresql-jdbc4-9.2.jar</runtime-relative-path>
-                <binary-origin>release/modules/ext/postgresql-jdbc4-9.2.jar</binary-origin>
             </class-path-extension>
             <class-path-extension>
                 <runtime-relative-path>ext/Rejistry-1.0-SNAPSHOT.jar</runtime-relative-path>

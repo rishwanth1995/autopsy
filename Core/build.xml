@@ -18,7 +18,7 @@
         </copy>
     </target>
 	
-	<property name="VERSION" value="4.6.0"/>
+	<property name="TSK_VERSION" value="4.6.0"/>
 	<condition property="os.family" value="unix"><os family="unix"/></condition>
 	<condition property="os.family" value="windows"><os family="windows"/></condition>
     
@@ -64,8 +64,8 @@
 		<equals arg1="${os.family}" arg2="windows"/>
 	<then>
         <property environment="env"/>
-        <copy file="${env.TSK_HOME}/bindings/java/dist/sleuthkit-postgresql-${VERSION}.jar" 
-              tofile="${ext.dir}/sleuthkit-postgresql-${VERSION}.jar"/>
+        <copy file="${env.TSK_HOME}/bindings/java/dist/sleuthkit-postgresql-${TSK_VERSION}.jar" 
+              tofile="${ext.dir}/sleuthkit-postgresql-${TSK_VERSION}.jar"/>
         <copy file="${env.TSK_HOME}/bindings/java/lib/sqlite-jdbc-3.21.0.1.jar"
               tofile="${ext.dir}/sqlite-jdbc-3.21.0.1.jar"/>
         <copy file="${env.TSK_HOME}/bindings/java/lib/postgresql-9.4.1211.jre7.jar" 
@@ -77,8 +77,8 @@
 	</then>
 	<else>
 	 <property environment="env"/>
-		<copy file="/usr/share/java/sleuthkit-${VERSION}.jar" 
-		      tofile="${ext.dir}/sleuthkit-postgresql-${VERSION}.jar"/>
+		<copy file="/usr/share/java/sleuthkit-${TSK_VERSION}.jar" 
+		      tofile="${ext.dir}/sleuthkit-postgresql-${TSK_VERSION}.jar"/>
 		<copy file="/usr/share/java/sqlite-jdbc-3.21.0.1.jar"
 		      tofile="${ext.dir}/sqlite-jdbc-3.21.0.1.jar"/>
 		<copy todir="${ext.dir}">
