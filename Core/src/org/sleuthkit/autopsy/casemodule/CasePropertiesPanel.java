@@ -179,7 +179,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        casePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.casePanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
+        casePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.casePanel.border.title"), 0, 0, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
         caseNameLabel.setFont(caseNameLabel.getFont().deriveFont(caseNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         caseNameLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.caseNameLabel.text")); // NOI18N
@@ -241,7 +241,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                         .addGroup(casePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(caseNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(caseNumberLabel))
-                        .addGap(6, 6, 6)
+                        .addGap(30, 30, 30)
                         .addGroup(casePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbCaseNumberText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lbCaseNameText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -296,7 +296,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                 .addGap(6, 6, 6))
         );
 
-        examinerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.examinerPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
+        examinerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.examinerPanel.border.title"), 0, 0, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
         lbNotesLabel.setFont(lbNotesLabel.getFont().deriveFont(lbNotesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbNotesLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbNotesLabel.text")); // NOI18N
@@ -383,7 +383,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                 .addGap(6, 6, 6))
         );
 
-        pnOrganization.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.pnOrganization.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
+        pnOrganization.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.pnOrganization.border.title"), 0, 0, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
         lbOrganizationNameLabel.setFont(lbOrganizationNameLabel.getFont().deriveFont(lbOrganizationNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbOrganizationNameLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbOrganizationNameLabel.text")); // NOI18N
@@ -426,7 +426,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                             .addComponent(lbPointOfContactEmailText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnOrganizationLayout.createSequentialGroup()
                         .addComponent(lbPointOfContactPhoneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(206, 206, 206)
                         .addComponent(lbPointOfContactPhoneText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );

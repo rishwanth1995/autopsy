@@ -19,9 +19,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="casePanel" max="32767" attributes="0"/>
                   <Component id="examinerPanel" alignment="1" max="32767" attributes="0"/>
                   <Component id="orgainizationPanel" alignment="1" max="32767" attributes="0"/>
+                  <Component id="casePanel" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
           </Group>
@@ -67,7 +67,7 @@
                       <Component id="caseNumberLabel" pref="60" max="32767" attributes="0"/>
                       <Component id="caseDisplayNameLabel" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="caseDisplayNameTextField" max="32767" attributes="1"/>
                       <Component id="caseNumberTextField" max="32767" attributes="1"/>
@@ -84,7 +84,7 @@
                       <Component id="caseDisplayNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="caseDisplayNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="caseNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="caseNumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -185,10 +185,10 @@
                               <Component id="lbNotesLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="lbExaminerPhoneLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="tfExaminerPhoneText" max="32767" attributes="0"/>
-                              <Component id="caseNotesScrollPane" max="32767" attributes="0"/>
+                              <Component id="caseNotesScrollPane" pref="462" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -196,7 +196,7 @@
                               <Component id="lbExaminerEmailLabel" alignment="1" max="32767" attributes="0"/>
                               <Component id="examinerLabel" alignment="1" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="examinerTextField" max="32767" attributes="1"/>
                               <Component id="tfExaminerEmailText" max="32767" attributes="0"/>

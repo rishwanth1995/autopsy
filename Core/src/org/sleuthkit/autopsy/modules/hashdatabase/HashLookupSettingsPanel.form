@@ -107,8 +107,8 @@
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="indexLabel" pref="87" max="32767" attributes="0"/>
                                                           <Component id="indexPathLabelLabel" max="32767" attributes="0"/>
+                                                          <Component id="indexLabel" pref="75" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
