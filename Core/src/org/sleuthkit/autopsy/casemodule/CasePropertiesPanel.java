@@ -193,6 +193,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
         lbDbType.setMinimumSize(new java.awt.Dimension(82, 14));
         lbDbType.setPreferredSize(new java.awt.Dimension(82, 14));
 
+        lbCaseUUIDLabel.setFont(lbCaseUUIDLabel.getFont().deriveFont(lbCaseUUIDLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbCaseUUIDLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbCaseUUIDLabel.text")); // NOI18N
         lbCaseUUIDLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbCaseUUIDLabel.setMinimumSize(new java.awt.Dimension(82, 14));
@@ -216,9 +217,6 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
 
         caseDirLabel.setFont(caseDirLabel.getFont().deriveFont(caseDirLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         caseDirLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.caseDirLabel.text")); // NOI18N
-        caseDirLabel.setMaximumSize(new java.awt.Dimension(82, 14));
-        caseDirLabel.setMinimumSize(new java.awt.Dimension(82, 14));
-        caseDirLabel.setPreferredSize(new java.awt.Dimension(82, 14));
 
         caseDirField.setMinimumSize(new java.awt.Dimension(25, 14));
 
@@ -253,7 +251,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                                 .addComponent(lbCaseUUIDLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbDbName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbDbType, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(caseDirLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(caseDirLabel, javax.swing.GroupLayout.Alignment.LEADING))
                             .addComponent(crDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(casePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -300,6 +298,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
 
         examinerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.examinerPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
+        lbNotesLabel.setFont(lbNotesLabel.getFont().deriveFont(lbNotesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbNotesLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbNotesLabel.text")); // NOI18N
         lbNotesLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbNotesLabel.setMinimumSize(new java.awt.Dimension(82, 14));
@@ -325,11 +324,13 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
         taNotesText.setFocusable(false);
         caseNotesScrollPane.setViewportView(taNotesText);
 
+        lbExaminerEmailLabel.setFont(lbExaminerEmailLabel.getFont().deriveFont(lbExaminerEmailLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbExaminerEmailLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbExaminerEmailLabel.text")); // NOI18N
         lbExaminerEmailLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbExaminerEmailLabel.setMinimumSize(new java.awt.Dimension(82, 14));
         lbExaminerEmailLabel.setPreferredSize(new java.awt.Dimension(82, 14));
 
+        lbExaminerPhoneLabel.setFont(lbExaminerPhoneLabel.getFont().deriveFont(lbExaminerPhoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbExaminerPhoneLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbExaminerPhoneLabel.text")); // NOI18N
         lbExaminerPhoneLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbExaminerPhoneLabel.setMinimumSize(new java.awt.Dimension(82, 14));
@@ -384,18 +385,22 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
 
         pnOrganization.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.pnOrganization.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
+        lbOrganizationNameLabel.setFont(lbOrganizationNameLabel.getFont().deriveFont(lbOrganizationNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbOrganizationNameLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbOrganizationNameLabel.text")); // NOI18N
         lbOrganizationNameLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbOrganizationNameLabel.setMinimumSize(new java.awt.Dimension(82, 14));
         lbOrganizationNameLabel.setPreferredSize(new java.awt.Dimension(82, 14));
 
+        lbPointOfContactNameLabel.setFont(lbPointOfContactNameLabel.getFont().deriveFont(lbPointOfContactNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbPointOfContactNameLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbPointOfContactNameLabel.text")); // NOI18N
 
+        lbPointOfContactEmailLabel.setFont(lbPointOfContactEmailLabel.getFont().deriveFont(lbPointOfContactEmailLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbPointOfContactEmailLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbPointOfContactEmailLabel.text")); // NOI18N
         lbPointOfContactEmailLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactEmailLabel.setMinimumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactEmailLabel.setPreferredSize(new java.awt.Dimension(82, 14));
 
+        lbPointOfContactPhoneLabel.setFont(lbPointOfContactPhoneLabel.getFont().deriveFont(lbPointOfContactPhoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbPointOfContactPhoneLabel.setText(org.openide.util.NbBundle.getMessage(CasePropertiesPanel.class, "CasePropertiesPanel.lbPointOfContactPhoneLabel.text")); // NOI18N
         lbPointOfContactPhoneLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactPhoneLabel.setMinimumSize(new java.awt.Dimension(82, 14));
@@ -416,7 +421,7 @@ final class CasePropertiesPanel extends javax.swing.JPanel {
                             .addComponent(lbOrganizationNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnOrganizationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lbPointOfContactNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+                            .addComponent(lbPointOfContactNameText, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(lbOrganizationNameText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lbPointOfContactEmailText, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnOrganizationLayout.createSequentialGroup()

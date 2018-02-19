@@ -245,10 +245,13 @@ class OpenRecentCasePanel extends javax.swing.JPanel {
         tableScrollPane = new javax.swing.JScrollPane();
         imagesTable = new javax.swing.JTable();
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jLabel1.setText(org.openide.util.NbBundle.getMessage(OpenRecentCasePanel.class, "OpenRecentCasePanel.jLabel1.text")); // NOI18N
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cancelButton.setText(org.openide.util.NbBundle.getMessage(OpenRecentCasePanel.class, "OpenRecentCasePanel.cancelButton.text")); // NOI18N
 
+        openButton.setFont(openButton.getFont().deriveFont(openButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         openButton.setText(org.openide.util.NbBundle.getMessage(OpenRecentCasePanel.class, "OpenRecentCasePanel.openButton.text")); // NOI18N
         openButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -290,7 +293,7 @@ class OpenRecentCasePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(292, 414, Short.MAX_VALUE))
+                        .addGap(292, 426, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tableScrollPane)
@@ -307,7 +310,7 @@ class OpenRecentCasePanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tableScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                .addComponent(tableScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 170, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelButton)

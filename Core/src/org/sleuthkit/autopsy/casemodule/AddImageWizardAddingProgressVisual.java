@@ -158,8 +158,10 @@ class AddImageWizardAddingProgressVisual extends javax.swing.JPanel {
             .addGap(0, 247, Short.MAX_VALUE)
         );
 
+        statusLabel.setFont(statusLabel.getFont().deriveFont(statusLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(statusLabel, org.openide.util.NbBundle.getMessage(AddImageWizardAddingProgressVisual.class, "AddImageWizardAddingProgressVisual.statusLabel.text")); // NOI18N
 
+        viewLogButton.setFont(viewLogButton.getFont().deriveFont(viewLogButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(viewLogButton, org.openide.util.NbBundle.getMessage(AddImageWizardAddingProgressVisual.class, "AddImageWizardAddingProgressVisual.viewLogButton.text")); // NOI18N
         viewLogButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,8 +192,8 @@ class AddImageWizardAddingProgressVisual extends javax.swing.JPanel {
 
         progressBar.setIndeterminate(true);
 
+        progressLabel.setFont(progressLabel.getFont().deriveFont(progressLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(progressLabel, org.openide.util.NbBundle.getMessage(AddImageWizardAddingProgressVisual.class, "AddImageWizardAddingProgressVisual.progressLabel.text")); // NOI18N
-        progressLabel.setPreferredSize(null);
 
         progressTextArea.setEditable(false);
         progressTextArea.setBackground(new java.awt.Color(240, 240, 240));
@@ -202,6 +204,7 @@ class AddImageWizardAddingProgressVisual extends javax.swing.JPanel {
         progressTextArea.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         progressTextArea.setFocusable(false);
 
+        subTitle1Label.setFont(subTitle1Label.getFont().deriveFont(subTitle1Label.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(subTitle1Label, org.openide.util.NbBundle.getMessage(AddImageWizardAddingProgressVisual.class, "AddImageWizardAddingProgressVisual.subTitle1Label.text")); // NOI18N
 
         javax.swing.GroupLayout inProgressPanelLayout = new javax.swing.GroupLayout(inProgressPanel);
@@ -216,7 +219,7 @@ class AddImageWizardAddingProgressVisual extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(inProgressPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(progressTextArea)
-                    .addComponent(progressLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(progressLabel, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(subTitle1Label, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );

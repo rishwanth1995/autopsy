@@ -176,6 +176,7 @@ final class LocalDiskPanel extends JPanel {
         diskTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(diskTable);
 
+        copyImageCheckbox.setFont(copyImageCheckbox.getFont().deriveFont(copyImageCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(copyImageCheckbox, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.copyImageCheckbox.text")); // NOI18N
         copyImageCheckbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,6 +191,7 @@ final class LocalDiskPanel extends JPanel {
             }
         });
 
+        browseButton.setFont(browseButton.getFont().deriveFont(browseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseButton, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.browseButton.text")); // NOI18N
         browseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,14 +199,17 @@ final class LocalDiskPanel extends JPanel {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.jLabel1.text")); // NOI18N
 
         imageWriterErrorLabel.setFont(imageWriterErrorLabel.getFont().deriveFont(imageWriterErrorLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         imageWriterErrorLabel.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(imageWriterErrorLabel, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.imageWriterErrorLabel.text")); // NOI18N
 
+        changeDatabasePathCheckbox.setFont(changeDatabasePathCheckbox.getFont().deriveFont(changeDatabasePathCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(changeDatabasePathCheckbox, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.changeDatabasePathCheckbox.text")); // NOI18N
 
+        refreshTablebutton.setFont(refreshTablebutton.getFont().deriveFont(refreshTablebutton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(refreshTablebutton, org.openide.util.NbBundle.getMessage(LocalDiskPanel.class, "LocalDiskPanel.refreshTablebutton.text")); // NOI18N
         refreshTablebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,7 +238,7 @@ final class LocalDiskPanel extends JPanel {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(pathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(browseButton, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
+                                                .addComponent(browseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(imageWriterErrorLabel)
@@ -245,7 +250,7 @@ final class LocalDiskPanel extends JPanel {
                                 .addComponent(timeZoneLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(timeZoneComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(refreshTablebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -286,7 +291,7 @@ final class LocalDiskPanel extends JPanel {
                 .addComponent(imageWriterErrorLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(errorLabel)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

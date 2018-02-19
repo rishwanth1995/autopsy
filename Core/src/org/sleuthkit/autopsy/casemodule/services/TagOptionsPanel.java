@@ -125,6 +125,7 @@ final class TagOptionsPanel extends javax.swing.JPanel implements OptionsPanel {
         jSplitPane1.setDividerSize(1);
         jSplitPane1.setPreferredSize(new java.awt.Dimension(748, 488));
 
+        tagTypesListLabel.setFont(tagTypesListLabel.getFont().deriveFont(tagTypesListLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(tagTypesListLabel, org.openide.util.NbBundle.getMessage(TagOptionsPanel.class, "TagOptionsPanel.tagTypesListLabel.text")); // NOI18N
 
         tagNamesList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
@@ -207,7 +208,7 @@ final class TagOptionsPanel extends javax.swing.JPanel implements OptionsPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tagTypesListLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TagNameScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                .addComponent(TagNameScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(modifyTagTypesListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newTagNameButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -220,6 +221,7 @@ final class TagOptionsPanel extends javax.swing.JPanel implements OptionsPanel {
 
         jSplitPane1.setLeftComponent(modifyTagTypesListPanel);
 
+        descriptionLabel.setFont(descriptionLabel.getFont().deriveFont(descriptionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(descriptionLabel, org.openide.util.NbBundle.getMessage(TagOptionsPanel.class, "TagOptionsPanel.descriptionLabel.text")); // NOI18N
 
         descriptionTextArea.setEditable(false);
@@ -232,6 +234,7 @@ final class TagOptionsPanel extends javax.swing.JPanel implements OptionsPanel {
         descriptionTextArea.setFocusable(false);
         descriptionScrollPane.setViewportView(descriptionTextArea);
 
+        isNotableLabel.setFont(isNotableLabel.getFont().deriveFont(isNotableLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(isNotableLabel, org.openide.util.NbBundle.getMessage(TagOptionsPanel.class, "TagOptionsPanel.isNotableLabel.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(notableYesOrNoLabel, org.openide.util.NbBundle.getMessage(TagOptionsPanel.class, "TagOptionsPanel.notableYesOrNoLabel.text")); // NOI18N
@@ -270,7 +273,7 @@ final class TagOptionsPanel extends javax.swing.JPanel implements OptionsPanel {
                 .addGroup(tagTypesAdditionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(isNotableLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(notableYesOrNoLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 304, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 309, Short.MAX_VALUE)
                 .addComponent(ingestRunningWarningLabel)
                 .addGap(31, 31, 31))
         );

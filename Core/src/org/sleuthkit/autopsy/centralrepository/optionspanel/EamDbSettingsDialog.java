@@ -152,6 +152,7 @@ public class EamDbSettingsDialog extends JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        bnCancel.setFont(bnCancel.getFont().deriveFont(bnCancel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnCancel, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.bnCancel.text")); // NOI18N
         bnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +160,7 @@ public class EamDbSettingsDialog extends JDialog {
             }
         });
 
+        bnOk.setFont(bnOk.getFont().deriveFont(bnOk.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOk, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.bnOk.text")); // NOI18N
         bnOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,11 +191,13 @@ public class EamDbSettingsDialog extends JDialog {
 
         pnSQLiteSettings.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        lbDatabasePath.setFont(lbDatabasePath.getFont().deriveFont(lbDatabasePath.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDatabasePath, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbDatabasePath.text")); // NOI18N
 
         tfDatabasePath.setText(org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.tfDatabasePath.text")); // NOI18N
         tfDatabasePath.setToolTipText(org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.tfDatabasePath.toolTipText")); // NOI18N
 
+        bnDatabasePathFileOpen.setFont(bnDatabasePathFileOpen.getFont().deriveFont(bnDatabasePathFileOpen.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnDatabasePathFileOpen, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.bnDatabasePathFileOpen.text")); // NOI18N
         bnDatabasePathFileOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,14 +205,19 @@ public class EamDbSettingsDialog extends JDialog {
             }
         });
 
+        lbHostName.setFont(lbHostName.getFont().deriveFont(lbHostName.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbHostName, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbHostName.text")); // NOI18N
 
+        lbPort.setFont(lbPort.getFont().deriveFont(lbPort.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPort, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbPort.text")); // NOI18N
 
+        lbUserName.setFont(lbUserName.getFont().deriveFont(lbUserName.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbUserName, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbUserName.text")); // NOI18N
 
+        lbUserPassword.setFont(lbUserPassword.getFont().deriveFont(lbUserPassword.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbUserPassword, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbUserPassword.text")); // NOI18N
 
+        cbDatabaseType.setFont(cbDatabaseType.getFont().deriveFont(cbDatabaseType.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cbDatabaseType.setModel(new javax.swing.DefaultComboBoxModel<>(new EamDbPlatformEnum[]{EamDbPlatformEnum.POSTGRESQL, EamDbPlatformEnum.SQLITE}));
         cbDatabaseType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,10 +225,13 @@ public class EamDbSettingsDialog extends JDialog {
             }
         });
 
+        lbSingleUserSqLite.setFont(lbSingleUserSqLite.getFont().deriveFont(lbSingleUserSqLite.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbSingleUserSqLite, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbSingleUserSqLite.text")); // NOI18N
 
+        lbDatabaseType.setFont(lbDatabaseType.getFont().deriveFont(lbDatabaseType.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDatabaseType, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbDatabaseType.text")); // NOI18N
 
+        lbDatabaseDesc.setFont(lbDatabaseDesc.getFont().deriveFont(lbDatabaseDesc.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDatabaseDesc, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbDatabaseDesc.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(lbFullDbPath, org.openide.util.NbBundle.getMessage(EamDbSettingsDialog.class, "EamDbSettingsDialog.lbFullDbPath.text")); // NOI18N
@@ -245,7 +257,7 @@ public class EamDbSettingsDialog extends JDialog {
                     .addGroup(pnSQLiteSettingsLayout.createSequentialGroup()
                         .addComponent(cbDatabaseType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbSingleUserSqLite, javax.swing.GroupLayout.DEFAULT_SIZE, 467, Short.MAX_VALUE)
+                        .addComponent(lbSingleUserSqLite, javax.swing.GroupLayout.DEFAULT_SIZE, 487, Short.MAX_VALUE)
                         .addGap(9, 9, 9))
                     .addGroup(pnSQLiteSettingsLayout.createSequentialGroup()
                         .addComponent(tfDatabasePath)
@@ -319,7 +331,7 @@ public class EamDbSettingsDialog extends JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addComponent(pnSQLiteSettings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(pnButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10))
         );

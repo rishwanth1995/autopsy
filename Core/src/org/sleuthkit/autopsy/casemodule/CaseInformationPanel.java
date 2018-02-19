@@ -95,8 +95,10 @@ class CaseInformationPanel extends javax.swing.JPanel {
 
         tabbedPane.setPreferredSize(new java.awt.Dimension(420, 200));
 
+        closeButton.setFont(closeButton.getFont().deriveFont(closeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(closeButton, org.openide.util.NbBundle.getMessage(CaseInformationPanel.class, "CaseInformationPanel.closeButton.text")); // NOI18N
 
+        editDetailsButton.setFont(editDetailsButton.getFont().deriveFont(editDetailsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(editDetailsButton, org.openide.util.NbBundle.getMessage(CaseInformationPanel.class, "CaseInformationPanel.editDetailsButton.text")); // NOI18N
         editDetailsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

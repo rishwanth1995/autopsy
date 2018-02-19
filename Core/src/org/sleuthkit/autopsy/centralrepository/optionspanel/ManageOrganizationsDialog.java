@@ -171,13 +171,14 @@ public final class ManageOrganizationsDialog extends JDialog {
         orgDescriptionTextArea.setEditable(false);
         orgDescriptionTextArea.setBackground(new java.awt.Color(240, 240, 240));
         orgDescriptionTextArea.setColumns(20);
-        orgDescriptionTextArea.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        orgDescriptionTextArea.setFont(orgDescriptionTextArea.getFont().deriveFont(orgDescriptionTextArea.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         orgDescriptionTextArea.setLineWrap(true);
         orgDescriptionTextArea.setRows(3);
         orgDescriptionTextArea.setText(org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.orgDescriptionTextArea.text")); // NOI18N
         orgDescriptionTextArea.setWrapStyleWord(true);
         orgDescriptionScrollPane.setViewportView(orgDescriptionTextArea);
 
+        newButton.setFont(newButton.getFont().deriveFont(newButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(newButton, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.newButton.text")); // NOI18N
         newButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
         newButton.setMaximumSize(new java.awt.Dimension(70, 23));
@@ -189,6 +190,7 @@ public final class ManageOrganizationsDialog extends JDialog {
             }
         });
 
+        deleteButton.setFont(deleteButton.getFont().deriveFont(deleteButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(deleteButton, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.deleteButton.text")); // NOI18N
         deleteButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
         deleteButton.setMaximumSize(new java.awt.Dimension(70, 23));
@@ -200,6 +202,7 @@ public final class ManageOrganizationsDialog extends JDialog {
             }
         });
 
+        closeButton.setFont(closeButton.getFont().deriveFont(closeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(closeButton, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.closeButton.text")); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -207,16 +210,21 @@ public final class ManageOrganizationsDialog extends JDialog {
             }
         });
 
+        orgListLabel.setFont(orgListLabel.getFont().deriveFont(orgListLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgListLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.orgListLabel.text")); // NOI18N
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+        pocNameLabel.setFont(pocNameLabel.getFont().deriveFont(pocNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pocNameLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.pocNameLabel.text")); // NOI18N
 
+        pocPhoneLabel.setFont(pocPhoneLabel.getFont().deriveFont(pocPhoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pocPhoneLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.pocPhoneLabel.text")); // NOI18N
 
+        pocEmailLabel.setFont(pocEmailLabel.getFont().deriveFont(pocEmailLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pocEmailLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.pocEmailLabel.text")); // NOI18N
 
+        orgNameLabel.setFont(orgNameLabel.getFont().deriveFont(orgNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgNameLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.orgNameLabel.text")); // NOI18N
 
         orgNameTextField.setEditable(false);
@@ -227,6 +235,7 @@ public final class ManageOrganizationsDialog extends JDialog {
 
         pocEmailTextField.setEditable(false);
 
+        editButton.setFont(editButton.getFont().deriveFont(editButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(editButton, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.editButton.text")); // NOI18N
         editButton.setMaximumSize(new java.awt.Dimension(70, 23));
         editButton.setMinimumSize(new java.awt.Dimension(70, 23));
@@ -237,6 +246,7 @@ public final class ManageOrganizationsDialog extends JDialog {
             }
         });
 
+        orgDetailsLabel.setFont(orgDetailsLabel.getFont().deriveFont(orgDetailsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgDetailsLabel, org.openide.util.NbBundle.getMessage(ManageOrganizationsDialog.class, "ManageOrganizationsDialog.orgDetailsLabel.text")); // NOI18N
 
         javax.swing.GroupLayout manageOrganizationsPanelLayout = new javax.swing.GroupLayout(manageOrganizationsPanel);
@@ -305,7 +315,7 @@ public final class ManageOrganizationsDialog extends JDialog {
                         .addGroup(manageOrganizationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(pocEmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pocEmailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
                         .addComponent(closeButton))
                     .addComponent(jSeparator1)
                     .addGroup(manageOrganizationsPanelLayout.createSequentialGroup()
@@ -313,7 +323,7 @@ public final class ManageOrganizationsDialog extends JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(orgListLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(orgListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                        .addComponent(orgListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(manageOrganizationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(newButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

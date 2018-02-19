@@ -62,8 +62,10 @@ class EditOptionalCasePropertiesPanel extends javax.swing.JPanel {
 
         optionsPanel.setLayout(new java.awt.BorderLayout());
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(EditOptionalCasePropertiesPanel.class, "EditOptionalCasePropertiesPanel.cancelButton.text")); // NOI18N
 
+        saveButton.setFont(saveButton.getFont().deriveFont(saveButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(saveButton, org.openide.util.NbBundle.getMessage(EditOptionalCasePropertiesPanel.class, "EditOptionalCasePropertiesPanel.saveButton.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -71,7 +73,7 @@ class EditOptionalCasePropertiesPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(254, Short.MAX_VALUE)
+                .addContainerGap(352, Short.MAX_VALUE)
                 .addComponent(saveButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cancelButton)

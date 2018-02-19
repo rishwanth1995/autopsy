@@ -116,7 +116,7 @@ public class ImageFilePanel extends JPanel implements DocumentListener {
         browseButton = new javax.swing.JButton();
         pathTextField = new javax.swing.JTextField();
         timeZoneLabel = new javax.swing.JLabel();
-        timeZoneComboBox = new javax.swing.JComboBox<String>();
+        timeZoneComboBox = new javax.swing.JComboBox<>();
         noFatOrphansCheckbox = new javax.swing.JCheckBox();
         descLabel = new javax.swing.JLabel();
         errorLabel = new javax.swing.JLabel();
@@ -124,8 +124,10 @@ public class ImageFilePanel extends JPanel implements DocumentListener {
         setMinimumSize(new java.awt.Dimension(0, 65));
         setPreferredSize(new java.awt.Dimension(403, 65));
 
+        pathLabel.setFont(pathLabel.getFont().deriveFont(pathLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(ImageFilePanel.class, "ImageFilePanel.pathLabel.text")); // NOI18N
 
+        browseButton.setFont(browseButton.getFont().deriveFont(browseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseButton, org.openide.util.NbBundle.getMessage(ImageFilePanel.class, "ImageFilePanel.browseButton.text")); // NOI18N
         browseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +146,7 @@ public class ImageFilePanel extends JPanel implements DocumentListener {
 
         org.openide.awt.Mnemonics.setLocalizedText(descLabel, org.openide.util.NbBundle.getMessage(ImageFilePanel.class, "ImageFilePanel.descLabel.text")); // NOI18N
 
+        errorLabel.setFont(errorLabel.getFont().deriveFont(errorLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         errorLabel.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(errorLabel, org.openide.util.NbBundle.getMessage(ImageFilePanel.class, "ImageFilePanel.errorLabel.text")); // NOI18N
 

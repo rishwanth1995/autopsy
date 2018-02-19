@@ -50,12 +50,13 @@ public class AddImageErrorsDialog extends javax.swing.JDialog {
         setIconImage(null);
         setIconImages(null);
 
+        errorsText.setEditable(false);
         errorsText.setBackground(new java.awt.Color(240, 240, 240));
         errorsText.setColumns(20);
-        errorsText.setEditable(false);
         errorsText.setRows(5);
         jScrollPane1.setViewportView(errorsText);
 
+        copyButton.setFont(copyButton.getFont().deriveFont(copyButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(copyButton, org.openide.util.NbBundle.getMessage(AddImageErrorsDialog.class, "AddImageErrorsDialog.copyButton.text")); // NOI18N
         copyButton.setToolTipText(org.openide.util.NbBundle.getMessage(AddImageErrorsDialog.class, "AddImageErrorsDialog.copyButton.toolTipText")); // NOI18N
         copyButton.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +65,7 @@ public class AddImageErrorsDialog extends javax.swing.JDialog {
             }
         });
 
+        closeButton.setFont(closeButton.getFont().deriveFont(closeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(closeButton, org.openide.util.NbBundle.getMessage(AddImageErrorsDialog.class, "AddImageErrorsDialog.closeButton.text")); // NOI18N
         closeButton.setToolTipText(org.openide.util.NbBundle.getMessage(AddImageErrorsDialog.class, "AddImageErrorsDialog.closeButton.toolTipText")); // NOI18N
         closeButton.addActionListener(new java.awt.event.ActionListener() {

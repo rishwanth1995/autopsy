@@ -230,6 +230,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbExaminerPhoneLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbExaminerPhoneLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbExaminerPhoneLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -287,6 +292,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbExaminerEmailLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbExaminerEmailLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbExaminerEmailLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -324,6 +334,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbNotesLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbNotesLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbNotesLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -415,6 +430,11 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lbPointOfContactPhoneLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbPointOfContactPhoneLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbPointOfContactPhoneLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -444,6 +464,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbPointOfContactNameLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbPointOfContactNameLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbPointOfContactNameLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -460,6 +485,11 @@
         </Component>
         <Component class="javax.swing.JButton" name="bnNewOrganization">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="bnNewOrganization" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.bnNewOrganization.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -486,6 +516,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbOrganizationNameLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbOrganizationNameLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbOrganizationNameLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -502,6 +537,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbPointOfContactEmailLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbPointOfContactEmailLabel" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/casemodule/Bundle.properties" key="OptionalCasePropertiesPanel.lbPointOfContactEmailLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>

@@ -228,6 +228,7 @@ public class AddNewOrganizationDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        bnOK.setFont(bnOK.getFont().deriveFont(bnOK.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOK, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.bnOK.text")); // NOI18N
         bnOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +236,7 @@ public class AddNewOrganizationDialog extends javax.swing.JDialog {
             }
         });
 
+        bnCancel.setFont(bnCancel.getFont().deriveFont(bnCancel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnCancel, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.bnCancel.text")); // NOI18N
         bnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,14 +244,19 @@ public class AddNewOrganizationDialog extends javax.swing.JDialog {
             }
         });
 
+        lbOrganizationName.setFont(lbOrganizationName.getFont().deriveFont(lbOrganizationName.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbOrganizationName, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.lbOrganizationName.text")); // NOI18N
 
+        lbPocHeading.setFont(lbPocHeading.getFont().deriveFont(lbPocHeading.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPocHeading, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.lbPocHeading.text")); // NOI18N
 
+        lbPocName.setFont(lbPocName.getFont().deriveFont(lbPocName.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPocName, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.lbPocName.text")); // NOI18N
 
+        lbPocEmail.setFont(lbPocEmail.getFont().deriveFont(lbPocEmail.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPocEmail, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.lbPocEmail.text")); // NOI18N
 
+        lbPocPhone.setFont(lbPocPhone.getFont().deriveFont(lbPocPhone.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPocPhone, org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.lbPocPhone.text")); // NOI18N
 
         tfPocName.setToolTipText(org.openide.util.NbBundle.getMessage(AddNewOrganizationDialog.class, "AddNewOrganizationDialog.tfName.tooltip")); // NOI18N
@@ -262,7 +269,7 @@ public class AddNewOrganizationDialog extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(258, Short.MAX_VALUE)
+                .addContainerGap(264, Short.MAX_VALUE)
                 .addComponent(bnOK)
                 .addGap(18, 18, 18)
                 .addComponent(bnCancel)
@@ -314,7 +321,7 @@ public class AddNewOrganizationDialog extends javax.swing.JDialog {
                     .addComponent(lbPocPhone)
                     .addComponent(tfPocPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbWarningMsg, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addComponent(lbWarningMsg, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bnOK)

@@ -135,6 +135,7 @@ final class ManageCorrelationPropertiesDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(ManageCorrelationPropertiesDialog.class, "ManageCorrelationPropertiesDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +143,7 @@ final class ManageCorrelationPropertiesDialog extends javax.swing.JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(ManageCorrelationPropertiesDialog.class, "ManageCorrelationPropertiesDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +153,7 @@ final class ManageCorrelationPropertiesDialog extends javax.swing.JDialog {
 
         jScrollPane1.setMinimumSize(new java.awt.Dimension(150, 23));
 
+        tbCorrelatableTypes.setFont(tbCorrelatableTypes.getFont().deriveFont(tbCorrelatableTypes.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         tbCorrelatableTypes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -178,14 +181,14 @@ final class ManageCorrelationPropertiesDialog extends javax.swing.JDialog {
         tbCorrelatableTypes.setMinimumSize(new java.awt.Dimension(150, 0));
         jScrollPane1.setViewportView(tbCorrelatableTypes);
 
-        lbWarningMsg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbWarningMsg.setFont(lbWarningMsg.getFont().deriveFont(lbWarningMsg.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbWarningMsg.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(lbWarningMsg, org.openide.util.NbBundle.getMessage(ManageCorrelationPropertiesDialog.class, "ManageCorrelationPropertiesDialog.lbWarningMsg.text")); // NOI18N
 
         taInstructions.setEditable(false);
         taInstructions.setBackground(new java.awt.Color(240, 240, 240));
         taInstructions.setColumns(20);
-        taInstructions.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        taInstructions.setFont(taInstructions.getFont().deriveFont(taInstructions.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         taInstructions.setLineWrap(true);
         taInstructions.setRows(5);
         taInstructions.setText(org.openide.util.NbBundle.getMessage(ManageCorrelationPropertiesDialog.class, "ManageArtifactTypesDialog.taInstructionsMsg.text")); // NOI18N

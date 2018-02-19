@@ -117,7 +117,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="tagTypesListLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="TagNameScrollPane" pref="338" max="32767" attributes="0"/>
+                              <Component id="TagNameScrollPane" pref="340" max="32767" attributes="0"/>
                               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="newTagNameButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -132,6 +132,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="tagTypesListLabel">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                          <FontInfo relative="true">
+                            <Font bold="false" component="tagTypesListLabel" property="font" relativeSize="false" size="11"/>
+                          </FontInfo>
+                        </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="org/sleuthkit/autopsy/casemodule/services/Bundle.properties" key="TagOptionsPanel.tagTypesListLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
@@ -296,7 +301,7 @@
                                   <Component id="isNotableLabel" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                                   <Component id="notableYesOrNoLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="304" max="32767" attributes="0"/>
+                              <EmptySpace pref="309" max="32767" attributes="0"/>
                               <Component id="ingestRunningWarningLabel" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
@@ -306,6 +311,11 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="descriptionLabel">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                          <FontInfo relative="true">
+                            <Font bold="false" component="descriptionLabel" property="font" relativeSize="false" size="11"/>
+                          </FontInfo>
+                        </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="org/sleuthkit/autopsy/casemodule/services/Bundle.properties" key="TagOptionsPanel.descriptionLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>
@@ -338,6 +348,11 @@
                     </Container>
                     <Component class="javax.swing.JLabel" name="isNotableLabel">
                       <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                          <FontInfo relative="true">
+                            <Font bold="false" component="isNotableLabel" property="font" relativeSize="false" size="11"/>
+                          </FontInfo>
+                        </Property>
                         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                           <ResourceString bundle="org/sleuthkit/autopsy/casemodule/services/Bundle.properties" key="TagOptionsPanel.isNotableLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                         </Property>

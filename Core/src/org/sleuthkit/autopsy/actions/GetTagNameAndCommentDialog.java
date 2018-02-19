@@ -178,6 +178,7 @@ public class GetTagNameAndCommentDialog extends JDialog {
             }
         });
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +186,7 @@ public class GetTagNameAndCommentDialog extends JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,13 +196,16 @@ public class GetTagNameAndCommentDialog extends JDialog {
 
         tagCombo.setToolTipText(org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.tagCombo.toolTipText")); // NOI18N
 
+        tagLabel.setFont(tagLabel.getFont().deriveFont(tagLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(tagLabel, org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.tagLabel.text")); // NOI18N
 
+        commentLabel.setFont(commentLabel.getFont().deriveFont(commentLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(commentLabel, org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.commentLabel.text")); // NOI18N
 
         commentText.setText(org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.commentText.text")); // NOI18N
         commentText.setToolTipText(org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.commentText.toolTipText")); // NOI18N
 
+        newTagButton.setFont(newTagButton.getFont().deriveFont(newTagButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(newTagButton, org.openide.util.NbBundle.getMessage(GetTagNameAndCommentDialog.class, "GetTagNameAndCommentDialog.newTagButton.text")); // NOI18N
         newTagButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,7 +222,7 @@ public class GetTagNameAndCommentDialog extends JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(newTagButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                         .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelButton))

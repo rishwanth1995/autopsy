@@ -294,6 +294,7 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
 
         examinerPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.examinerPanel.border.title"))); // NOI18N
 
+        lbExaminerPhoneLabel.setFont(lbExaminerPhoneLabel.getFont().deriveFont(lbExaminerPhoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbExaminerPhoneLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbExaminerPhoneLabel.text")); // NOI18N
         lbExaminerPhoneLabel.setMaximumSize(new java.awt.Dimension(41, 14));
         lbExaminerPhoneLabel.setMinimumSize(new java.awt.Dimension(41, 14));
@@ -311,6 +312,7 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
 
         examinerTextField.setFont(examinerTextField.getFont().deriveFont(examinerTextField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
+        lbExaminerEmailLabel.setFont(lbExaminerEmailLabel.getFont().deriveFont(lbExaminerEmailLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbExaminerEmailLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbExaminerEmailLabel.text")); // NOI18N
         lbExaminerEmailLabel.setMaximumSize(new java.awt.Dimension(41, 14));
         lbExaminerEmailLabel.setMinimumSize(new java.awt.Dimension(41, 14));
@@ -322,6 +324,7 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
         examinerLabel.setMinimumSize(new java.awt.Dimension(41, 14));
         examinerLabel.setPreferredSize(new java.awt.Dimension(41, 14));
 
+        lbNotesLabel.setFont(lbNotesLabel.getFont().deriveFont(lbNotesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbNotesLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbNotesLabel.text")); // NOI18N
         lbNotesLabel.setMaximumSize(new java.awt.Dimension(41, 14));
         lbNotesLabel.setMinimumSize(new java.awt.Dimension(41, 14));
@@ -376,6 +379,7 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
 
         orgainizationPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.orgainizationPanel.border.title"))); // NOI18N
 
+        lbPointOfContactPhoneLabel.setFont(lbPointOfContactPhoneLabel.getFont().deriveFont(lbPointOfContactPhoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPointOfContactPhoneLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbPointOfContactPhoneLabel.text")); // NOI18N
         lbPointOfContactPhoneLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactPhoneLabel.setMinimumSize(new java.awt.Dimension(82, 14));
@@ -387,11 +391,13 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
             }
         });
 
+        lbPointOfContactNameLabel.setFont(lbPointOfContactNameLabel.getFont().deriveFont(lbPointOfContactNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPointOfContactNameLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbPointOfContactNameLabel.text")); // NOI18N
         lbPointOfContactNameLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactNameLabel.setMinimumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactNameLabel.setPreferredSize(new java.awt.Dimension(82, 14));
 
+        bnNewOrganization.setFont(bnNewOrganization.getFont().deriveFont(bnNewOrganization.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnNewOrganization, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.bnNewOrganization.text")); // NOI18N
         bnNewOrganization.setMargin(new java.awt.Insets(2, 6, 2, 6));
         bnNewOrganization.setMaximumSize(new java.awt.Dimension(123, 23));
@@ -403,11 +409,13 @@ final class OptionalCasePropertiesPanel extends javax.swing.JPanel {
             }
         });
 
+        lbOrganizationNameLabel.setFont(lbOrganizationNameLabel.getFont().deriveFont(lbOrganizationNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbOrganizationNameLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbOrganizationNameLabel.text")); // NOI18N
         lbOrganizationNameLabel.setMaximumSize(new java.awt.Dimension(189, 14));
         lbOrganizationNameLabel.setMinimumSize(new java.awt.Dimension(189, 14));
         lbOrganizationNameLabel.setPreferredSize(new java.awt.Dimension(189, 14));
 
+        lbPointOfContactEmailLabel.setFont(lbPointOfContactEmailLabel.getFont().deriveFont(lbPointOfContactEmailLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbPointOfContactEmailLabel, org.openide.util.NbBundle.getMessage(OptionalCasePropertiesPanel.class, "OptionalCasePropertiesPanel.lbPointOfContactEmailLabel.text")); // NOI18N
         lbPointOfContactEmailLabel.setMaximumSize(new java.awt.Dimension(82, 14));
         lbPointOfContactEmailLabel.setMinimumSize(new java.awt.Dimension(82, 14));

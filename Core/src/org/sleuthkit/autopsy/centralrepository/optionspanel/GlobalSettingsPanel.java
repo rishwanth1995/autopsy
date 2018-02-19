@@ -140,12 +140,16 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
 
         pnDatabaseConfiguration.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.pnDatabaseConfiguration.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
+        lbDbPlatformTypeLabel.setFont(lbDbPlatformTypeLabel.getFont().deriveFont(lbDbPlatformTypeLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDbPlatformTypeLabel, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.lbDbPlatformTypeLabel.text")); // NOI18N
 
+        lbDbNameLabel.setFont(lbDbNameLabel.getFont().deriveFont(lbDbNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDbNameLabel, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.lbDbNameLabel.text")); // NOI18N
 
+        lbDbLocationLabel.setFont(lbDbLocationLabel.getFont().deriveFont(lbDbLocationLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbDbLocationLabel, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.lbDbLocationLabel.text")); // NOI18N
 
+        bnDbConfigure.setFont(bnDbConfigure.getFont().deriveFont(bnDbConfigure.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnDbConfigure, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.bnDbConfigure.text")); // NOI18N
         bnDbConfigure.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +198,7 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
                 .addGap(8, 8, 8))
         );
 
+        cbUseCentralRepo.setFont(cbUseCentralRepo.getFont().deriveFont(cbUseCentralRepo.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cbUseCentralRepo, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.cbUseCentralRepo.text")); // NOI18N
         cbUseCentralRepo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +214,7 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
         pnCorrelationProperties.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.pnCorrelationProperties.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
         pnCorrelationProperties.setPreferredSize(new java.awt.Dimension(674, 93));
 
+        bnManageTypes.setFont(bnManageTypes.getFont().deriveFont(bnManageTypes.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnManageTypes, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.bnManageProperties.text")); // NOI18N
         bnManageTypes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,7 +227,7 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
         correlationPropertiesTextArea.setEditable(false);
         correlationPropertiesTextArea.setBackground(new java.awt.Color(240, 240, 240));
         correlationPropertiesTextArea.setColumns(20);
-        correlationPropertiesTextArea.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        correlationPropertiesTextArea.setFont(correlationPropertiesTextArea.getFont().deriveFont(correlationPropertiesTextArea.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         correlationPropertiesTextArea.setLineWrap(true);
         correlationPropertiesTextArea.setRows(2);
         correlationPropertiesTextArea.setText(org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.correlationPropertiesTextArea.text")); // NOI18N
@@ -253,10 +259,12 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
                 .addGap(8, 8, 8))
         );
 
+        lbCentralRepository.setFont(lbCentralRepository.getFont().deriveFont(lbCentralRepository.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbCentralRepository, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.lbCentralRepository.text")); // NOI18N
 
         organizationPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.organizationPanel.border.title"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12))); // NOI18N
 
+        manageOrganizationButton.setFont(manageOrganizationButton.getFont().deriveFont(manageOrganizationButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(manageOrganizationButton, org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.manageOrganizationButton.text")); // NOI18N
         manageOrganizationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -269,7 +277,7 @@ public final class GlobalSettingsPanel extends IngestModuleGlobalSettingsPanel i
         organizationTextArea.setEditable(false);
         organizationTextArea.setBackground(new java.awt.Color(240, 240, 240));
         organizationTextArea.setColumns(20);
-        organizationTextArea.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        organizationTextArea.setFont(organizationTextArea.getFont().deriveFont(organizationTextArea.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         organizationTextArea.setLineWrap(true);
         organizationTextArea.setRows(2);
         organizationTextArea.setText(org.openide.util.NbBundle.getMessage(GlobalSettingsPanel.class, "GlobalSettingsPanel.organizationTextArea.text")); // NOI18N

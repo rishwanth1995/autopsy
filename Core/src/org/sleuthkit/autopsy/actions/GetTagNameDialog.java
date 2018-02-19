@@ -188,6 +188,7 @@ public class GetTagNameDialog extends JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,14 +196,13 @@ public class GetTagNameDialog extends JDialog {
             }
         });
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okButtonActionPerformed(evt);
             }
         });
-
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
         tagsTable.setBackground(new java.awt.Color(240, 240, 240));
         tagsTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -218,10 +218,13 @@ public class GetTagNameDialog extends JDialog {
         tagsTable.setTableHeader(null);
         jScrollPane1.setViewportView(tagsTable);
 
+        preexistingLabel.setFont(preexistingLabel.getFont().deriveFont(preexistingLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(preexistingLabel, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.preexistingLabel.text")); // NOI18N
 
         newTagPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.newTagPanel.border.title"))); // NOI18N
+        newTagPanel.setFont(newTagPanel.getFont().deriveFont(newTagPanel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
+        tagNameLabel.setFont(tagNameLabel.getFont().deriveFont(tagNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(tagNameLabel, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.tagNameLabel.text")); // NOI18N
 
         tagNameField.setText(org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.tagNameField.text")); // NOI18N
@@ -231,6 +234,7 @@ public class GetTagNameDialog extends JDialog {
             }
         });
 
+        descriptionLabel.setFont(descriptionLabel.getFont().deriveFont(descriptionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(descriptionLabel, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.descriptionLabel.text")); // NOI18N
 
         descriptionTextArea.setColumns(20);
@@ -238,6 +242,7 @@ public class GetTagNameDialog extends JDialog {
         descriptionTextArea.setRows(3);
         descriptionScrollPane.setViewportView(descriptionTextArea);
 
+        notableCheckbox.setFont(notableCheckbox.getFont().deriveFont(notableCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(notableCheckbox, org.openide.util.NbBundle.getMessage(GetTagNameDialog.class, "GetTagNameDialog.notableCheckbox.text")); // NOI18N
 
         javax.swing.GroupLayout newTagPanelLayout = new javax.swing.GroupLayout(newTagPanel);
@@ -270,7 +275,7 @@ public class GetTagNameDialog extends JDialog {
                 .addComponent(descriptionScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(notableCheckbox)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -285,7 +290,7 @@ public class GetTagNameDialog extends JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 233, Short.MAX_VALUE)
+                        .addGap(0, 239, Short.MAX_VALUE)
                         .addComponent(okButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cancelButton))

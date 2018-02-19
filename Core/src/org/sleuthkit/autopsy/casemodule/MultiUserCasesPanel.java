@@ -155,14 +155,15 @@ final class MultiUserCasesPanel extends JPanel{
     private void initComponents() {
 
         bnOpen = new javax.swing.JButton();
-        bnOpenSingleUserCase = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
+        bnOpenSingleUserCase = new javax.swing.JButton();
         searchLabel = new javax.swing.JLabel();
         caseExplorerScrollPane = new javax.swing.JScrollPane();
 
         setName("Completed Cases"); // NOI18N
         setPreferredSize(new java.awt.Dimension(960, 485));
 
+        bnOpen.setFont(bnOpen.getFont().deriveFont(bnOpen.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOpen, org.openide.util.NbBundle.getMessage(MultiUserCasesPanel.class, "MultiUserCasesPanel.bnOpen.text")); // NOI18N
         bnOpen.setEnabled(false);
         bnOpen.setMaximumSize(new java.awt.Dimension(80, 23));
@@ -174,15 +175,7 @@ final class MultiUserCasesPanel extends JPanel{
             }
         });
 
-        org.openide.awt.Mnemonics.setLocalizedText(bnOpenSingleUserCase, org.openide.util.NbBundle.getMessage(MultiUserCasesPanel.class, "MultiUserCasesPanel.bnOpenSingleUserCase.text")); // NOI18N
-        bnOpenSingleUserCase.setMinimumSize(new java.awt.Dimension(156, 23));
-        bnOpenSingleUserCase.setPreferredSize(new java.awt.Dimension(156, 23));
-        bnOpenSingleUserCase.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bnOpenSingleUserCaseActionPerformed(evt);
-            }
-        });
-
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(MultiUserCasesPanel.class, "MultiUserCasesPanel.cancelButton.text")); // NOI18N
         cancelButton.setMaximumSize(new java.awt.Dimension(80, 23));
         cancelButton.setMinimumSize(new java.awt.Dimension(80, 23));
@@ -193,6 +186,17 @@ final class MultiUserCasesPanel extends JPanel{
             }
         });
 
+        bnOpenSingleUserCase.setFont(bnOpenSingleUserCase.getFont().deriveFont(bnOpenSingleUserCase.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+        org.openide.awt.Mnemonics.setLocalizedText(bnOpenSingleUserCase, org.openide.util.NbBundle.getMessage(MultiUserCasesPanel.class, "MultiUserCasesPanel.bnOpenSingleUserCase.text")); // NOI18N
+        bnOpenSingleUserCase.setMinimumSize(new java.awt.Dimension(156, 23));
+        bnOpenSingleUserCase.setPreferredSize(new java.awt.Dimension(156, 23));
+        bnOpenSingleUserCase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnOpenSingleUserCaseActionPerformed(evt);
+            }
+        });
+
+        searchLabel.setFont(searchLabel.getFont().deriveFont(searchLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(searchLabel, org.openide.util.NbBundle.getMessage(MultiUserCasesPanel.class, "MultiUserCasesPanel.searchLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -205,7 +209,7 @@ final class MultiUserCasesPanel extends JPanel{
                     .addComponent(caseExplorerScrollPane)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(searchLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                         .addComponent(bnOpenSingleUserCase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(226, 226, 226)
                         .addComponent(bnOpen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
