@@ -776,6 +776,7 @@ public final class FilesSetDefsPanel extends IngestModuleGlobalSettingsPanel imp
         jTextArea1.setWrapStyleWord(true);
         jScrollPane2.setViewportView(jTextArea1);
 
+        jLabel7.setFont(jLabel7.getFont().deriveFont(jLabel7.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel7, org.openide.util.NbBundle.getMessage(FilesSetDefsPanel.class, "FilesSetDefsPanel.jLabel7.text")); // NOI18N
 
         mimeTypeComboBox.setBackground(new java.awt.Color(240, 240, 240));
@@ -784,6 +785,7 @@ public final class FilesSetDefsPanel extends IngestModuleGlobalSettingsPanel imp
         mimeTypeComboBox.setMinimumSize(new java.awt.Dimension(0, 20));
         mimeTypeComboBox.setPreferredSize(new java.awt.Dimension(12, 20));
 
+        jLabel8.setFont(jLabel8.getFont().deriveFont(jLabel8.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel8, org.openide.util.NbBundle.getMessage(FilesSetDefsPanel.class, "FilesSetDefsPanel.jLabel8.text")); // NOI18N
 
         equalitySignComboBox.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "=", ">", "≥", "<", "≤" }));
@@ -816,6 +818,7 @@ public final class FilesSetDefsPanel extends IngestModuleGlobalSettingsPanel imp
             }
         });
 
+        importSetButton.setFont(importSetButton.getFont().deriveFont(importSetButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         importSetButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/import16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(importSetButton, org.openide.util.NbBundle.getMessage(FilesSetDefsPanel.class, "FilesSetDefsPanel.interesting.importSetButton.text")); // NOI18N
         importSetButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
@@ -914,20 +917,16 @@ public final class FilesSetDefsPanel extends IngestModuleGlobalSettingsPanel imp
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel8))
-                                        .addGap(18, 18, 18))
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addComponent(jLabel3)
                                                 .addComponent(jLabel2))
                                             .addGap(6, 6, 6))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel4)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))))
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(equalitySignComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)

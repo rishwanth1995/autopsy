@@ -81,6 +81,7 @@ class KnownStatusSearchPanel extends javax.swing.JPanel {
         knownOptionCheckBox = new javax.swing.JCheckBox();
         knownBadOptionCheckBox = new javax.swing.JCheckBox();
 
+        knownCheckBox.setFont(knownCheckBox.getFont().deriveFont(knownCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownCheckBox.setText(org.openide.util.NbBundle.getMessage(KnownStatusSearchPanel.class, "KnownStatusSearchPanel.knownCheckBox.text")); // NOI18N
         knownCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +89,7 @@ class KnownStatusSearchPanel extends javax.swing.JPanel {
             }
         });
 
+        unknownOptionCheckBox.setFont(unknownOptionCheckBox.getFont().deriveFont(unknownOptionCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         unknownOptionCheckBox.setSelected(true);
         unknownOptionCheckBox.setText(org.openide.util.NbBundle.getMessage(KnownStatusSearchPanel.class, "KnownStatusSearchPanel.unknownOptionCheckBox.text")); // NOI18N
         unknownOptionCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +98,7 @@ class KnownStatusSearchPanel extends javax.swing.JPanel {
             }
         });
 
+        knownOptionCheckBox.setFont(knownOptionCheckBox.getFont().deriveFont(knownOptionCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownOptionCheckBox.setSelected(true);
         knownOptionCheckBox.setText(org.openide.util.NbBundle.getMessage(KnownStatusSearchPanel.class, "KnownStatusSearchPanel.knownOptionCheckBox.text")); // NOI18N
         knownOptionCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +107,7 @@ class KnownStatusSearchPanel extends javax.swing.JPanel {
             }
         });
 
+        knownBadOptionCheckBox.setFont(knownBadOptionCheckBox.getFont().deriveFont(knownBadOptionCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownBadOptionCheckBox.setSelected(true);
         knownBadOptionCheckBox.setText(org.openide.util.NbBundle.getMessage(KnownStatusSearchPanel.class, "KnownStatusSearchPanel.knownBadOptionCheckBox.text")); // NOI18N
         knownBadOptionCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +130,7 @@ class KnownStatusSearchPanel extends javax.swing.JPanel {
                         .addComponent(knownOptionCheckBox)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(knownBadOptionCheckBox)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

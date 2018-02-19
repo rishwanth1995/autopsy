@@ -154,7 +154,7 @@ class HashDbSearchPanel extends javax.swing.JPanel implements ActionListener {
 
             },
             new String [] {
-                    NbBundle.getMessage(this.getClass(), "HashDbSearchPanel.hashTable.defaultModel.title.text")
+                "MD5 Hashes"
             }
         ) {
             Class[] types = new Class [] {
@@ -173,23 +173,32 @@ class HashDbSearchPanel extends javax.swing.JPanel implements ActionListener {
             }
         });
         jScrollPane1.setViewportView(hashTable);
+        if (hashTable.getColumnModel().getColumnCount() > 0) {
             hashTable.getColumnModel().getColumn(0).setHeaderValue(org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.hashTable.columnModel.title0")); // NOI18N
+        }
 
         hashField.setText(org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.hashField.text")); // NOI18N
 
+        addButton.setFont(addButton.getFont().deriveFont(addButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(addButton, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.addButton.text")); // NOI18N
 
+        hashLabel.setFont(hashLabel.getFont().deriveFont(hashLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(hashLabel, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.hashLabel.text")); // NOI18N
 
+        searchButton.setFont(searchButton.getFont().deriveFont(searchButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(searchButton, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.searchButton.text")); // NOI18N
 
+        removeButton.setFont(removeButton.getFont().deriveFont(removeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(removeButton, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.removeButton.text")); // NOI18N
 
+        titleLabel.setFont(titleLabel.getFont().deriveFont(titleLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(titleLabel, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.titleLabel.text")); // NOI18N
 
+        errorField.setFont(errorField.getFont().deriveFont(errorField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         errorField.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(errorField, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.errorField.text")); // NOI18N
 
+        saveBox.setFont(saveBox.getFont().deriveFont(saveBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(saveBox, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.saveBox.text")); // NOI18N
         saveBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,6 +206,7 @@ class HashDbSearchPanel extends javax.swing.JPanel implements ActionListener {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(HashDbSearchPanel.class, "HashDbSearchPanel.cancelButton.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

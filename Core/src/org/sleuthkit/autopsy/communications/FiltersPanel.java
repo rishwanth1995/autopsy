@@ -258,15 +258,18 @@ final public class FiltersPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        setFont(getFont().deriveFont(getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+
         applyFiltersButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/communications/images/tick.png"))); // NOI18N
         applyFiltersButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.applyFiltersButton.text")); // NOI18N
-        applyFiltersButton.setPreferredSize(null);
+        applyFiltersButton.setFont(applyFiltersButton.getFont().deriveFont(applyFiltersButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         filtersTitleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/communications/images/funnel.png"))); // NOI18N
         filtersTitleLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.filtersTitleLabel.text")); // NOI18N
-        filtersTitleLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        filtersTitleLabel.setFont(filtersTitleLabel.getFont().deriveFont(filtersTitleLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         unCheckAllAccountTypesButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.unCheckAllAccountTypesButton.text")); // NOI18N
+        unCheckAllAccountTypesButton.setFont(unCheckAllAccountTypesButton.getFont().deriveFont(unCheckAllAccountTypesButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         unCheckAllAccountTypesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unCheckAllAccountTypesButtonActionPerformed(evt);
@@ -275,8 +278,10 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         accountTypesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/accounts.png"))); // NOI18N
         accountTypesLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.accountTypesLabel.text")); // NOI18N
+        accountTypesLabel.setFont(accountTypesLabel.getFont().deriveFont(accountTypesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         checkAllAccountTypesButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.checkAllAccountTypesButton.text")); // NOI18N
+        checkAllAccountTypesButton.setFont(checkAllAccountTypesButton.getFont().deriveFont(checkAllAccountTypesButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         checkAllAccountTypesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkAllAccountTypesButtonActionPerformed(evt);
@@ -288,6 +293,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         accountTypeRequiredLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/error-icon-16.png"))); // NOI18N
         accountTypeRequiredLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.accountTypeRequiredLabel.text")); // NOI18N
+        accountTypeRequiredLabel.setFont(accountTypeRequiredLabel.getFont().deriveFont(accountTypeRequiredLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         accountTypeRequiredLabel.setForeground(new java.awt.Color(255, 0, 0));
         accountTypeRequiredLabel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
@@ -319,7 +325,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
                     .addComponent(accountTypesLabel)
                     .addComponent(accountTypeRequiredLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(checkAllAccountTypesButton)
@@ -327,6 +333,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
         );
 
         unCheckAllDevicesButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.unCheckAllDevicesButton.text")); // NOI18N
+        unCheckAllDevicesButton.setFont(unCheckAllDevicesButton.getFont().deriveFont(unCheckAllDevicesButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         unCheckAllDevicesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 unCheckAllDevicesButtonActionPerformed(evt);
@@ -335,8 +342,10 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         devicesLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/communications/images/image.png"))); // NOI18N
         devicesLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.devicesLabel.text")); // NOI18N
+        devicesLabel.setFont(devicesLabel.getFont().deriveFont(devicesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         checkAllDevicesButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.checkAllDevicesButton.text")); // NOI18N
+        checkAllDevicesButton.setFont(checkAllDevicesButton.getFont().deriveFont(checkAllDevicesButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         checkAllDevicesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 checkAllDevicesButtonActionPerformed(evt);
@@ -352,6 +361,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         deviceRequiredLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/error-icon-16.png"))); // NOI18N
         deviceRequiredLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.deviceRequiredLabel.text")); // NOI18N
+        deviceRequiredLabel.setFont(deviceRequiredLabel.getFont().deriveFont(deviceRequiredLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         deviceRequiredLabel.setForeground(new java.awt.Color(255, 0, 0));
         deviceRequiredLabel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
@@ -380,7 +390,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
                     .addComponent(devicesLabel)
                     .addComponent(deviceRequiredLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(checkAllDevicesButton)
@@ -392,8 +402,10 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         dateRangeLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/calendar.png"))); // NOI18N
         dateRangeLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.dateRangeLabel.text")); // NOI18N
+        dateRangeLabel.setFont(dateRangeLabel.getFont().deriveFont(dateRangeLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         startCheckBox.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.startCheckBox.text")); // NOI18N
+        startCheckBox.setFont(startCheckBox.getFont().deriveFont(startCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         startCheckBox.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 startCheckBoxStateChanged(evt);
@@ -401,6 +413,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
         });
 
         endCheckBox.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.endCheckBox.text")); // NOI18N
+        endCheckBox.setFont(endCheckBox.getFont().deriveFont(endCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         endCheckBox.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 endCheckBoxStateChanged(evt);
@@ -444,9 +457,11 @@ final public class FiltersPanel extends javax.swing.JPanel {
 
         refreshButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/communications/images/arrow-circle-double-135.png"))); // NOI18N
         refreshButton.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.refreshButton.text")); // NOI18N
+        refreshButton.setFont(refreshButton.getFont().deriveFont(refreshButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
-        needsRefreshLabel.setForeground(new java.awt.Color(255, 0, 0));
         needsRefreshLabel.setText(org.openide.util.NbBundle.getMessage(FiltersPanel.class, "FiltersPanel.needsRefreshLabel.text")); // NOI18N
+        needsRefreshLabel.setFont(needsRefreshLabel.getFont().deriveFont(needsRefreshLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+        needsRefreshLabel.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -471,7 +486,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(filtersTitleLabel)
-                    .addComponent(applyFiltersButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(applyFiltersButton)
                     .addComponent(refreshButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(needsRefreshLabel)
@@ -481,7 +496,7 @@ final public class FiltersPanel extends javax.swing.JPanel {
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -108,14 +108,17 @@ final class CriterionChooser extends javax.swing.JPanel {
 
         label1.setText("Sort By: ");
 
+        removeButton.setFont(removeButton.getFont().deriveFont(removeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         removeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/cross-script.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(removeButton, org.openide.util.NbBundle.getMessage(CriterionChooser.class, "CriterionChooser.removeButton.text")); // NOI18N
 
         sortOrderGroup.add(ascendingRadio);
+        ascendingRadio.setFont(ascendingRadio.getFont().deriveFont(ascendingRadio.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         ascendingRadio.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(ascendingRadio, org.openide.util.NbBundle.getMessage(CriterionChooser.class, "CriterionChooser.ascendingRadio.text")); // NOI18N
 
         sortOrderGroup.add(descendingRadio);
+        descendingRadio.setFont(descendingRadio.getFont().deriveFont(descendingRadio.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(descendingRadio, org.openide.util.NbBundle.getMessage(CriterionChooser.class, "CriterionChooser.descendingRadio.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

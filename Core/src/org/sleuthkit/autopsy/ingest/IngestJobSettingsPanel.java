@@ -240,6 +240,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(160, 160, 160)));
         jPanel1.setPreferredSize(new java.awt.Dimension(338, 257));
 
+        globalSettingsButton.setFont(globalSettingsButton.getFont().deriveFont(globalSettingsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         globalSettingsButton.setText(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.globalSettingsButton.text")); // NOI18N
         globalSettingsButton.setActionCommand(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.globalSettingsButton.actionCommand")); // NOI18N
         globalSettingsButton.setEnabled(false);
@@ -249,6 +250,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        descriptionLabel.setFont(descriptionLabel.getFont().deriveFont(descriptionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         descriptionLabel.setText("DO NOT REMOVE. This dummy text is used to anchor the inner panel's size to the outer panel, while still being expandable. Without this the expandability behavior doesn't work well. This text will never be shown, as it would only be shown when no module is selected (which is not possible).");
 
         jScrollPane1.setBorder(null);
@@ -277,7 +279,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8)
@@ -287,6 +289,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
                 .addGap(8, 8, 8))
         );
 
+        jButtonSelectAll.setFont(jButtonSelectAll.getFont().deriveFont(jButtonSelectAll.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jButtonSelectAll.setText(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.jButtonSelectAll.text")); // NOI18N
         jButtonSelectAll.setMargin(new java.awt.Insets(2, 8, 2, 8));
         jButtonSelectAll.setMaximumSize(new java.awt.Dimension(87, 23));
@@ -298,6 +301,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        jButtonDeselectAll.setFont(jButtonDeselectAll.getFont().deriveFont(jButtonDeselectAll.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jButtonDeselectAll.setText(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.jButtonDeselectAll.text")); // NOI18N
         jButtonDeselectAll.setMargin(new java.awt.Insets(2, 8, 2, 8));
         jButtonDeselectAll.setPreferredSize(new java.awt.Dimension(86, 23));
@@ -307,6 +311,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        pastJobsButton.setFont(pastJobsButton.getFont().deriveFont(pastJobsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pastJobsButton.setText(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.pastJobsButton.text")); // NOI18N
         pastJobsButton.setMargin(new java.awt.Insets(2, 8, 2, 8));
         pastJobsButton.setMaximumSize(new java.awt.Dimension(87, 23));
@@ -318,6 +323,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        fileIngestFilterLabel.setFont(fileIngestFilterLabel.getFont().deriveFont(fileIngestFilterLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         fileIngestFilterLabel.setText(org.openide.util.NbBundle.getMessage(IngestJobSettingsPanel.class, "IngestJobSettingsPanel.fileIngestFilterLabel.text")); // NOI18N
 
         fileIngestFilterComboBox.setModel(new DefaultComboBoxModel<>(getComboBoxContents()));
@@ -366,7 +372,7 @@ public final class IngestJobSettingsPanel extends javax.swing.JPanel {
                             .addComponent(jButtonSelectAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonDeselectAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pastJobsButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

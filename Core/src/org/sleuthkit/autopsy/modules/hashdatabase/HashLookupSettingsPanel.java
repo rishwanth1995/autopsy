@@ -755,16 +755,22 @@ public final class HashLookupSettingsPanel extends IngestModuleGlobalSettingsPan
             }
         });
 
+        versionLabel.setFont(versionLabel.getFont().deriveFont(versionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(versionLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.versionLabel.text_1")); // NOI18N
 
+        hashDbVersionLabel.setFont(hashDbVersionLabel.getFont().deriveFont(hashDbVersionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(hashDbVersionLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.hashDbVersionLabel.text_1")); // NOI18N
 
+        orgLabel.setFont(orgLabel.getFont().deriveFont(orgLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.orgLabel.text_1")); // NOI18N
 
+        hashDbOrgLabel.setFont(hashDbOrgLabel.getFont().deriveFont(hashDbOrgLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(hashDbOrgLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.hashDbOrgLabel.text_1")); // NOI18N
 
+        readOnlyLabel.setFont(readOnlyLabel.getFont().deriveFont(readOnlyLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(readOnlyLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.readOnlyLabel.text_1")); // NOI18N
 
+        hashDbReadOnlyLabel.setFont(hashDbReadOnlyLabel.getFont().deriveFont(hashDbReadOnlyLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(hashDbReadOnlyLabel, org.openide.util.NbBundle.getMessage(HashLookupSettingsPanel.class, "HashLookupSettingsPanel.hashDbReadOnlyLabel.text_1")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

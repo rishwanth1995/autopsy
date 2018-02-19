@@ -201,6 +201,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        saveAsButton.setFont(saveAsButton.getFont().deriveFont(saveAsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(saveAsButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.saveAsButton.text")); // NOI18N
         saveAsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,6 +209,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,6 +218,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(knownRadioButton);
+        knownRadioButton.setFont(knownRadioButton.getFont().deriveFont(knownRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(knownRadioButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.knownRadioButton.text")); // NOI18N
         knownRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,6 +227,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(knownBadRadioButton);
+        knownBadRadioButton.setFont(knownBadRadioButton.getFont().deriveFont(knownBadRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownBadRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(knownBadRadioButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.knownBadRadioButton.text")); // NOI18N
         knownBadRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -232,12 +236,15 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        databasePathLabel.setFont(databasePathLabel.getFont().deriveFont(databasePathLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(databasePathLabel, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.databasePathLabel.text")); // NOI18N
 
         hashSetNameTextField.setText(org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.hashSetNameTextField.text")); // NOI18N
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.jLabel2.text")); // NOI18N
 
+        sendIngestMessagesCheckbox.setFont(sendIngestMessagesCheckbox.getFont().deriveFont(sendIngestMessagesCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sendIngestMessagesCheckbox.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(sendIngestMessagesCheckbox, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.sendIngestMessagesCheckbox.text")); // NOI18N
         sendIngestMessagesCheckbox.addActionListener(new java.awt.event.ActionListener() {
@@ -246,11 +253,13 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.jLabel3.text")); // NOI18N
 
         databasePathTextField.setEditable(false);
         databasePathTextField.setText(org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.databasePathTextField.text")); // NOI18N
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,9 +267,11 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.jLabel4.text")); // NOI18N
 
         storageTypeButtonGroup.add(fileTypeRadioButton);
+        fileTypeRadioButton.setFont(fileTypeRadioButton.getFont().deriveFont(fileTypeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         fileTypeRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(fileTypeRadioButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.fileTypeRadioButton.text")); // NOI18N
         fileTypeRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +281,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
         });
 
         storageTypeButtonGroup.add(centralRepoRadioButton);
+        centralRepoRadioButton.setFont(centralRepoRadioButton.getFont().deriveFont(centralRepoRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(centralRepoRadioButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.centralRepoRadioButton.text")); // NOI18N
         centralRepoRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,6 +289,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        lbOrg.setFont(lbOrg.getFont().deriveFont(lbOrg.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbOrg, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.lbOrg.text")); // NOI18N
 
         orgComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -285,6 +298,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        orgButton.setFont(orgButton.getFont().deriveFont(orgButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgButton, org.openide.util.NbBundle.getMessage(HashDbCreateDatabaseDialog.class, "HashDbCreateDatabaseDialog.orgButton.text")); // NOI18N
         orgButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -325,7 +339,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
                                         .addComponent(fileTypeRadioButton)
                                         .addGap(22, 22, 22)
                                         .addComponent(centralRepoRadioButton))
-                                    .addComponent(hashSetNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                    .addComponent(hashSetNameTextField)
                                     .addComponent(databasePathTextField))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(saveAsButton)))
@@ -372,7 +386,7 @@ final class HashDbCreateDatabaseDialog extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(sendIngestMessagesCheckbox)
-                        .addGap(0, 27, Short.MAX_VALUE))
+                        .addGap(0, 35, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

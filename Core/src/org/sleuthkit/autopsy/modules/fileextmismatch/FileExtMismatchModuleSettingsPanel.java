@@ -76,6 +76,7 @@ final class FileExtMismatchModuleSettingsPanel extends IngestModuleIngestJobSett
         checkNoTextRadioButton = new javax.swing.JRadioButton();
         checkMediaExeRadioButton = new javax.swing.JRadioButton();
 
+        skipNoExtCheckBox.setFont(skipNoExtCheckBox.getFont().deriveFont(skipNoExtCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         skipNoExtCheckBox.setSelected(true);
         skipNoExtCheckBox.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchModuleSettingsPanel.class, "FileExtMismatchModuleSettingsPanel.skipNoExtCheckBox.text")); // NOI18N
         skipNoExtCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +85,7 @@ final class FileExtMismatchModuleSettingsPanel extends IngestModuleIngestJobSett
             }
         });
 
+        skipKnownFiles.setFont(skipKnownFiles.getFont().deriveFont(skipKnownFiles.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         skipKnownFiles.setSelected(true);
         skipKnownFiles.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchModuleSettingsPanel.class, "FileExtMismatchModuleSettingsPanel.skipKnownFiles.text")); // NOI18N
         skipKnownFiles.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +95,7 @@ final class FileExtMismatchModuleSettingsPanel extends IngestModuleIngestJobSett
         });
 
         checkTypeButtonGroup.add(checkAllRadioButton);
+        checkAllRadioButton.setFont(checkAllRadioButton.getFont().deriveFont(checkAllRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         checkAllRadioButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchModuleSettingsPanel.class, "FileExtMismatchModuleSettingsPanel.checkAllRadioButton.text")); // NOI18N
         checkAllRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +104,7 @@ final class FileExtMismatchModuleSettingsPanel extends IngestModuleIngestJobSett
         });
 
         checkTypeButtonGroup.add(checkNoTextRadioButton);
+        checkNoTextRadioButton.setFont(checkNoTextRadioButton.getFont().deriveFont(checkNoTextRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         checkNoTextRadioButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchModuleSettingsPanel.class, "FileExtMismatchModuleSettingsPanel.checkNoTextRadioButton.text")); // NOI18N
         checkNoTextRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +113,7 @@ final class FileExtMismatchModuleSettingsPanel extends IngestModuleIngestJobSett
         });
 
         checkTypeButtonGroup.add(checkMediaExeRadioButton);
+        checkMediaExeRadioButton.setFont(checkMediaExeRadioButton.getFont().deriveFont(checkMediaExeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         checkMediaExeRadioButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchModuleSettingsPanel.class, "FileExtMismatchModuleSettingsPanel.checkMediaExeRadioButton.text")); // NOI18N
         checkMediaExeRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

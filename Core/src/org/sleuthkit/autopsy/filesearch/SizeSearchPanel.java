@@ -148,6 +148,7 @@ class SizeSearchPanel extends javax.swing.JPanel {
 
         sizeCompareComboBox.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "equal to", "greater than", "less than" }));
 
+        sizeCheckBox.setFont(sizeCheckBox.getFont().deriveFont(sizeCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sizeCheckBox.setText(org.openide.util.NbBundle.getMessage(SizeSearchPanel.class, "SizeSearchPanel.sizeCheckBox.text")); // NOI18N
         sizeCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

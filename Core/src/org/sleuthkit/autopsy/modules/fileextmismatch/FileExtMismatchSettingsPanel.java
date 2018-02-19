@@ -166,11 +166,13 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
         mimePanel.setPreferredSize(new java.awt.Dimension(369, 424));
         mimePanel.setRequestFocusEnabled(false);
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jLabel1.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.jLabel1.text")); // NOI18N
 
         mimeTable.setModel(mimeTableModel);
         jScrollPane2.setViewportView(mimeTable);
 
+        newTypeButton.setFont(newTypeButton.getFont().deriveFont(newTypeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         newTypeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/add16.png"))); // NOI18N
         newTypeButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.newTypeButton.text")); // NOI18N
         newTypeButton.setMaximumSize(new java.awt.Dimension(111, 25));
@@ -182,6 +184,7 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
             }
         });
 
+        removeTypeButton.setFont(removeTypeButton.getFont().deriveFont(removeTypeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         removeTypeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/delete16.png"))); // NOI18N
         removeTypeButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.removeTypeButton.text")); // NOI18N
         removeTypeButton.setToolTipText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.removeTypeButton.toolTipText")); // NOI18N
@@ -217,9 +220,9 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(mimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mimePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(newTypeButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(removeTypeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
@@ -229,6 +232,7 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
 
         extensionPanel.setPreferredSize(new java.awt.Dimension(344, 424));
 
+        newExtButton.setFont(newExtButton.getFont().deriveFont(newExtButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         newExtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/add16.png"))); // NOI18N
         newExtButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.newExtButton.text")); // NOI18N
         newExtButton.setMaximumSize(new java.awt.Dimension(111, 25));
@@ -242,6 +246,7 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
         extTable.setModel(extTableModel);
         jScrollPane3.setViewportView(extTable);
 
+        removeExtButton.setFont(removeExtButton.getFont().deriveFont(removeExtButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         removeExtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/delete16.png"))); // NOI18N
         removeExtButton.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.removeExtButton.text")); // NOI18N
         removeExtButton.addActionListener(new java.awt.event.ActionListener() {
@@ -250,6 +255,7 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
             }
         });
 
+        extHeaderLabel.setFont(extHeaderLabel.getFont().deriveFont(extHeaderLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         extHeaderLabel.setText(org.openide.util.NbBundle.getMessage(FileExtMismatchSettingsPanel.class, "FileExtMismatchSettingsPanel.extHeaderLabel.text")); // NOI18N
 
         javax.swing.GroupLayout extensionPanelLayout = new javax.swing.GroupLayout(extensionPanel);
@@ -276,7 +282,7 @@ final class FileExtMismatchSettingsPanel extends IngestModuleGlobalSettingsPanel
                 .addContainerGap()
                 .addComponent(extHeaderLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(extensionPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newExtButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

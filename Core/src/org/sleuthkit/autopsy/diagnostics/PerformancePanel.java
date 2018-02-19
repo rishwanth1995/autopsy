@@ -76,22 +76,27 @@ public class PerformancePanel extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.jLabel1.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(imgReadLabel, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.imgReadLabel.text")); // NOI18N
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.jLabel2.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(dbReadLabel, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.dbReadLabel.text")); // NOI18N
 
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.jLabel4.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(fileReadLabel, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.fileReadLabel.text")); // NOI18N
 
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.jLabel3.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(cpuTimeLabel, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.cpuTimeLabel.text")); // NOI18N
 
+        startButton.setFont(startButton.getFont().deriveFont(startButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(startButton, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.startButton.text")); // NOI18N
         startButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +106,7 @@ public class PerformancePanel extends javax.swing.JDialog {
 
         org.openide.awt.Mnemonics.setLocalizedText(statusLabel, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.statusLabel.text")); // NOI18N
 
+        jLabel5.setFont(jLabel5.getFont().deriveFont(jLabel5.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(PerformancePanel.class, "PerformancePanel.jLabel5.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

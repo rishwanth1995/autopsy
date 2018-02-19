@@ -131,6 +131,9 @@ final class MessageBrowser extends javax.swing.JPanel implements ExplorerManager
         splitPane.setDividerSize(10);
         splitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
         splitPane.setResizeWeight(0.5);
+        splitPane.setFont(splitPane.getFont().deriveFont(splitPane.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+
+        messageDataContent.setFont(messageDataContent.getFont().deriveFont(messageDataContent.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         splitPane.setBottomComponent(messageDataContent);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

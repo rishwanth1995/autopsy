@@ -59,6 +59,7 @@ final class DataSourceIngestCancellationPanel extends javax.swing.JPanel {
         cancelAllModulesRadioButton = new javax.swing.JRadioButton();
 
         cancelRadioButtonsGroup.add(cancelCurrentModuleRadioButton);
+        cancelCurrentModuleRadioButton.setFont(cancelCurrentModuleRadioButton.getFont().deriveFont(cancelCurrentModuleRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelCurrentModuleRadioButton, org.openide.util.NbBundle.getMessage(DataSourceIngestCancellationPanel.class, "DataSourceIngestCancellationPanel.cancelCurrentModuleRadioButton.text")); // NOI18N
         cancelCurrentModuleRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +68,7 @@ final class DataSourceIngestCancellationPanel extends javax.swing.JPanel {
         });
 
         cancelRadioButtonsGroup.add(cancelAllModulesRadioButton);
+        cancelAllModulesRadioButton.setFont(cancelAllModulesRadioButton.getFont().deriveFont(cancelAllModulesRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelAllModulesRadioButton, org.openide.util.NbBundle.getMessage(DataSourceIngestCancellationPanel.class, "DataSourceIngestCancellationPanel.cancelAllModulesRadioButton.text")); // NOI18N
         cancelAllModulesRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

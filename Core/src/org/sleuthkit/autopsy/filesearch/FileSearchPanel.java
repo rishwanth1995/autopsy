@@ -289,6 +289,7 @@ class FileSearchPanel extends javax.swing.JPanel {
         filterPanel.setPreferredSize(new java.awt.Dimension(300, 400));
         filterPanel.setLayout(new javax.swing.BoxLayout(filterPanel, javax.swing.BoxLayout.Y_AXIS));
 
+        searchButton.setFont(searchButton.getFont().deriveFont(searchButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         searchButton.setText(org.openide.util.NbBundle.getMessage(FileSearchPanel.class, "FileSearchPanel.searchButton.text")); // NOI18N
 
         errorLabel.setForeground(new java.awt.Color(255, 51, 51));
@@ -309,7 +310,7 @@ class FileSearchPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(filterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
+                .addComponent(filterPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(searchButton)
                     .addComponent(errorLabel))

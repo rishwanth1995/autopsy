@@ -110,6 +110,7 @@ class ProfilePanel extends IngestModuleGlobalSettingsPanel {
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(650, 323));
 
+        profileDescLabel.setFont(profileDescLabel.getFont().deriveFont(profileDescLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(profileDescLabel, org.openide.util.NbBundle.getMessage(ProfilePanel.class, "ProfilePanel.profileDescLabel.text")); // NOI18N
 
         profileDescArea.setColumns(20);
@@ -120,6 +121,7 @@ class ProfilePanel extends IngestModuleGlobalSettingsPanel {
         profileDescArea.setName(""); // NOI18N
         profileDescPane.setViewportView(profileDescArea);
 
+        profileNameLabel.setFont(profileNameLabel.getFont().deriveFont(profileNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(profileNameLabel, org.openide.util.NbBundle.getMessage(ProfilePanel.class, "ProfilePanel.profileNameLabel.text")); // NOI18N
 
         jPanel1.setMinimumSize(new java.awt.Dimension(625, 450));

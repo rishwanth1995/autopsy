@@ -81,6 +81,7 @@ public class STIXReportModuleConfigPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jCheckBox1 = new javax.swing.JCheckBox();
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jLabel2.setText(org.openide.util.NbBundle.getMessage(STIXReportModuleConfigPanel.class, "STIXReportModuleConfigPanel.jLabel2.text")); // NOI18N
 
         jTextField1.setText(org.openide.util.NbBundle.getMessage(STIXReportModuleConfigPanel.class, "STIXReportModuleConfigPanel.jTextField1.text")); // NOI18N
@@ -98,6 +99,7 @@ public class STIXReportModuleConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jButton1.setText(org.openide.util.NbBundle.getMessage(STIXReportModuleConfigPanel.class, "STIXReportModuleConfigPanel.jButton1.text")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +107,7 @@ public class STIXReportModuleConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        jCheckBox1.setFont(jCheckBox1.getFont().deriveFont(jCheckBox1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jCheckBox1.setText(org.openide.util.NbBundle.getMessage(STIXReportModuleConfigPanel.class, "STIXReportModuleConfigPanel.jCheckBox1.text")); // NOI18N
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,7 +128,7 @@ public class STIXReportModuleConfigPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton1))
                     .addComponent(jCheckBox1))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +141,7 @@ public class STIXReportModuleConfigPanel extends javax.swing.JPanel {
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jCheckBox1)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

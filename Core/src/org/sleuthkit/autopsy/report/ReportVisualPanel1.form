@@ -48,7 +48,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="configurationPanel" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="modulesScrollPane" pref="208" max="32767" attributes="0"/>
+                  <Component id="modulesScrollPane" pref="206" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -58,6 +58,11 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="reportModulesLabel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="reportModulesLabel" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/report/Bundle.properties" key="ReportVisualPanel1.reportModulesLabel.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
@@ -82,7 +87,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="168" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="166" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

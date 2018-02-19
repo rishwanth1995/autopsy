@@ -59,6 +59,7 @@ class ProgressPanel extends javax.swing.JPanel {
         progressMessage = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
 
+        progressMessage.setFont(progressMessage.getFont().deriveFont(progressMessage.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(progressMessage, org.openide.util.NbBundle.getMessage(ProgressPanel.class, "ProgressPanel.progressMessage.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -79,7 +80,7 @@ class ProgressPanel extends javax.swing.JPanel {
                 .addComponent(progressMessage)
                 .addGap(18, 18, 18)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

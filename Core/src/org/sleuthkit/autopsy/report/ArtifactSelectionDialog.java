@@ -151,6 +151,7 @@ public class ArtifactSelectionDialog extends javax.swing.JDialog {
         artifactList.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
         artifactScrollPane.setViewportView(artifactList);
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(ArtifactSelectionDialog.class, "ArtifactSelectionDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,8 +159,10 @@ public class ArtifactSelectionDialog extends javax.swing.JDialog {
             }
         });
 
+        titleLabel.setFont(titleLabel.getFont().deriveFont(titleLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(titleLabel, org.openide.util.NbBundle.getMessage(ArtifactSelectionDialog.class, "ArtifactSelectionDialog.titleLabel.text")); // NOI18N
 
+        selectAllButton.setFont(selectAllButton.getFont().deriveFont(selectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(selectAllButton, org.openide.util.NbBundle.getMessage(ArtifactSelectionDialog.class, "ArtifactSelectionDialog.selectAllButton.text")); // NOI18N
         selectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,6 +170,7 @@ public class ArtifactSelectionDialog extends javax.swing.JDialog {
             }
         });
 
+        deselectAllButton.setFont(deselectAllButton.getFont().deriveFont(deselectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(deselectAllButton, org.openide.util.NbBundle.getMessage(ArtifactSelectionDialog.class, "ArtifactSelectionDialog.deselectAllButton.text")); // NOI18N
         deselectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,7 +193,7 @@ public class ArtifactSelectionDialog extends javax.swing.JDialog {
                             .addComponent(selectAllButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(titleLabel)
-                        .addGap(0, 221, Short.MAX_VALUE))
+                        .addGap(0, 315, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(okButton)))
@@ -202,7 +206,7 @@ public class ArtifactSelectionDialog extends javax.swing.JDialog {
                 .addComponent(titleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(artifactScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addComponent(artifactScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(selectAllButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

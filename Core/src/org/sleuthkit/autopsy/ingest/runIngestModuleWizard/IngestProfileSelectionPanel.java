@@ -249,6 +249,7 @@ final class IngestProfileSelectionPanel extends JPanel {
         setMaximumSize(new java.awt.Dimension(5750, 3000));
         setPreferredSize(new java.awt.Dimension(625, 450));
 
+        ingestSettingsButton.setFont(ingestSettingsButton.getFont().deriveFont(ingestSettingsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ingestSettingsButton, org.openide.util.NbBundle.getMessage(IngestProfileSelectionPanel.class, "IngestProfileSelectionPanel.ingestSettingsButton.text")); // NOI18N
         ingestSettingsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -262,6 +263,7 @@ final class IngestProfileSelectionPanel extends JPanel {
         profileListPanel.setLayout(new java.awt.GridBagLayout());
         profileListScrollPane.setViewportView(profileListPanel);
 
+        profileListLabel.setFont(profileListLabel.getFont().deriveFont(profileListLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(profileListLabel, org.openide.util.NbBundle.getMessage(IngestProfileSelectionPanel.class, "IngestProfileSelectionPanel.profileListLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -285,7 +287,7 @@ final class IngestProfileSelectionPanel extends JPanel {
                 .addContainerGap()
                 .addComponent(profileListLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(profileListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
+                .addComponent(profileListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ingestSettingsButton)
                 .addGap(18, 18, 18))

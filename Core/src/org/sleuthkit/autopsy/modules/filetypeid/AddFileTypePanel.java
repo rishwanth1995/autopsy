@@ -227,6 +227,7 @@ class AddFileTypePanel extends javax.swing.JPanel {
         setNameTextField = new javax.swing.JTextField();
         mimeFormatLabel = new javax.swing.JLabel();
 
+        editSigButton.setFont(editSigButton.getFont().deriveFont(editSigButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         editSigButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/edit16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(editSigButton, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.editSigButton.text")); // NOI18N
         editSigButton.addActionListener(new java.awt.event.ActionListener() {
@@ -235,6 +236,7 @@ class AddFileTypePanel extends javax.swing.JPanel {
             }
         });
 
+        deleteSigButton.setFont(deleteSigButton.getFont().deriveFont(deleteSigButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         deleteSigButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/delete16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(deleteSigButton, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.deleteSigButton.text")); // NOI18N
         deleteSigButton.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +258,7 @@ class AddFileTypePanel extends javax.swing.JPanel {
         mimeTypeTextField.setFont(mimeTypeTextField.getFont().deriveFont(mimeTypeTextField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         mimeTypeTextField.setText(org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.mimeTypeTextField.text")); // NOI18N
 
+        addSigButton.setFont(addSigButton.getFont().deriveFont(addSigButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         addSigButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/add16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(addSigButton, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.addSigButton.text")); // NOI18N
         addSigButton.addActionListener(new java.awt.event.ActionListener() {
@@ -264,8 +267,10 @@ class AddFileTypePanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.jLabel1.text")); // NOI18N
 
+        postHitCheckBox.setFont(postHitCheckBox.getFont().deriveFont(postHitCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(postHitCheckBox, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.postHitCheckBox.text")); // NOI18N
         postHitCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,12 +278,14 @@ class AddFileTypePanel extends javax.swing.JPanel {
             }
         });
 
+        setNameLabel.setFont(setNameLabel.getFont().deriveFont(setNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(setNameLabel, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.setNameLabel.text")); // NOI18N
         setNameLabel.setEnabled(postHitCheckBox.isSelected());
 
         setNameTextField.setText(org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.setNameTextField.text")); // NOI18N
         setNameTextField.setEnabled(postHitCheckBox.isSelected());
 
+        mimeFormatLabel.setFont(mimeFormatLabel.getFont().deriveFont(mimeFormatLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(mimeFormatLabel, org.openide.util.NbBundle.getMessage(AddFileTypePanel.class, "AddFileTypePanel.mimeFormatLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

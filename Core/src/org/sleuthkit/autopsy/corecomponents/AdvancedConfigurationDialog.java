@@ -101,8 +101,10 @@ public class AdvancedConfigurationDialog extends javax.swing.JDialog {
         jPanel1.setMinimumSize(new java.awt.Dimension(100, 27));
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 27));
 
+        applyButton.setFont(applyButton.getFont().deriveFont(applyButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         applyButton.setText(org.openide.util.NbBundle.getMessage(AdvancedConfigurationDialog.class, "AdvancedConfigurationDialog.applyButton.text")); // NOI18N
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cancelButton.setText(org.openide.util.NbBundle.getMessage(AdvancedConfigurationDialog.class, "AdvancedConfigurationDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +129,7 @@ public class AdvancedConfigurationDialog extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(applyButton)
                     .addComponent(cancelButton))
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);

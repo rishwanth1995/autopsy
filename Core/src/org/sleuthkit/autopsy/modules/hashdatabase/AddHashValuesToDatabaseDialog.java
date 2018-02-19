@@ -100,6 +100,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle(org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseDialog.class, "AddHashValuesToDatabaseDialog.title")); // NOI18N
 
+        instructionLabel.setFont(instructionLabel.getFont().deriveFont(instructionLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(instructionLabel, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseDialog.class, "AddHashValuesToDatabaseDialog.instructionLabel.text_1")); // NOI18N
 
         hashValuesTextArea.setColumns(20);
@@ -111,6 +112,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(hashValuesTextArea);
 
+        pasteFromClipboardButton.setFont(pasteFromClipboardButton.getFont().deriveFont(pasteFromClipboardButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pasteFromClipboardButton, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseDialog.class, "AddHashValuesToDatabaseDialog.pasteFromClipboardButton.text_2")); // NOI18N
         pasteFromClipboardButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +120,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        AddValuesToHashDatabaseButton.setFont(AddValuesToHashDatabaseButton.getFont().deriveFont(AddValuesToHashDatabaseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(AddValuesToHashDatabaseButton, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseDialog.class, "AddHashValuesToDatabaseDialog.AddValuesToHashDatabaseButton.text_2")); // NOI18N
         AddValuesToHashDatabaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +128,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseDialog.class, "AddHashValuesToDatabaseDialog.cancelButton.text_2")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +145,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(instructionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 41, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,7 +167,7 @@ public class AddHashValuesToDatabaseDialog extends javax.swing.JDialog {
                         .addComponent(cancelButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(pasteFromClipboardButton))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE))
                 .addContainerGap())
         );
 

@@ -143,8 +143,10 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
         sortButton = new javax.swing.JButton();
         sortLabel = new javax.swing.JLabel();
 
+        pageLabel.setFont(pageLabel.getFont().deriveFont(pageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pageLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.pageLabel.text")); // NOI18N
 
+        pagesLabel.setFont(pagesLabel.getFont().deriveFont(pagesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pagesLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.pagesLabel.text")); // NOI18N
 
         pagePrevButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/corecomponents/btn_step_back.png"))); // NOI18N
@@ -178,6 +180,7 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
             }
         });
 
+        imagesLabel.setFont(imagesLabel.getFont().deriveFont(imagesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         imagesLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.imagesLabel.text")); // NOI18N
 
         imagesRangeLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.imagesRangeLabel.text")); // NOI18N
@@ -186,6 +189,7 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
 
         filePathLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.filePathLabel.text")); // NOI18N
 
+        goToPageLabel.setFont(goToPageLabel.getFont().deriveFont(goToPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         goToPageLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.goToPageLabel.text")); // NOI18N
 
         goToPageField.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.goToPageField.text")); // NOI18N
@@ -201,6 +205,7 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
             }
         });
 
+        sortButton.setFont(sortButton.getFont().deriveFont(sortButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sortButton.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.sortButton.text")); // NOI18N
         sortButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -208,6 +213,7 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
             }
         });
 
+        sortLabel.setFont(sortLabel.getFont().deriveFont(sortLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sortLabel.setText(org.openide.util.NbBundle.getMessage(DataResultViewerThumbnail.class, "DataResultViewerThumbnail.sortLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -262,7 +268,7 @@ final class DataResultViewerThumbnail extends AbstractDataResultViewer {
                     .addComponent(sortButton)
                     .addComponent(sortLabel))
                 .addGap(13, 13, 13)
-                .addComponent(iconView, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE)
+                .addComponent(iconView, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(filePathLabel))
         );

@@ -149,6 +149,7 @@ class ReportWizardFileOptionsVisualPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(optionsList);
 
+        selectAllButton.setFont(selectAllButton.getFont().deriveFont(selectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(selectAllButton, org.openide.util.NbBundle.getMessage(ReportWizardFileOptionsVisualPanel.class, "ReportWizardFileOptionsVisualPanel.selectAllButton.text")); // NOI18N
         selectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,6 +157,7 @@ class ReportWizardFileOptionsVisualPanel extends javax.swing.JPanel {
             }
         });
 
+        deselectAllButton.setFont(deselectAllButton.getFont().deriveFont(deselectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(deselectAllButton, org.openide.util.NbBundle.getMessage(ReportWizardFileOptionsVisualPanel.class, "ReportWizardFileOptionsVisualPanel.deselectAllButton.text")); // NOI18N
         deselectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,6 +165,7 @@ class ReportWizardFileOptionsVisualPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(ReportWizardFileOptionsVisualPanel.class, "ReportWizardFileOptionsVisualPanel.jLabel1.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -180,7 +183,7 @@ class ReportWizardFileOptionsVisualPanel extends javax.swing.JPanel {
                                 .addComponent(selectAllButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(deselectAllButton)))
-                        .addGap(0, 210, Short.MAX_VALUE)))
+                        .addGap(0, 276, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -189,7 +192,7 @@ class ReportWizardFileOptionsVisualPanel extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deselectAllButton)

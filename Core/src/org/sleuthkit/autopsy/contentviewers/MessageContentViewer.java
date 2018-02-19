@@ -150,30 +150,41 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
         attachmentsScrollPane = new javax.swing.JScrollPane();
 
         envelopePanel.setBackground(new java.awt.Color(204, 204, 204));
+        envelopePanel.setFont(envelopePanel.getFont().deriveFont(envelopePanel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
+        fromLabel.setFont(fromLabel.getFont().deriveFont((float)11));
         org.openide.awt.Mnemonics.setLocalizedText(fromLabel, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.fromLabel.text")); // NOI18N
 
+        datetimeText.setFont(datetimeText.getFont().deriveFont(datetimeText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         datetimeText.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         org.openide.awt.Mnemonics.setLocalizedText(datetimeText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.datetimeText.text")); // NOI18N
 
+        fromText.setFont(fromText.getFont().deriveFont(fromText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(fromText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.fromText.text")); // NOI18N
 
+        toLabel.setFont(toLabel.getFont().deriveFont(toLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(toLabel, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.toLabel.text")); // NOI18N
 
+        toText.setFont(toText.getFont().deriveFont(toText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(toText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.toText.text")); // NOI18N
         toText.setAutoscrolls(true);
         toText.setMinimumSize(new java.awt.Dimension(27, 14));
 
+        ccLabel.setFont(ccLabel.getFont().deriveFont(ccLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ccLabel, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.ccLabel.text")); // NOI18N
 
+        ccText.setFont(ccText.getFont().deriveFont(ccText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ccText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.ccText.text")); // NOI18N
         ccText.setMinimumSize(new java.awt.Dimension(27, 14));
 
+        subjectLabel.setFont(subjectLabel.getFont().deriveFont(subjectLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(subjectLabel, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.subjectLabel.text")); // NOI18N
 
+        subjectText.setFont(subjectText.getFont().deriveFont(subjectText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(subjectText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.subjectText.text")); // NOI18N
         subjectText.setMinimumSize(new java.awt.Dimension(26, 14));
 
+        directionText.setFont(directionText.getFont().deriveFont(directionText.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         directionText.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         org.openide.awt.Mnemonics.setLocalizedText(directionText, org.openide.util.NbBundle.getMessage(MessageContentViewer.class, "MessageContentViewer.directionText.text")); // NOI18N
 
@@ -232,6 +243,8 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
                 .addGap(5, 5, 5))
         );
 
+        msgbodyTabbedPane.setFont(msgbodyTabbedPane.getFont().deriveFont(msgbodyTabbedPane.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+
         headersScrollPane.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         headersScrollPane.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
@@ -260,6 +273,7 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
         htmlbodyTextPane.setEditable(false);
         htmlScrollPane.setViewportView(htmlbodyTextPane);
 
+        showImagesToggleButton.setFont(showImagesToggleButton.getFont().deriveFont(showImagesToggleButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(showImagesToggleButton, "Show Images");
         showImagesToggleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,7 +287,7 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
             htmlPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(htmlScrollPane)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, htmlPaneLayout.createSequentialGroup()
-                .addContainerGap(533, Short.MAX_VALUE)
+                .addContainerGap(567, Short.MAX_VALUE)
                 .addComponent(showImagesToggleButton)
                 .addGap(3, 3, 3))
         );
@@ -282,7 +296,7 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
             .addGroup(htmlPaneLayout.createSequentialGroup()
                 .addComponent(showImagesToggleButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(htmlScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+                .addComponent(htmlScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 
@@ -320,7 +334,7 @@ public class MessageContentViewer extends javax.swing.JPanel implements DataCont
                 .addGap(0, 0, 0)
                 .addComponent(viewInNewWindowButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(attachmentsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+                .addComponent(attachmentsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
 

@@ -121,15 +121,19 @@ public class DataContentViewerHex extends javax.swing.JPanel implements DataCont
 
         hexViewerPanel.setPreferredSize(new java.awt.Dimension(610, 23));
 
+        totalPageLabel.setFont(totalPageLabel.getFont().deriveFont(totalPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         totalPageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.totalPageLabel.text_1")); // NOI18N
 
+        ofLabel.setFont(ofLabel.getFont().deriveFont(ofLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         ofLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.ofLabel.text_1")); // NOI18N
 
+        currentPageLabel.setFont(currentPageLabel.getFont().deriveFont(currentPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         currentPageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.currentPageLabel.text_1")); // NOI18N
         currentPageLabel.setMaximumSize(new java.awt.Dimension(18, 14));
         currentPageLabel.setMinimumSize(new java.awt.Dimension(18, 14));
         currentPageLabel.setPreferredSize(new java.awt.Dimension(18, 14));
 
+        pageLabel.setFont(pageLabel.getFont().deriveFont(pageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.pageLabel.text_1")); // NOI18N
         pageLabel.setMaximumSize(new java.awt.Dimension(33, 14));
         pageLabel.setMinimumSize(new java.awt.Dimension(33, 14));
@@ -163,6 +167,7 @@ public class DataContentViewerHex extends javax.swing.JPanel implements DataCont
             }
         });
 
+        pageLabel2.setFont(pageLabel2.getFont().deriveFont(pageLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pageLabel2.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.pageLabel2.text")); // NOI18N
         pageLabel2.setMaximumSize(new java.awt.Dimension(29, 14));
         pageLabel2.setMinimumSize(new java.awt.Dimension(29, 14));
@@ -175,8 +180,10 @@ public class DataContentViewerHex extends javax.swing.JPanel implements DataCont
             }
         });
 
+        goToPageLabel.setFont(goToPageLabel.getFont().deriveFont(goToPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         goToPageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.goToPageLabel.text")); // NOI18N
 
+        goToOffsetLabel.setFont(goToOffsetLabel.getFont().deriveFont(goToOffsetLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         goToOffsetLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.goToOffsetLabel.text")); // NOI18N
 
         goToOffsetTextField.setText(org.openide.util.NbBundle.getMessage(DataContentViewerHex.class, "DataContentViewerHex.goToOffsetTextField.text")); // NOI18N
@@ -249,7 +256,7 @@ public class DataContentViewerHex extends javax.swing.JPanel implements DataCont
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(hexViewerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(hexViewerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(

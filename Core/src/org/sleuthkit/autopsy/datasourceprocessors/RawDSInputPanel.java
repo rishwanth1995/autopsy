@@ -119,10 +119,12 @@ final class RawDSInputPanel extends JPanel implements DocumentListener {
         timeZoneLabel = new javax.swing.JLabel();
         timeZoneComboBox = new javax.swing.JComboBox<>();
 
+        pathLabel.setFont(pathLabel.getFont().deriveFont(pathLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.pathLabel.text")); // NOI18N
 
         pathTextField.setText(org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.pathTextField.text")); // NOI18N
 
+        browseButton.setFont(browseButton.getFont().deriveFont(browseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseButton, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.browseButton.text")); // NOI18N
         browseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +133,7 @@ final class RawDSInputPanel extends JPanel implements DocumentListener {
         });
 
         infileTypeButtonGroup.add(j2GBBreakupRadioButton);
+        j2GBBreakupRadioButton.setFont(j2GBBreakupRadioButton.getFont().deriveFont(j2GBBreakupRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         j2GBBreakupRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(j2GBBreakupRadioButton, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.j2GBBreakupRadioButton.text")); // NOI18N
         j2GBBreakupRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -139,9 +142,11 @@ final class RawDSInputPanel extends JPanel implements DocumentListener {
             }
         });
 
+        jBreakFileUpLabel.setFont(jBreakFileUpLabel.getFont().deriveFont(jBreakFileUpLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jBreakFileUpLabel, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.jBreakFileUpLabel.text")); // NOI18N
 
         infileTypeButtonGroup.add(jNoBreakupRadioButton);
+        jNoBreakupRadioButton.setFont(jNoBreakupRadioButton.getFont().deriveFont(jNoBreakupRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jNoBreakupRadioButton, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.jNoBreakupRadioButton.text")); // NOI18N
         jNoBreakupRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,9 +154,11 @@ final class RawDSInputPanel extends JPanel implements DocumentListener {
             }
         });
 
+        errorLabel.setFont(errorLabel.getFont().deriveFont(errorLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         errorLabel.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(errorLabel, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.errorLabel.text")); // NOI18N
 
+        timeZoneLabel.setFont(timeZoneLabel.getFont().deriveFont(timeZoneLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(timeZoneLabel, org.openide.util.NbBundle.getMessage(RawDSInputPanel.class, "RawDSInputPanel.timeZoneLabel.text")); // NOI18N
 
         timeZoneComboBox.setMaximumRowCount(30);

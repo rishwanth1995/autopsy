@@ -91,6 +91,7 @@ final class SortChooser extends javax.swing.JPanel {
         scrollContent.setLayout(new javax.swing.BoxLayout(scrollContent, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(scrollContent);
 
+        addCriteriaButton.setFont(addCriteriaButton.getFont().deriveFont(addCriteriaButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(addCriteriaButton, org.openide.util.NbBundle.getMessage(SortChooser.class, "SortChooser.addCriteriaButton.text")); // NOI18N
         addCriteriaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +116,7 @@ final class SortChooser extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(addCriteriaButton)
                 .addContainerGap())

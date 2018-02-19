@@ -301,10 +301,13 @@ public final class HashLookupModuleSettingsPanel extends IngestModuleIngestJobSe
         knownHashTable.setShowVerticalLines(false);
         jScrollPane1.setViewportView(knownHashTable);
 
+        knownBadHashDbsLabel.setFont(knownBadHashDbsLabel.getFont().deriveFont(knownBadHashDbsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownBadHashDbsLabel.setText(org.openide.util.NbBundle.getMessage(HashLookupModuleSettingsPanel.class, "HashLookupModuleSettingsPanel.knownBadHashDbsLabel.text")); // NOI18N
 
+        knownHashDbsLabel.setFont(knownHashDbsLabel.getFont().deriveFont(knownHashDbsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownHashDbsLabel.setText(org.openide.util.NbBundle.getMessage(HashLookupModuleSettingsPanel.class, "HashLookupModuleSettingsPanel.knownHashDbsLabel.text")); // NOI18N
 
+        alwaysCalcHashesCheckbox.setFont(alwaysCalcHashesCheckbox.getFont().deriveFont(alwaysCalcHashesCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         alwaysCalcHashesCheckbox.setText(org.openide.util.NbBundle.getMessage(HashLookupModuleSettingsPanel.class, "HashLookupModuleSettingsPanel.alwaysCalcHashesCheckbox.text")); // NOI18N
         alwaysCalcHashesCheckbox.setToolTipText(org.openide.util.NbBundle.getMessage(HashLookupModuleSettingsPanel.class, "HashLookupModuleSettingsPanel.alwaysCalcHashesCheckbox.toolTipText")); // NOI18N
         alwaysCalcHashesCheckbox.setMaximumSize(new java.awt.Dimension(290, 35));
@@ -353,11 +356,11 @@ public final class HashLookupModuleSettingsPanel extends IngestModuleIngestJobSe
                 .addGap(2, 2, 2)
                 .addComponent(knownHashDbsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(knownBadHashDbsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(alwaysCalcHashesCheckbox, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))

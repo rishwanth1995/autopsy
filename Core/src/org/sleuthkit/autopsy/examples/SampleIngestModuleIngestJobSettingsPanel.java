@@ -71,6 +71,7 @@ public class SampleIngestModuleIngestJobSettingsPanel extends IngestModuleIngest
 
         skipKnownFilesCheckBox = new javax.swing.JCheckBox();
 
+        skipKnownFilesCheckBox.setFont(skipKnownFilesCheckBox.getFont().deriveFont(skipKnownFilesCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(skipKnownFilesCheckBox, org.openide.util.NbBundle.getMessage(SampleIngestModuleIngestJobSettingsPanel.class, "SampleIngestModuleIngestJobSettingsPanel.skipKnownFilesCheckBox.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -80,7 +81,7 @@ public class SampleIngestModuleIngestJobSettingsPanel extends IngestModuleIngest
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(skipKnownFilesCheckBox)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

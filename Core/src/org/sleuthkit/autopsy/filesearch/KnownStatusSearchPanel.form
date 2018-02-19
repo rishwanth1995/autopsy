@@ -28,7 +28,7 @@
                       <Component id="knownBadOptionCheckBox" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace pref="106" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -49,6 +49,11 @@
   <SubComponents>
     <Component class="javax.swing.JCheckBox" name="knownCheckBox">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="knownCheckBox" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/filesearch/Bundle.properties" key="KnownStatusSearchPanel.knownCheckBox.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
@@ -59,6 +64,11 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="unknownOptionCheckBox">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="unknownOptionCheckBox" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/filesearch/Bundle.properties" key="KnownStatusSearchPanel.unknownOptionCheckBox.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -70,6 +80,11 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="knownOptionCheckBox">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="knownOptionCheckBox" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/filesearch/Bundle.properties" key="KnownStatusSearchPanel.knownOptionCheckBox.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -81,6 +96,11 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="knownBadOptionCheckBox">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="knownBadOptionCheckBox" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="selected" type="boolean" value="true"/>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/filesearch/Bundle.properties" key="KnownStatusSearchPanel.knownBadOptionCheckBox.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>

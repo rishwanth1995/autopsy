@@ -580,6 +580,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
 
         agencyLogoPathField.setText(org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.agencyLogoPathField.text")); // NOI18N
 
+        browseLogosButton.setFont(browseLogosButton.getFont().deriveFont(browseLogosButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseLogosButton, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.browseLogosButton.text")); // NOI18N
         browseLogosButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -587,6 +588,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        agencyLogoPreview.setFont(agencyLogoPreview.getFont().deriveFont(agencyLogoPreview.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         agencyLogoPreview.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         org.openide.awt.Mnemonics.setLocalizedText(agencyLogoPreview, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.agencyLogoPreview.text")); // NOI18N
         agencyLogoPreview.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -595,6 +597,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
         agencyLogoPreview.setPreferredSize(new java.awt.Dimension(64, 64));
 
         logoSourceButtonGroup.add(defaultLogoRB);
+        defaultLogoRB.setFont(defaultLogoRB.getFont().deriveFont(defaultLogoRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(defaultLogoRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.defaultLogoRB.text")); // NOI18N
         defaultLogoRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -603,6 +606,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
         });
 
         logoSourceButtonGroup.add(specifyLogoRB);
+        specifyLogoRB.setFont(specifyLogoRB.getFont().deriveFont(specifyLogoRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(specifyLogoRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.specifyLogoRB.text")); // NOI18N
         specifyLogoRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -652,9 +656,11 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
 
         viewPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.viewPanel.border.title"))); // NOI18N
 
+        jLabelSelectFile.setFont(jLabelSelectFile.getFont().deriveFont(jLabelSelectFile.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelSelectFile, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.jLabelSelectFile.text")); // NOI18N
 
         fileSelectionButtonGroup.add(useBestViewerRB);
+        useBestViewerRB.setFont(useBestViewerRB.getFont().deriveFont(useBestViewerRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(useBestViewerRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.useBestViewerRB.text")); // NOI18N
         useBestViewerRB.setToolTipText(org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.useBestViewerRB.toolTipText")); // NOI18N
         useBestViewerRB.addActionListener(new java.awt.event.ActionListener() {
@@ -664,6 +670,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
         });
 
         fileSelectionButtonGroup.add(keepCurrentViewerRB);
+        keepCurrentViewerRB.setFont(keepCurrentViewerRB.getFont().deriveFont(keepCurrentViewerRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(keepCurrentViewerRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.keepCurrentViewerRB.text")); // NOI18N
         keepCurrentViewerRB.setToolTipText(org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.keepCurrentViewerRB.toolTipText")); // NOI18N
         keepCurrentViewerRB.addActionListener(new java.awt.event.ActionListener() {
@@ -672,8 +679,10 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabelHideKnownFiles.setFont(jLabelHideKnownFiles.getFont().deriveFont(jLabelHideKnownFiles.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelHideKnownFiles, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.jLabelHideKnownFiles.text")); // NOI18N
 
+        dataSourcesHideKnownCB.setFont(dataSourcesHideKnownCB.getFont().deriveFont(dataSourcesHideKnownCB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(dataSourcesHideKnownCB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.dataSourcesHideKnownCB.text")); // NOI18N
         dataSourcesHideKnownCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -681,6 +690,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        viewsHideKnownCB.setFont(viewsHideKnownCB.getFont().deriveFont(viewsHideKnownCB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(viewsHideKnownCB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.viewsHideKnownCB.text")); // NOI18N
         viewsHideKnownCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -688,8 +698,10 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabelHideSlackFiles.setFont(jLabelHideSlackFiles.getFont().deriveFont(jLabelHideSlackFiles.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelHideSlackFiles, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.jLabelHideSlackFiles.text")); // NOI18N
 
+        dataSourcesHideSlackCB.setFont(dataSourcesHideSlackCB.getFont().deriveFont(dataSourcesHideSlackCB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(dataSourcesHideSlackCB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.dataSourcesHideSlackCB.text")); // NOI18N
         dataSourcesHideSlackCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -697,6 +709,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        viewsHideSlackCB.setFont(viewsHideSlackCB.getFont().deriveFont(viewsHideSlackCB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(viewsHideSlackCB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.viewsHideSlackCB.text")); // NOI18N
         viewsHideSlackCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -704,9 +717,11 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabelTimeDisplay.setFont(jLabelTimeDisplay.getFont().deriveFont(jLabelTimeDisplay.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelTimeDisplay, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.jLabelTimeDisplay.text")); // NOI18N
 
         displayTimesButtonGroup.add(useLocalTimeRB);
+        useLocalTimeRB.setFont(useLocalTimeRB.getFont().deriveFont(useLocalTimeRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(useLocalTimeRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.useLocalTimeRB.text")); // NOI18N
         useLocalTimeRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -715,6 +730,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
         });
 
         displayTimesButtonGroup.add(useGMTTimeRB);
+        useGMTTimeRB.setFont(useGMTTimeRB.getFont().deriveFont(useGMTTimeRB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(useGMTTimeRB, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.useGMTTimeRB.text")); // NOI18N
         useGMTTimeRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -785,14 +801,17 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
 
         runtimePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.runtimePanel.border.title"))); // NOI18N
 
+        maxMemoryLabel.setFont(maxMemoryLabel.getFont().deriveFont(maxMemoryLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(maxMemoryLabel, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.maxMemoryLabel.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(maxMemoryUnitsLabel, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.maxMemoryUnitsLabel.text")); // NOI18N
 
+        totalMemoryLabel.setFont(totalMemoryLabel.getFont().deriveFont(totalMemoryLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(totalMemoryLabel, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.totalMemoryLabel.text")); // NOI18N
 
         systemMemoryTotal.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
 
+        restartNecessaryWarning.setFont(restartNecessaryWarning.getFont().deriveFont(restartNecessaryWarning.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         restartNecessaryWarning.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/corecomponents/warning16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(restartNecessaryWarning, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.restartNecessaryWarning.text")); // NOI18N
 
@@ -807,6 +826,7 @@ final class AutopsyOptionsPanel extends javax.swing.JPanel {
 
         org.openide.awt.Mnemonics.setLocalizedText(maxMemoryUnitsLabel1, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.maxMemoryUnitsLabel.text")); // NOI18N
 
+        maxLogFileCount.setFont(maxLogFileCount.getFont().deriveFont(maxLogFileCount.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(maxLogFileCount, org.openide.util.NbBundle.getMessage(AutopsyOptionsPanel.class, "AutopsyOptionsPanel.maxLogFileCount.text")); // NOI18N
 
         logFileCount.setHorizontalAlignment(javax.swing.JTextField.TRAILING);

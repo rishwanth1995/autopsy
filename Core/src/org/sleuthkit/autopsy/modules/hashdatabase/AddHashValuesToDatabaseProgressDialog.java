@@ -193,6 +193,7 @@ public class AddHashValuesToDatabaseProgressDialog extends javax.swing.JDialog {
 
         addingHashesToDatabaseProgressBar.setIndeterminate(true);
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseProgressDialog.class, "AddHashValuesToDatabaseProgressDialog.okButton.text")); // NOI18N
         okButton.setEnabled(false);
         okButton.addActionListener(new java.awt.event.ActionListener() {
@@ -201,8 +202,10 @@ public class AddHashValuesToDatabaseProgressDialog extends javax.swing.JDialog {
             }
         });
 
+        statusLabel.setFont(statusLabel.getFont().deriveFont(statusLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(statusLabel, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseProgressDialog.class, "AddHashValuesToDatabaseProgressDialog.statusLabel.text")); // NOI18N
 
+        showErrorsButton.setFont(showErrorsButton.getFont().deriveFont(showErrorsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(showErrorsButton, org.openide.util.NbBundle.getMessage(AddHashValuesToDatabaseProgressDialog.class, "AddHashValuesToDatabaseProgressDialog.showErrorsButton.text")); // NOI18N
         showErrorsButton.setVisible(false);
         showErrorsButton.addActionListener(new java.awt.event.ActionListener() {

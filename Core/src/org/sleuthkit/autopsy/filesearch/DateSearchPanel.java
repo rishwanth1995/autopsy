@@ -186,8 +186,10 @@ class DateSearchPanel extends javax.swing.JPanel {
         jLabel1.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.jLabel1.text")); // NOI18N
 
         jLabel4.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.jLabel4.text")); // NOI18N
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         dateCheckBox.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.dateCheckBox.text")); // NOI18N
+        dateCheckBox.setFont(dateCheckBox.getFont().deriveFont(dateCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         dateCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dateCheckBoxActionPerformed(evt);
@@ -202,6 +204,7 @@ class DateSearchPanel extends javax.swing.JPanel {
 
         modifiedCheckBox.setSelected(true);
         modifiedCheckBox.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.modifiedCheckBox.text")); // NOI18N
+        modifiedCheckBox.setFont(modifiedCheckBox.getFont().deriveFont(modifiedCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         modifiedCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modifiedCheckBoxActionPerformed(evt);
@@ -210,6 +213,7 @@ class DateSearchPanel extends javax.swing.JPanel {
 
         changedCheckBox.setSelected(true);
         changedCheckBox.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.changedCheckBox.text")); // NOI18N
+        changedCheckBox.setFont(changedCheckBox.getFont().deriveFont(changedCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         changedCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 changedCheckBoxActionPerformed(evt);
@@ -218,6 +222,7 @@ class DateSearchPanel extends javax.swing.JPanel {
 
         accessedCheckBox.setSelected(true);
         accessedCheckBox.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.accessedCheckBox.text")); // NOI18N
+        accessedCheckBox.setFont(accessedCheckBox.getFont().deriveFont(accessedCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         accessedCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accessedCheckBoxActionPerformed(evt);
@@ -226,6 +231,7 @@ class DateSearchPanel extends javax.swing.JPanel {
 
         createdCheckBox.setSelected(true);
         createdCheckBox.setText(org.openide.util.NbBundle.getMessage(DateSearchPanel.class, "DateSearchPanel.createdCheckBox.text")); // NOI18N
+        createdCheckBox.setFont(createdCheckBox.getFont().deriveFont(createdCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         createdCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createdCheckBoxActionPerformed(evt);

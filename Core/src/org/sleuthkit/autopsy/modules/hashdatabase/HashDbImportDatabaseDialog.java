@@ -184,6 +184,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        okButton.setFont(okButton.getFont().deriveFont(okButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(okButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.okButton.text")); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,6 +192,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,6 +203,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
         databasePathTextField.setEditable(false);
         databasePathTextField.setText(org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.databasePathTextField.text")); // NOI18N
 
+        openButton.setFont(openButton.getFont().deriveFont(openButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(openButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.openButton.text")); // NOI18N
         openButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +212,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(knownRadioButton);
+        knownRadioButton.setFont(knownRadioButton.getFont().deriveFont(knownRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(knownRadioButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.knownRadioButton.text")); // NOI18N
         knownRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +221,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
         });
 
         buttonGroup1.add(knownBadRadioButton);
+        knownBadRadioButton.setFont(knownBadRadioButton.getFont().deriveFont(knownBadRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         knownBadRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(knownBadRadioButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.knownBadRadioButton.text")); // NOI18N
         knownBadRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -225,12 +230,15 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.jLabel1.text")); // NOI18N
 
         hashSetNameTextField.setText(org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.hashSetNameTextField.text")); // NOI18N
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.jLabel2.text")); // NOI18N
 
+        sendIngestMessagesCheckbox.setFont(sendIngestMessagesCheckbox.getFont().deriveFont(sendIngestMessagesCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sendIngestMessagesCheckbox.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(sendIngestMessagesCheckbox, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.sendIngestMessagesCheckbox.text")); // NOI18N
         sendIngestMessagesCheckbox.addActionListener(new java.awt.event.ActionListener() {
@@ -239,12 +247,16 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.jLabel3.text")); // NOI18N
 
+        lbVersion.setFont(lbVersion.getFont().deriveFont(lbVersion.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbVersion, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.lbVersion.text")); // NOI18N
 
+        versionTextField.setFont(versionTextField.getFont().deriveFont((float)11));
         versionTextField.setText(org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.versionTextField.text")); // NOI18N
 
+        lbOrg.setFont(lbOrg.getFont().deriveFont(lbOrg.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(lbOrg, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.lbOrg.text")); // NOI18N
 
         orgComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -253,6 +265,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        orgButton.setFont(orgButton.getFont().deriveFont(orgButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(orgButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.orgButton.text")); // NOI18N
         orgButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,6 +273,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        readOnlyCheckbox.setFont(readOnlyCheckbox.getFont().deriveFont(readOnlyCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         readOnlyCheckbox.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(readOnlyCheckbox, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.readOnlyCheckbox.text")); // NOI18N
         readOnlyCheckbox.addActionListener(new java.awt.event.ActionListener() {
@@ -269,6 +283,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
         });
 
         storageTypeButtonGroup.add(fileTypeRadioButton);
+        fileTypeRadioButton.setFont(fileTypeRadioButton.getFont().deriveFont(fileTypeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         fileTypeRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(fileTypeRadioButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.fileTypeRadioButton.text")); // NOI18N
         fileTypeRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -278,6 +293,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
         });
 
         storageTypeButtonGroup.add(centralRepoRadioButton);
+        centralRepoRadioButton.setFont(centralRepoRadioButton.getFont().deriveFont(centralRepoRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(centralRepoRadioButton, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.centralRepoRadioButton.text")); // NOI18N
         centralRepoRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,6 +301,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
             }
         });
 
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel4, org.openide.util.NbBundle.getMessage(HashDbImportDatabaseDialog.class, "HashDbImportDatabaseDialog.jLabel4.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -304,12 +321,11 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                                 .addComponent(fileTypeRadioButton)
                                 .addGap(26, 26, 26)
                                 .addComponent(centralRepoRadioButton)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(databasePathTextField)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(openButton)
-                                .addContainerGap())))
+                                .addComponent(openButton))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -319,7 +335,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(lbOrg)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(orgComboBox, 0, 121, Short.MAX_VALUE)
+                                .addComponent(orgComboBox, 0, 220, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(orgButton))
                             .addGroup(layout.createSequentialGroup()
@@ -331,8 +347,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                                     .addComponent(versionTextField)
                                     .addComponent(hashSetNameTextField))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelButton)
-                        .addContainerGap())
+                        .addComponent(cancelButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -342,7 +357,8 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(knownRadioButton)
                                     .addComponent(knownBadRadioButton))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cancelButton, okButton});
@@ -355,7 +371,6 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                     .addComponent(databasePathTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(openButton))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -385,7 +400,7 @@ final class HashDbImportDatabaseDialog extends javax.swing.JDialog {
                         .addComponent(readOnlyCheckbox)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sendIngestMessagesCheckbox)
-                        .addGap(0, 21, Short.MAX_VALUE))
+                        .addGap(0, 51, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

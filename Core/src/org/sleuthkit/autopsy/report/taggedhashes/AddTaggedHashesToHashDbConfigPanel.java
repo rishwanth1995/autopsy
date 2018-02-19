@@ -203,6 +203,7 @@ class AddTaggedHashesToHashDbConfigPanel extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(tagNamesListBox);
 
+        selectAllButton.setFont(selectAllButton.getFont().deriveFont(selectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(selectAllButton, org.openide.util.NbBundle.getMessage(AddTaggedHashesToHashDbConfigPanel.class, "AddTaggedHashesToHashDbConfigPanel.selectAllButton.text")); // NOI18N
         selectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,6 +211,7 @@ class AddTaggedHashesToHashDbConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        deselectAllButton.setFont(deselectAllButton.getFont().deriveFont(deselectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(deselectAllButton, org.openide.util.NbBundle.getMessage(AddTaggedHashesToHashDbConfigPanel.class, "AddTaggedHashesToHashDbConfigPanel.deselectAllButton.text")); // NOI18N
         deselectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,6 +219,7 @@ class AddTaggedHashesToHashDbConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(AddTaggedHashesToHashDbConfigPanel.class, "AddTaggedHashesToHashDbConfigPanel.jLabel1.text")); // NOI18N
 
         hashSetsComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -225,6 +228,7 @@ class AddTaggedHashesToHashDbConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        configureHashDatabasesButton.setFont(configureHashDatabasesButton.getFont().deriveFont(configureHashDatabasesButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(configureHashDatabasesButton, org.openide.util.NbBundle.getMessage(AddTaggedHashesToHashDbConfigPanel.class, "AddTaggedHashesToHashDbConfigPanel.configureHashDatabasesButton.text")); // NOI18N
         configureHashDatabasesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,6 +236,7 @@ class AddTaggedHashesToHashDbConfigPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(AddTaggedHashesToHashDbConfigPanel.class, "AddTaggedHashesToHashDbConfigPanel.jLabel2.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -192,22 +192,27 @@ class AddExternalViewerRulePanel extends javax.swing.JPanel {
         exePathTextField = new javax.swing.JTextField();
         browseButton = new javax.swing.JButton();
 
+        nameLabel.setFont(nameLabel.getFont().deriveFont(nameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(nameLabel, org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.nameLabel.text")); // NOI18N
 
         nameTextField.setText(org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.nameTextField.text")); // NOI18N
 
         buttonGroup.add(mimeRadioButton);
+        mimeRadioButton.setFont(mimeRadioButton.getFont().deriveFont(mimeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         mimeRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(mimeRadioButton, org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.mimeRadioButton.text")); // NOI18N
 
         buttonGroup.add(extRadioButton);
+        extRadioButton.setFont(extRadioButton.getFont().deriveFont(extRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(extRadioButton, org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.extRadioButton.text")); // NOI18N
 
+        exePathLabel.setFont(exePathLabel.getFont().deriveFont(exePathLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(exePathLabel, org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.exePathLabel.text")); // NOI18N
 
         exePathTextField.setEditable(false);
         exePathTextField.setText(org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.exePathTextField.text")); // NOI18N
 
+        browseButton.setFont(browseButton.getFont().deriveFont(browseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseButton, org.openide.util.NbBundle.getMessage(AddExternalViewerRulePanel.class, "AddExternalViewerRulePanel.browseButton.text")); // NOI18N
         browseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +234,7 @@ class AddExternalViewerRulePanel extends javax.swing.JPanel {
                         .addComponent(browseButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(exePathLabel)
-                        .addGap(0, 80, Short.MAX_VALUE))
+                        .addGap(0, 194, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(nameLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

@@ -220,15 +220,19 @@ public class DataContentViewerArtifact extends javax.swing.JPanel implements Dat
 
         jPanel1.setPreferredSize(new java.awt.Dimension(620, 58));
 
+        totalPageLabel.setFont(totalPageLabel.getFont().deriveFont(totalPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         totalPageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerArtifact.class, "DataContentViewerArtifact.totalPageLabel.text")); // NOI18N
 
+        ofLabel.setFont(ofLabel.getFont().deriveFont(ofLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         ofLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerArtifact.class, "DataContentViewerArtifact.ofLabel.text")); // NOI18N
 
+        currentPageLabel.setFont(currentPageLabel.getFont().deriveFont(currentPageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         currentPageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerArtifact.class, "DataContentViewerArtifact.currentPageLabel.text")); // NOI18N
         currentPageLabel.setMaximumSize(new java.awt.Dimension(18, 14));
         currentPageLabel.setMinimumSize(new java.awt.Dimension(18, 14));
         currentPageLabel.setPreferredSize(new java.awt.Dimension(18, 14));
 
+        pageLabel.setFont(pageLabel.getFont().deriveFont(pageLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pageLabel.setText(org.openide.util.NbBundle.getMessage(DataContentViewerArtifact.class, "DataContentViewerArtifact.pageLabel.text")); // NOI18N
         pageLabel.setMaximumSize(new java.awt.Dimension(33, 14));
         pageLabel.setMinimumSize(new java.awt.Dimension(33, 14));
@@ -248,6 +252,7 @@ public class DataContentViewerArtifact extends javax.swing.JPanel implements Dat
             }
         });
 
+        pageLabel2.setFont(pageLabel2.getFont().deriveFont(pageLabel2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pageLabel2.setText(org.openide.util.NbBundle.getMessage(DataContentViewerArtifact.class, "DataContentViewerArtifact.pageLabel2.text")); // NOI18N
         pageLabel2.setMaximumSize(new java.awt.Dimension(29, 14));
         pageLabel2.setMinimumSize(new java.awt.Dimension(29, 14));
@@ -289,7 +294,7 @@ public class DataContentViewerArtifact extends javax.swing.JPanel implements Dat
                 .addComponent(prevPageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(nextPageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(352, Short.MAX_VALUE))
             .addComponent(resultsTableScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()

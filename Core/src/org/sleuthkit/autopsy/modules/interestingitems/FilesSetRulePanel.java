@@ -583,6 +583,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
         dirsRadioButton = new javax.swing.JRadioButton();
         allRadioButton = new javax.swing.JRadioButton();
 
+        ruleNameLabel.setFont(ruleNameLabel.getFont().deriveFont(ruleNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ruleNameLabel, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.ruleNameLabel.text")); // NOI18N
 
         ruleNameTextField.setText(org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.ruleNameTextField.text")); // NOI18N
@@ -592,32 +593,39 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.jLabel1.text")); // NOI18N
 
         nameTextField.setText(org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.nameTextField.text")); // NOI18N
         nameTextField.setEnabled(false);
 
         nameButtonGroup.add(fullNameRadioButton);
+        fullNameRadioButton.setFont(fullNameRadioButton.getFont().deriveFont(fullNameRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(fullNameRadioButton, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.fullNameRadioButton.text")); // NOI18N
         fullNameRadioButton.setEnabled(false);
 
         nameButtonGroup.add(extensionRadioButton);
+        extensionRadioButton.setFont(extensionRadioButton.getFont().deriveFont(extensionRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(extensionRadioButton, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.extensionRadioButton.text")); // NOI18N
         extensionRadioButton.setEnabled(false);
 
+        nameRegexCheckbox.setFont(nameRegexCheckbox.getFont().deriveFont(nameRegexCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(nameRegexCheckbox, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.nameRegexCheckbox.text")); // NOI18N
         nameRegexCheckbox.setEnabled(false);
 
         pathTextField.setText(org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.pathTextField.text")); // NOI18N
         pathTextField.setEnabled(false);
 
+        pathRegexCheckBox.setFont(pathRegexCheckBox.getFont().deriveFont(pathRegexCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pathRegexCheckBox, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.pathRegexCheckBox.text")); // NOI18N
         pathRegexCheckBox.setEnabled(false);
 
+        pathSeparatorInfoLabel.setFont(pathSeparatorInfoLabel.getFont().deriveFont(pathSeparatorInfoLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         pathSeparatorInfoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/info-icon-16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(pathSeparatorInfoLabel, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.pathSeparatorInfoLabel.text")); // NOI18N
         pathSeparatorInfoLabel.setEnabled(false);
 
+        jLabel5.setFont(jLabel5.getFont().deriveFont(jLabel5.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel5, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.interesting.jLabel5.text")); // NOI18N
 
         mimeTypeComboBox.setEditable(true);
@@ -633,6 +641,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
         fileSizeSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         fileSizeSpinner.setEnabled(false);
 
+        nameCheck.setFont(nameCheck.getFont().deriveFont(nameCheck.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(nameCheck, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.nameCheck.text")); // NOI18N
         nameCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -640,6 +649,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
             }
         });
 
+        pathCheck.setFont(pathCheck.getFont().deriveFont(pathCheck.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pathCheck, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.pathCheck.text")); // NOI18N
         pathCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -647,6 +657,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
             }
         });
 
+        mimeCheck.setFont(mimeCheck.getFont().deriveFont(mimeCheck.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(mimeCheck, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.mimeCheck.text")); // NOI18N
         mimeCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -654,6 +665,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
             }
         });
 
+        fileSizeCheck.setFont(fileSizeCheck.getFont().deriveFont(fileSizeCheck.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(fileSizeCheck, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.fileSizeCheck.text")); // NOI18N
         fileSizeCheck.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,6 +674,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
         });
 
         typeButtonGroup.add(filesRadioButton);
+        filesRadioButton.setFont(filesRadioButton.getFont().deriveFont(filesRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(filesRadioButton, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.filesRadioButton.text")); // NOI18N
         filesRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -670,6 +683,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
         });
 
         typeButtonGroup.add(dirsRadioButton);
+        dirsRadioButton.setFont(dirsRadioButton.getFont().deriveFont(dirsRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(dirsRadioButton, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.dirsRadioButton.text")); // NOI18N
         dirsRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -678,6 +692,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
         });
 
         typeButtonGroup.add(allRadioButton);
+        allRadioButton.setFont(allRadioButton.getFont().deriveFont(allRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(allRadioButton, org.openide.util.NbBundle.getMessage(FilesSetRulePanel.class, "FilesSetRulePanel.allRadioButton.text")); // NOI18N
         allRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -777,7 +792,7 @@ final class FilesSetRulePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pathRegexCheckBox)
                     .addComponent(pathSeparatorInfoLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mimeTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(mimeCheck))

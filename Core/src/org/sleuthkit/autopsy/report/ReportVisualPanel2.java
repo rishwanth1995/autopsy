@@ -224,13 +224,17 @@ final class ReportVisualPanel2 extends JPanel {
         setPreferredSize(new java.awt.Dimension(650, 250));
 
         optionsButtonGroup.add(taggedResultsRadioButton);
+        taggedResultsRadioButton.setFont(taggedResultsRadioButton.getFont().deriveFont(taggedResultsRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(taggedResultsRadioButton, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.taggedResultsRadioButton.text")); // NOI18N
 
         optionsButtonGroup.add(allResultsRadioButton);
+        allResultsRadioButton.setFont(allResultsRadioButton.getFont().deriveFont(allResultsRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(allResultsRadioButton, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.allResultsRadioButton.text")); // NOI18N
 
+        dataLabel.setFont(dataLabel.getFont().deriveFont(dataLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(dataLabel, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.dataLabel.text")); // NOI18N
 
+        selectAllButton.setFont(selectAllButton.getFont().deriveFont(selectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(selectAllButton, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.selectAllButton.text")); // NOI18N
         selectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +242,7 @@ final class ReportVisualPanel2 extends JPanel {
             }
         });
 
+        deselectAllButton.setFont(deselectAllButton.getFont().deriveFont(deselectAllButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(deselectAllButton, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.deselectAllButton.text")); // NOI18N
         deselectAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,6 +254,7 @@ final class ReportVisualPanel2 extends JPanel {
         tagsList.setLayoutOrientation(javax.swing.JList.VERTICAL_WRAP);
         tagsScrollPane.setViewportView(tagsList);
 
+        advancedButton.setFont(advancedButton.getFont().deriveFont(advancedButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(advancedButton, org.openide.util.NbBundle.getMessage(ReportVisualPanel2.class, "ReportVisualPanel2.advancedButton.text")); // NOI18N
         advancedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -268,7 +274,7 @@ final class ReportVisualPanel2 extends JPanel {
                         .addComponent(tagsScrollPane)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(advancedButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                            .addComponent(advancedButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(deselectAllButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(selectAllButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
@@ -276,7 +282,7 @@ final class ReportVisualPanel2 extends JPanel {
                             .addComponent(taggedResultsRadioButton)
                             .addComponent(dataLabel)
                             .addComponent(allResultsRadioButton))
-                        .addGap(0, 481, Short.MAX_VALUE)))
+                        .addGap(0, 471, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -294,7 +300,7 @@ final class ReportVisualPanel2 extends JPanel {
                         .addComponent(selectAllButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(deselectAllButton)
-                        .addGap(0, 70, Short.MAX_VALUE))
+                        .addGap(0, 43, Short.MAX_VALUE))
                     .addComponent(tagsScrollPane))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(advancedButton)

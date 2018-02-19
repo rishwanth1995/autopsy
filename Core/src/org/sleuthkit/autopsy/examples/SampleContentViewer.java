@@ -65,6 +65,7 @@ class SampleContentViewer extends javax.swing.JPanel implements DataContentViewe
 
         jLabel1 = new javax.swing.JLabel();
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(SampleContentViewer.class, "SampleContentViewer.jLabel1.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

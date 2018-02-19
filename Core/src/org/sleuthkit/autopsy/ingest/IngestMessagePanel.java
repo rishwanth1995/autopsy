@@ -147,6 +147,7 @@ class IngestMessagePanel extends JPanel implements TableModelListener {
         messageTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(messageTable);
 
+        sortByLabel.setFont(sortByLabel.getFont().deriveFont(sortByLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sortByLabel.setText(org.openide.util.NbBundle.getMessage(IngestMessagePanel.class, "IngestMessagePanel.sortByLabel.text")); // NOI18N
 
         sortByComboBox.setFont(sortByComboBox.getFont().deriveFont(sortByComboBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
@@ -181,11 +182,11 @@ class IngestMessagePanel extends JPanel implements TableModelListener {
                 .addGap(101, 101, 101)
                 .addComponent(totalMessagesNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalMessagesNameVal, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addComponent(totalMessagesNameVal, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addGap(22, 22, 22)
                 .addComponent(totalUniqueMessagesNameLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(totalUniqueMessagesNameVal, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addComponent(totalUniqueMessagesNameVal, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
                 .addGap(22, 22, 22))
         );
         controlPanelLayout.setVerticalGroup(

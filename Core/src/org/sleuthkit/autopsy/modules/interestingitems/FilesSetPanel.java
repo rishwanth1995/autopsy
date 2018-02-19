@@ -167,6 +167,7 @@ public class FilesSetPanel extends javax.swing.JPanel {
         ignoreKnownFilesCheckbox = new javax.swing.JCheckBox();
         ignoreUnallocCheckbox = new javax.swing.JCheckBox();
 
+        nameLabel.setFont(nameLabel.getFont().deriveFont(nameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(nameLabel, org.openide.util.NbBundle.getMessage(FilesSetPanel.class, "FilesSetPanel.interesting.nameLabel.text")); // NOI18N
 
         descPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(FilesSetPanel.class, "FilesSetPanel.descPanel.border.title"))); // NOI18N
@@ -194,8 +195,10 @@ public class FilesSetPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
+        ignoreKnownFilesCheckbox.setFont(ignoreKnownFilesCheckbox.getFont().deriveFont(ignoreKnownFilesCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ignoreKnownFilesCheckbox, org.openide.util.NbBundle.getMessage(FilesSetPanel.class, "FilesSetPanel.ignoreKnownFilesCheckbox.text")); // NOI18N
 
+        ignoreUnallocCheckbox.setFont(ignoreUnallocCheckbox.getFont().deriveFont(ignoreUnallocCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(ignoreUnallocCheckbox, org.openide.util.NbBundle.getMessage(FilesSetPanel.class, "FilesSetPanel.ignoreUnallocCheckbox.text")); // NOI18N
         ignoreUnallocCheckbox.setToolTipText(org.openide.util.NbBundle.getMessage(FilesSetPanel.class, "FilesSetPanel.ignoreUnallocCheckbox.toolTipText")); // NOI18N
 

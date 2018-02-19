@@ -152,6 +152,7 @@ final class IngestSettingsPanel extends IngestModuleGlobalSettingsPanel {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(664, 400));
 
+        jLabelNumThreads.setFont(jLabelNumThreads.getFont().deriveFont(jLabelNumThreads.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelNumThreads, org.openide.util.NbBundle.getMessage(IngestSettingsPanel.class, "IngestSettingsPanel.jLabelNumThreads.text")); // NOI18N
 
         numberOfFileIngestThreadsComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -160,9 +161,11 @@ final class IngestSettingsPanel extends IngestModuleGlobalSettingsPanel {
             }
         });
 
+        restartRequiredLabel.setFont(restartRequiredLabel.getFont().deriveFont(restartRequiredLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         restartRequiredLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/corecomponents/warning16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(restartRequiredLabel, org.openide.util.NbBundle.getMessage(IngestSettingsPanel.class, "IngestSettingsPanel.restartRequiredLabel.text")); // NOI18N
 
+        jLabelSetProcessTimeOut.setFont(jLabelSetProcessTimeOut.getFont().deriveFont(jLabelSetProcessTimeOut.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelSetProcessTimeOut, org.openide.util.NbBundle.getMessage(IngestSettingsPanel.class, "IngestSettingsPanel.jLabelSetProcessTimeOut.text")); // NOI18N
 
         org.openide.awt.Mnemonics.setLocalizedText(jCheckBoxEnableProcTimeout, org.openide.util.NbBundle.getMessage(IngestSettingsPanel.class, "IngestSettingsPanel.jCheckBoxEnableProcTimeout.text")); // NOI18N
@@ -179,6 +182,7 @@ final class IngestSettingsPanel extends IngestModuleGlobalSettingsPanel {
             }
         });
 
+        jLabelProcessTimeOutUnits.setFont(jLabelProcessTimeOutUnits.getFont().deriveFont(jLabelProcessTimeOutUnits.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelProcessTimeOutUnits, org.openide.util.NbBundle.getMessage(IngestSettingsPanel.class, "IngestSettingsPanel.jLabelProcessTimeOutUnits.text")); // NOI18N
 
         ingestWarningLabel.setFont(ingestWarningLabel.getFont().deriveFont(ingestWarningLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
@@ -211,7 +215,7 @@ final class IngestSettingsPanel extends IngestModuleGlobalSettingsPanel {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabelProcessTimeOutUnits)))
                                 .addGap(213, 213, 213)))
-                        .addContainerGap(52, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(ingestWarningLabel)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -235,7 +239,7 @@ final class IngestSettingsPanel extends IngestModuleGlobalSettingsPanel {
                         .addComponent(jLabelProcessTimeOutUnits)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ingestWarningLabel)
-                .addContainerGap(257, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);

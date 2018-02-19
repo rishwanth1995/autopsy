@@ -106,8 +106,10 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
         profileList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         profileListPane.setViewportView(profileList);
 
+        profileListLabel.setFont(profileListLabel.getFont().deriveFont(profileListLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(profileListLabel, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.profileListLabel.text")); // NOI18N
 
+        newProfileButton.setFont(newProfileButton.getFont().deriveFont(newProfileButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         newProfileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/add16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(newProfileButton, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.newProfileButton.text")); // NOI18N
         newProfileButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
@@ -120,6 +122,7 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
             }
         });
 
+        editProfileButton.setFont(editProfileButton.getFont().deriveFont(editProfileButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         editProfileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/edit16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(editProfileButton, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.editProfileButton.text")); // NOI18N
         editProfileButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
@@ -132,6 +135,7 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
             }
         });
 
+        deleteProfileButton.setFont(deleteProfileButton.getFont().deriveFont(deleteProfileButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         deleteProfileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/images/delete16.png"))); // NOI18N
         org.openide.awt.Mnemonics.setLocalizedText(deleteProfileButton, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.deleteProfileButton.text")); // NOI18N
         deleteProfileButton.setMargin(new java.awt.Insets(2, 6, 2, 6));
@@ -153,8 +157,10 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
         profileDescArea.setMinimumSize(new java.awt.Dimension(10, 22));
         profileDescPane.setViewportView(profileDescArea);
 
+        profileDescLabel.setFont(profileDescLabel.getFont().deriveFont(profileDescLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(profileDescLabel, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.profileDescLabel.text")); // NOI18N
 
+        filterNameLabel.setFont(filterNameLabel.getFont().deriveFont(filterNameLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(filterNameLabel, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.filterNameLabel.text")); // NOI18N
         filterNameLabel.setMinimumSize(new java.awt.Dimension(30, 14));
         filterNameLabel.setPreferredSize(new java.awt.Dimension(30, 14));
@@ -181,6 +187,7 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
         selectedModulesArea.setWrapStyleWord(true);
         selectedModulesPane.setViewportView(selectedModulesArea);
 
+        selectedModulesLabel.setFont(selectedModulesLabel.getFont().deriveFont(selectedModulesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(selectedModulesLabel, org.openide.util.NbBundle.getMessage(ProfileSettingsPanel.class, "ProfileSettingsPanel.selectedModulesLabel.text")); // NOI18N
 
         ingestWarningLabel.setFont(ingestWarningLabel.getFont().deriveFont(ingestWarningLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
@@ -281,14 +288,13 @@ class ProfileSettingsPanel extends IngestModuleGlobalSettingsPanel implements Op
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(selectedModulesLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(selectedModulesPane, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE))
+                                .addComponent(selectedModulesPane, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(profileListLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(profileListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
-                                .addGap(0, 0, 0)))
+                                .addComponent(profileListPane, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)))
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(newProfileButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

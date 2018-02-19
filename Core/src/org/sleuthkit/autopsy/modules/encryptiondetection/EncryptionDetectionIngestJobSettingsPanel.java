@@ -129,17 +129,22 @@ final class EncryptionDetectionIngestJobSettingsPanel extends IngestModuleIngest
 
         minimumFileSizeTextbox.setText(org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.minimumFileSizeTextbox.text")); // NOI18N
 
+        fileSizeMultiplesEnforcedCheckbox.setFont(fileSizeMultiplesEnforcedCheckbox.getFont().deriveFont(fileSizeMultiplesEnforcedCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(fileSizeMultiplesEnforcedCheckbox, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.fileSizeMultiplesEnforcedCheckbox.text")); // NOI18N
 
+        slackFilesAllowedCheckbox.setFont(slackFilesAllowedCheckbox.getFont().deriveFont(slackFilesAllowedCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(slackFilesAllowedCheckbox, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.slackFilesAllowedCheckbox.text")); // NOI18N
 
+        minimumEntropyLabel.setFont(minimumEntropyLabel.getFont().deriveFont(minimumEntropyLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(minimumEntropyLabel, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.minimumEntropyLabel.text")); // NOI18N
 
+        minimumFileSizeLabel.setFont(minimumFileSizeLabel.getFont().deriveFont(minimumFileSizeLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(minimumFileSizeLabel, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.minimumFileSizeLabel.text")); // NOI18N
 
+        mbLabel.setFont(mbLabel.getFont().deriveFont(mbLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(mbLabel, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.mbLabel.text")); // NOI18N
 
-        detectionSettingsLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        detectionSettingsLabel.setFont(detectionSettingsLabel.getFont().deriveFont(detectionSettingsLabel.getFont().getStyle() | java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(detectionSettingsLabel, org.openide.util.NbBundle.getMessage(EncryptionDetectionIngestJobSettingsPanel.class, "EncryptionDetectionIngestJobSettingsPanel.detectionSettingsLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -164,7 +169,7 @@ final class EncryptionDetectionIngestJobSettingsPanel extends IngestModuleIngest
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(mbLabel))
                     .addComponent(fileSizeMultiplesEnforcedCheckbox))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
