@@ -635,6 +635,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         tbOops.setText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.tbOops.text")); // NOI18N
         tbOops.setBorder(null);
 
+        bnEditIngestSettings.setFont(bnEditIngestSettings.getFont().deriveFont(bnEditIngestSettings.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnEditIngestSettings, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.bnEditIngestSettings.text")); // NOI18N
         bnEditIngestSettings.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.bnEditIngestSettings.toolTipText")); // NOI18N
         bnEditIngestSettings.addActionListener(new java.awt.event.ActionListener() {
@@ -643,6 +644,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        bnAdvancedSettings.setFont(bnAdvancedSettings.getFont().deriveFont(bnAdvancedSettings.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnAdvancedSettings, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.bnAdvancedSettings.text")); // NOI18N
         bnAdvancedSettings.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -650,6 +652,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        bnFileExport.setFont(bnFileExport.getFont().deriveFont(bnFileExport.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnFileExport, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.bnFileExport.text")); // NOI18N
         bnFileExport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -657,6 +660,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        bnLogging.setFont(bnLogging.getFont().deriveFont(bnLogging.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnLogging, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.bnLogging.text")); // NOI18N
         bnLogging.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -664,6 +668,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        browseOutputFolderButton.setFont(browseOutputFolderButton.getFont().deriveFont(browseOutputFolderButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseOutputFolderButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.browseOutputFolderButton.text")); // NOI18N
         browseOutputFolderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -671,6 +676,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        browseInputFolderButton.setFont(browseInputFolderButton.getFont().deriveFont(browseInputFolderButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseInputFolderButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.browseInputFolderButton.text")); // NOI18N
         browseInputFolderButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -684,18 +690,23 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         outputPathTextField.setText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.outputPathTextField.text")); // NOI18N
         outputPathTextField.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.outputPathTextField.toolTipText")); // NOI18N
 
+        jLabelInvalidResultsFolder.setFont(jLabelInvalidResultsFolder.getFont().deriveFont(jLabelInvalidResultsFolder.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jLabelInvalidResultsFolder.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelInvalidResultsFolder, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelInvalidResultsFolder.text")); // NOI18N
 
+        jLabelInvalidImageFolder.setFont(jLabelInvalidImageFolder.getFont().deriveFont(jLabelInvalidImageFolder.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         jLabelInvalidImageFolder.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelInvalidImageFolder, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelInvalidImageFolder.text")); // NOI18N
 
+        jLabelSelectInputFolder.setFont(jLabelSelectInputFolder.getFont().deriveFont(jLabelSelectInputFolder.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelSelectInputFolder, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelSelectInputFolder.text")); // NOI18N
         jLabelSelectInputFolder.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        jLabelSelectOutputFolder.setFont(jLabelSelectOutputFolder.getFont().deriveFont(jLabelSelectOutputFolder.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelSelectOutputFolder, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelSelectOutputFolder.text")); // NOI18N
         jLabelSelectOutputFolder.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
+        sharedConfigCheckbox.setFont(sharedConfigCheckbox.getFont().deriveFont(sharedConfigCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(sharedConfigCheckbox, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.sharedConfigCheckbox.text")); // NOI18N
         sharedConfigCheckbox.setMaximumSize(new java.awt.Dimension(191, 14));
         sharedConfigCheckbox.setMinimumSize(new java.awt.Dimension(191, 14));
@@ -707,6 +718,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         });
 
         sharedSettingsErrorTextField.setEditable(false);
+        sharedSettingsErrorTextField.setFont(sharedSettingsErrorTextField.getFont().deriveFont(sharedSettingsErrorTextField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         sharedSettingsErrorTextField.setForeground(new java.awt.Color(255, 0, 0));
         sharedSettingsErrorTextField.setText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.sharedSettingsErrorTextField.text")); // NOI18N
         sharedSettingsErrorTextField.setBorder(null);
@@ -714,6 +726,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         sharedSettingsTextField.setText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.sharedSettingsTextField.text")); // NOI18N
         sharedSettingsTextField.setEnabled(false);
 
+        browseSharedSettingsButton.setFont(browseSharedSettingsButton.getFont().deriveFont(browseSharedSettingsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseSharedSettingsButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.browseSharedSettingsButton.text")); // NOI18N
         browseSharedSettingsButton.setEnabled(false);
         browseSharedSettingsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -722,6 +735,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        downloadButton.setFont(downloadButton.getFont().deriveFont(downloadButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(downloadButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.downloadButton.text")); // NOI18N
         downloadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -730,14 +744,18 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         });
 
         configButtonErrorTextField.setEditable(false);
+        configButtonErrorTextField.setFont(configButtonErrorTextField.getFont().deriveFont(configButtonErrorTextField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         configButtonErrorTextField.setForeground(new java.awt.Color(255, 0, 0));
         configButtonErrorTextField.setText(org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.configButtonErrorTextField.text")); // NOI18N
         configButtonErrorTextField.setBorder(null);
 
+        jLabelTaskDescription.setFont(jLabelTaskDescription.getFont().deriveFont(jLabelTaskDescription.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelTaskDescription, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelTaskDescription.text")); // NOI18N
 
+        jLabelCurrentTask.setFont(jLabelCurrentTask.getFont().deriveFont(jLabelCurrentTask.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(jLabelCurrentTask, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.jLabelCurrentTask.text")); // NOI18N
 
+        uploadButton.setFont(uploadButton.getFont().deriveFont(uploadButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(uploadButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.uploadButton.text")); // NOI18N
         uploadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -745,6 +763,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
             }
         });
 
+        masterNodeCheckBox.setFont(masterNodeCheckBox.getFont().deriveFont(masterNodeCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(masterNodeCheckBox, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.masterNodeCheckBox.text")); // NOI18N
         masterNodeCheckBox.setEnabled(false);
         masterNodeCheckBox.addItemListener(new java.awt.event.ItemListener() {
@@ -754,6 +773,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         });
 
         modeSelectionButtonGroup.add(examinerModeRadioButton);
+        examinerModeRadioButton.setFont(examinerModeRadioButton.getFont().deriveFont(examinerModeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(examinerModeRadioButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.examinerModeRadioButton.text")); // NOI18N
         examinerModeRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -762,6 +782,7 @@ public class AutoIngestSettingsPanel extends javax.swing.JPanel {
         });
 
         modeSelectionButtonGroup.add(autoIngestModeRadioButton);
+        autoIngestModeRadioButton.setFont(autoIngestModeRadioButton.getFont().deriveFont(autoIngestModeRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(autoIngestModeRadioButton, org.openide.util.NbBundle.getMessage(AutoIngestSettingsPanel.class, "AutoIngestSettingsPanel.autoIngestModeRadioButton.text")); // NOI18N
         autoIngestModeRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

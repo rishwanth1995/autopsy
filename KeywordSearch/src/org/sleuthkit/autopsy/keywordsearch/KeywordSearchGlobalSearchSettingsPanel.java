@@ -101,6 +101,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
         showSnippetsCB = new javax.swing.JCheckBox();
         timeRadioButton5 = new javax.swing.JRadioButton();
 
+        skipNSRLCheckBox.setFont(skipNSRLCheckBox.getFont().deriveFont(skipNSRLCheckBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         skipNSRLCheckBox.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.skipNSRLCheckBox.text")); // NOI18N
         skipNSRLCheckBox.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.skipNSRLCheckBox.toolTipText")); // NOI18N
         skipNSRLCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -109,20 +110,28 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        filesIndexedLabel.setFont(filesIndexedLabel.getFont().deriveFont(filesIndexedLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         filesIndexedLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.filesIndexedLabel.text")); // NOI18N
 
+        filesIndexedValue.setFont(filesIndexedValue.getFont().deriveFont(filesIndexedValue.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         filesIndexedValue.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.filesIndexedValue.text")); // NOI18N
 
+        chunksLabel.setFont(chunksLabel.getFont().deriveFont(chunksLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         chunksLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.chunksLabel.text")); // NOI18N
 
+        chunksValLabel.setFont(chunksValLabel.getFont().deriveFont(chunksValLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         chunksValLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.chunksValLabel.text")); // NOI18N
 
+        settingsLabel.setFont(settingsLabel.getFont().deriveFont(settingsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         settingsLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.settingsLabel.text")); // NOI18N
 
+        informationLabel.setFont(informationLabel.getFont().deriveFont(informationLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         informationLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.informationLabel.text")); // NOI18N
 
+        frequencyLabel.setFont(frequencyLabel.getFont().deriveFont(frequencyLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         frequencyLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.frequencyLabel.text")); // NOI18N
 
+        timeRadioButton1.setFont(timeRadioButton1.getFont().deriveFont(timeRadioButton1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         timeRadioButton1.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton1.text")); // NOI18N
         timeRadioButton1.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton1.toolTipText")); // NOI18N
         timeRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,6 +140,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        timeRadioButton2.setFont(timeRadioButton2.getFont().deriveFont(timeRadioButton2.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         timeRadioButton2.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton2.text")); // NOI18N
         timeRadioButton2.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton2.toolTipText")); // NOI18N
         timeRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -139,6 +149,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        timeRadioButton3.setFont(timeRadioButton3.getFont().deriveFont(timeRadioButton3.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         timeRadioButton3.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton3.text")); // NOI18N
         timeRadioButton3.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton3.toolTipText")); // NOI18N
         timeRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +158,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        timeRadioButton4.setFont(timeRadioButton4.getFont().deriveFont(timeRadioButton4.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         timeRadioButton4.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton4.text_1")); // NOI18N
         timeRadioButton4.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton4.toolTipText")); // NOI18N
         timeRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +167,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        showSnippetsCB.setFont(showSnippetsCB.getFont().deriveFont(showSnippetsCB.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         showSnippetsCB.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.showSnippetsCB.text")); // NOI18N
         showSnippetsCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +175,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
             }
         });
 
+        timeRadioButton5.setFont(timeRadioButton5.getFont().deriveFont(timeRadioButton5.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         timeRadioButton5.setText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton5.text")); // NOI18N
         timeRadioButton5.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchGlobalSearchSettingsPanel.class, "KeywordSearchGlobalSearchSettingsPanel.timeRadioButton5.toolTipText")); // NOI18N
         timeRadioButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -244,7 +258,7 @@ class KeywordSearchGlobalSearchSettingsPanel extends javax.swing.JPanel implemen
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(chunksLabel)
                     .addComponent(chunksValLabel))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

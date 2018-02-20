@@ -242,6 +242,7 @@ public final class KeywordSearchJobSettingsPanel extends IngestModuleIngestJobSe
         listsScrollPane.setPreferredSize(new java.awt.Dimension(300, 100));
 
         listsTable.setBackground(new java.awt.Color(240, 240, 240));
+        listsTable.setFont(listsTable.getFont().deriveFont(listsTable.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         listsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -254,18 +255,23 @@ public final class KeywordSearchJobSettingsPanel extends IngestModuleIngestJobSe
         listsTable.setShowVerticalLines(false);
         listsScrollPane.setViewportView(listsTable);
 
+        titleLabel.setFont(titleLabel.getFont().deriveFont(titleLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         titleLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.titleLabel.text")); // NOI18N
 
+        languagesLabel.setFont(languagesLabel.getFont().deriveFont(languagesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         languagesLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.languagesLabel.text")); // NOI18N
         languagesLabel.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.languagesLabel.toolTipText")); // NOI18N
         languagesLabel.setPreferredSize(new java.awt.Dimension(294, 35));
         languagesLabel.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
+        languagesValLabel.setFont(languagesValLabel.getFont().deriveFont(languagesValLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         languagesValLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.languagesValLabel.text")); // NOI18N
         languagesValLabel.setToolTipText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.languagesValLabel.toolTipText")); // NOI18N
 
+        encodingsLabel.setFont(encodingsLabel.getFont().deriveFont(encodingsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         encodingsLabel.setText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.encodingsLabel.text")); // NOI18N
 
+        keywordSearchEncodings.setFont(keywordSearchEncodings.getFont().deriveFont(keywordSearchEncodings.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         keywordSearchEncodings.setText(org.openide.util.NbBundle.getMessage(KeywordSearchJobSettingsPanel.class, "KeywordSearchJobSettingsPanel.keywordSearchEncodings.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -298,7 +304,7 @@ public final class KeywordSearchJobSettingsPanel extends IngestModuleIngestJobSe
                 .addGap(7, 7, 7)
                 .addComponent(titleLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(listsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addComponent(listsScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(languagesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

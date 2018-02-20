@@ -70,27 +70,32 @@ class NewKeywordPanel extends javax.swing.JPanel {
         regexButton = new javax.swing.JRadioButton();
         newKeywordLabel = new javax.swing.JLabel();
 
+        keywordTextField.setFont(keywordTextField.getFont().deriveFont(keywordTextField.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         keywordTextField.setText(org.openide.util.NbBundle.getMessage(NewKeywordPanel.class, "NewKeywordPanel.keywordTextField.text")); // NOI18N
         keywordTextField.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 keywordTextFieldAncestorAdded(evt);
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
         });
 
         keywordTypeButtonGroup.add(exactButton);
+        exactButton.setFont(exactButton.getFont().deriveFont(exactButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         exactButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(exactButton, org.openide.util.NbBundle.getMessage(NewKeywordPanel.class, "NewKeywordPanel.exactButton.text")); // NOI18N
 
         keywordTypeButtonGroup.add(substringButton);
+        substringButton.setFont(substringButton.getFont().deriveFont(substringButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(substringButton, org.openide.util.NbBundle.getMessage(NewKeywordPanel.class, "NewKeywordPanel.substringButton.text")); // NOI18N
 
         keywordTypeButtonGroup.add(regexButton);
+        regexButton.setFont(regexButton.getFont().deriveFont(regexButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(regexButton, org.openide.util.NbBundle.getMessage(NewKeywordPanel.class, "NewKeywordPanel.regexButton.text")); // NOI18N
 
+        newKeywordLabel.setFont(newKeywordLabel.getFont().deriveFont(newKeywordLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(newKeywordLabel, org.openide.util.NbBundle.getMessage(NewKeywordPanel.class, "NewKeywordPanel.newKeywordLabel.text")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

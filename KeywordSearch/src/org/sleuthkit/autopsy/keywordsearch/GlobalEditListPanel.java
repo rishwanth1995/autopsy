@@ -265,6 +265,7 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
 
         jScrollPane1.setPreferredSize(new java.awt.Dimension(340, 300));
 
+        keywordTable.setFont(keywordTable.getFont().deriveFont(keywordTable.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         keywordTable.setModel(tableModel);
         keywordTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
         keywordTable.setGridColor(new java.awt.Color(153, 153, 153));
@@ -272,6 +273,7 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
         keywordTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(keywordTable);
 
+        ingestMessagesCheckbox.setFont(ingestMessagesCheckbox.getFont().deriveFont(ingestMessagesCheckbox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         ingestMessagesCheckbox.setSelected(true);
         ingestMessagesCheckbox.setText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "KeywordSearchEditListPanel.ingestMessagesCheckbox.text")); // NOI18N
         ingestMessagesCheckbox.setToolTipText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "KeywordSearchEditListPanel.ingestMessagesCheckbox.toolTipText")); // NOI18N
@@ -281,8 +283,10 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
             }
         });
 
+        keywordsLabel.setFont(keywordsLabel.getFont().deriveFont(keywordsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         keywordsLabel.setText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "KeywordSearchEditListPanel.keywordsLabel.text")); // NOI18N
 
+        newKeywordsButton.setFont(newKeywordsButton.getFont().deriveFont(newKeywordsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         newKeywordsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/add16.png"))); // NOI18N
         newKeywordsButton.setText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "GlobalEditListPanel.newKeywordsButton.text")); // NOI18N
         newKeywordsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +295,7 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
             }
         });
 
+        deleteWordButton.setFont(deleteWordButton.getFont().deriveFont(deleteWordButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         deleteWordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/delete16.png"))); // NOI18N
         deleteWordButton.setText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "KeywordSearchEditListPanel.deleteWordButton.text")); // NOI18N
         deleteWordButton.addActionListener(new java.awt.event.ActionListener() {
@@ -299,6 +304,7 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
             }
         });
 
+        editWordButton.setFont(editWordButton.getFont().deriveFont(editWordButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         editWordButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/edit16.png"))); // NOI18N
         editWordButton.setText(org.openide.util.NbBundle.getMessage(GlobalEditListPanel.class, "GlobalEditListPanel.editWordButton.text")); // NOI18N
         editWordButton.addActionListener(new java.awt.event.ActionListener() {
@@ -342,7 +348,7 @@ class GlobalEditListPanel extends javax.swing.JPanel implements ListSelectionLis
                 .addContainerGap()
                 .addComponent(keywordsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(listEditorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteWordButton)

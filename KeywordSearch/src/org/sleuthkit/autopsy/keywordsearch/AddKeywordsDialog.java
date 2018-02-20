@@ -194,19 +194,25 @@ class AddKeywordsDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         keywordTypeButtonGroup.add(exactRadioButton);
+        exactRadioButton.setFont(exactRadioButton.getFont().deriveFont(exactRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         exactRadioButton.setSelected(true);
         org.openide.awt.Mnemonics.setLocalizedText(exactRadioButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.exactRadioButton.text")); // NOI18N
 
         keywordTypeButtonGroup.add(substringRadioButton);
+        substringRadioButton.setFont(substringRadioButton.getFont().deriveFont(substringRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(substringRadioButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.substringRadioButton.text")); // NOI18N
 
         keywordTypeButtonGroup.add(regexRadioButton);
+        regexRadioButton.setFont(regexRadioButton.getFont().deriveFont(regexRadioButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(regexRadioButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.regexRadioButton.text")); // NOI18N
 
+        enterKeywordsLabel.setFont(enterKeywordsLabel.getFont().deriveFont(enterKeywordsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(enterKeywordsLabel, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.enterKeywordsLabel.text")); // NOI18N
 
+        keywordTypeLabel.setFont(keywordTypeLabel.getFont().deriveFont(keywordTypeLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(keywordTypeLabel, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.keywordTypeLabel.text")); // NOI18N
 
+        addButton.setFont(addButton.getFont().deriveFont(addButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(addButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.addButton.text")); // NOI18N
         addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,6 +220,7 @@ class AddKeywordsDialog extends javax.swing.JDialog {
             }
         });
 
+        cancelButton.setFont(cancelButton.getFont().deriveFont(cancelButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(cancelButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.cancelButton.text")); // NOI18N
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,6 +228,7 @@ class AddKeywordsDialog extends javax.swing.JDialog {
             }
         });
 
+        pasteButton.setFont(pasteButton.getFont().deriveFont(pasteButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pasteButton, org.openide.util.NbBundle.getMessage(AddKeywordsDialog.class, "AddKeywordsDialog.pasteButton.text")); // NOI18N
         pasteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

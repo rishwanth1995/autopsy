@@ -186,20 +186,25 @@ class ExtractedContentPanel extends javax.swing.JPanel {
             extractedTextPane.setPreferredSize(new java.awt.Dimension(640, 29));
             jScrollPane1.setViewportView(extractedTextPane);
 
+            sourceComboBox.setFont(sourceComboBox.getFont().deriveFont(sourceComboBox.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             sourceComboBox.setModel(new javax.swing.DefaultComboBoxModel<org.sleuthkit.autopsy.keywordsearch.IndexedText>());
             sourceComboBox.setMaximumSize(new java.awt.Dimension(150, 32767));
             sourceComboBox.setMinimumSize(new java.awt.Dimension(150, 20));
             sourceComboBox.setPreferredSize(new java.awt.Dimension(150, 20));
 
+            jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             jLabel1.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.jLabel1.text")); // NOI18N
 
+            pageOfLabel.setFont(pageOfLabel.getFont().deriveFont(pageOfLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             pageOfLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.pageOfLabel.text")); // NOI18N
 
+            pageButtonsLabel.setFont(pageButtonsLabel.getFont().deriveFont(pageButtonsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             pageButtonsLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.pageButtonsLabel.text")); // NOI18N
 
             pageTotalLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
             pageTotalLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.pageTotalLabel.text")); // NOI18N
 
+            pagesLabel.setFont(pagesLabel.getFont().deriveFont(pagesLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             pagesLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.pagesLabel.text")); // NOI18N
 
             pageNextButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/btn_step_forward.png"))); // NOI18N
@@ -225,9 +230,11 @@ class ExtractedContentPanel extends javax.swing.JPanel {
 
             jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
+            hitLabel.setFont(hitLabel.getFont().deriveFont(hitLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             hitLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.hitLabel.text")); // NOI18N
             hitLabel.setToolTipText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.hitLabel.toolTipText")); // NOI18N
 
+            hitButtonsLabel.setFont(hitButtonsLabel.getFont().deriveFont(hitButtonsLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             hitButtonsLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.hitButtonsLabel.text")); // NOI18N
 
             hitNextButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/btn_step_forward.png"))); // NOI18N
@@ -240,6 +247,7 @@ class ExtractedContentPanel extends javax.swing.JPanel {
             hitNextButton.setPreferredSize(new java.awt.Dimension(23, 23));
             hitNextButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/btn_step_forward_hover.png"))); // NOI18N
 
+            hitOfLabel.setFont(hitOfLabel.getFont().deriveFont(hitOfLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
             hitOfLabel.setText(org.openide.util.NbBundle.getMessage(ExtractedContentPanel.class, "ExtractedContentPanel.hitOfLabel.text")); // NOI18N
 
             hitTotalLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

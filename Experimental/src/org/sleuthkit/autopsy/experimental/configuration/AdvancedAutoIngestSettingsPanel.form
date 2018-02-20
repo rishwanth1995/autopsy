@@ -102,17 +102,14 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="spInputScanInterval" min="-2" pref="90" max="-2" attributes="0"/>
                                       <Component id="spMaximumRetryAttempts" min="-2" pref="90" max="-2" attributes="0"/>
                                       <Component id="spConcurrentJobsPerCase" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="numberOfFileIngestThreadsComboBox" min="-2" pref="91" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="numberOfFileIngestThreadsComboBox" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
@@ -133,7 +130,7 @@
                       <Component id="lbTimeoutHours" min="-2" max="-2" attributes="0"/>
                       <Component id="lbInputScanIntervalMinutes" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <EmptySpace pref="239" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -189,6 +186,11 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lbSecondsBetweenJobs">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbSecondsBetweenJobs" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbSecondsBetweenJobs.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -199,6 +201,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbTimeoutText">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbTimeoutText" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbTimeoutText.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -209,6 +216,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbInputScanInterval">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbInputScanInterval" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbInputScanInterval.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -219,6 +231,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbRetriesAllowed">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbRetriesAllowed" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbRetriesAllowed.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -229,6 +246,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbNumberOfThreads">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbNumberOfThreads" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbNumberOfThreads.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -239,6 +261,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbConcurrentJobsPerCase">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbConcurrentJobsPerCase" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbConcurrentJobsPerCase.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -279,6 +306,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbRestartRequired">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbRestartRequired" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/org/sleuthkit/autopsy/corecomponents/warning16.png"/>
             </Property>
@@ -344,6 +376,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbSecondsBetweenJobsSeconds">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbSecondsBetweenJobsSeconds" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbSecondsBetweenJobsSeconds.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -351,6 +388,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbTimeoutHours">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbTimeoutHours" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbTimeoutHours.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>
@@ -361,6 +403,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lbInputScanIntervalMinutes">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbInputScanIntervalMinutes" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/configuration/Bundle.properties" key="AdvancedAutoIngestSettingsPanel.lbInputScanIntervalMinutes.text" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
             </Property>

@@ -250,13 +250,14 @@ class DropdownToolbar extends javax.swing.JPanel {
 
         setOpaque(false);
 
-        listsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon.png"))); // NOI18N NON-NLS
+        listsButton.setFont(listsButton.getFont().deriveFont(listsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+        listsButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon.png"))); // NOI18N
         listsButton.setText(org.openide.util.NbBundle.getMessage(DropdownToolbar.class, "ListBundleName")); // NOI18N
         listsButton.setBorderPainted(false);
         listsButton.setContentAreaFilled(false);
         listsButton.setEnabled(false);
-        listsButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon-rollover.png"))); // NOI18N NON-NLS
-        listsButton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon-pressed.png"))); // NOI18N NON-NLS
+        listsButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon-rollover.png"))); // NOI18N
+        listsButton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/watchbutton-icon-pressed.png"))); // NOI18N
         listsButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 listsButtonMousePressed(evt);
@@ -268,7 +269,8 @@ class DropdownToolbar extends javax.swing.JPanel {
             }
         });
 
-        searchDropButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon.png"))); // NOI18N NON-NLS
+        searchDropButton.setFont(searchDropButton.getFont().deriveFont(searchDropButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
+        searchDropButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon.png"))); // NOI18N
         searchDropButton.setText(org.openide.util.NbBundle.getMessage(DropdownToolbar.class, "KeywordSearchPanel.searchDropButton.text")); // NOI18N
         searchDropButton.setBorderPainted(false);
         searchDropButton.setContentAreaFilled(false);
@@ -276,8 +278,8 @@ class DropdownToolbar extends javax.swing.JPanel {
         searchDropButton.setMaximumSize(new java.awt.Dimension(146, 27));
         searchDropButton.setMinimumSize(new java.awt.Dimension(146, 27));
         searchDropButton.setPreferredSize(new java.awt.Dimension(146, 27));
-        searchDropButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon-rollover.png"))); // NOI18N NON-NLS
-        searchDropButton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon-pressed.png"))); // NOI18N NON-NLS
+        searchDropButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon-rollover.png"))); // NOI18N
+        searchDropButton.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/keywordsearch/searchbutton-icon-pressed.png"))); // NOI18N
         searchDropButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 searchDropButtonMousePressed(evt);

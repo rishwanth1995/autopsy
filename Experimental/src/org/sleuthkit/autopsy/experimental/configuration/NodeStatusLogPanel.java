@@ -257,9 +257,11 @@ public class NodeStatusLogPanel extends javax.swing.JPanel {
         org.openide.awt.Mnemonics.setLocalizedText(lbTestDatabase, org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.lbTestDatabase.text")); // NOI18N
         lbTestDatabase.setAutoscrolls(true);
 
+        lbTestDbWarning.setFont(lbTestDbWarning.getFont().deriveFont(lbTestDbWarning.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         lbTestDbWarning.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(lbTestDbWarning, org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.lbTestDbWarning.text")); // NOI18N
 
+        tbDbName.setFont(tbDbName.getFont().deriveFont(tbDbName.getFont().getStyle() & ~java.awt.Font.BOLD, 12));
         tbDbName.setText(org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.tbDbName.text")); // NOI18N
         tbDbName.setToolTipText(org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.tbDbName.toolTipText_1")); // NOI18N
 
@@ -315,6 +317,7 @@ public class NodeStatusLogPanel extends javax.swing.JPanel {
             }
         });
 
+        bnOk.setFont(bnOk.getFont().deriveFont(bnOk.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOk, org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.bnOk.text")); // NOI18N
         bnOk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -322,6 +325,7 @@ public class NodeStatusLogPanel extends javax.swing.JPanel {
             }
         });
 
+        bnCancel.setFont(bnCancel.getFont().deriveFont(bnCancel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnCancel, org.openide.util.NbBundle.getMessage(NodeStatusLogPanel.class, "NodeStatusLogPanel.bnCancel.text")); // NOI18N
         bnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,7 +362,7 @@ public class NodeStatusLogPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bnOk)
                     .addComponent(bnCancel))
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(48, 48, 48)
