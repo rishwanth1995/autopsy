@@ -709,6 +709,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         cbMimeType.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.MimetypeText")); // NOI18N
+        cbMimeType.setFont(cbMimeType.getFont().deriveFont(cbMimeType.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cbMimeType.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.MimetypeCheckboxTooltip_1")); // NOI18N
         cbMimeType.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -717,11 +718,13 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         spFileSizeValue.setModel(new javax.swing.SpinnerNumberModel(1024, 0, null, 1));
+        spFileSizeValue.setFont(spFileSizeValue.getFont().deriveFont(spFileSizeValue.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         spFileSizeValue.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.FileSizeValueToolTip_1")); // NOI18N
 
         comboBoxFileSizeUnits.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.FileSizeUnitToolTip_1")); // NOI18N
 
         cbFileSize.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.FileSize")); // NOI18N
+        cbFileSize.setFont(cbFileSize.getFont().deriveFont(cbFileSize.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cbFileSize.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.FileSize_1")); // NOI18N
         cbFileSize.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -747,6 +750,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         bnSaveRule.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/experimental/images/save-icon.png"))); // NOI18N
         bnSaveRule.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.SaveText")); // NOI18N
         bnSaveRule.setEnabled(false);
+        bnSaveRule.setFont(bnSaveRule.getFont().deriveFont(bnSaveRule.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnSaveRule.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.SaveTooltip_1")); // NOI18N
         bnSaveRule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -782,6 +786,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         bnAddAttribute.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/experimental/images/left-arrow-16-icon.png"))); // NOI18N
         bnAddAttribute.setText("Add Attribute");
         bnAddAttribute.setEnabled(false);
+        bnAddAttribute.setFont(bnAddAttribute.getFont().deriveFont(bnAddAttribute.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnAddAttribute.setToolTipText("Click to add an attribute to the current rule");
         bnAddAttribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -797,6 +802,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         cbAttributeType.setText("Attributes");
+        cbAttributeType.setFont(cbAttributeType.getFont().deriveFont(cbAttributeType.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cbAttributeType.setToolTipText("Select to include artifact/attribute pairs in the rule");
         cbAttributeType.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -805,11 +811,14 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         lbArtifact.setText("Artifact");
+        lbArtifact.setFont(lbArtifact.getFont().deriveFont(lbArtifact.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         lbAttribute.setText("Attribute");
+        lbAttribute.setFont(lbAttribute.getFont().deriveFont(lbAttribute.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         bnDeleteAttribute.setText("Delete Attribute");
         bnDeleteAttribute.setEnabled(false);
+        bnDeleteAttribute.setFont(bnDeleteAttribute.getFont().deriveFont(bnDeleteAttribute.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnDeleteAttribute.setToolTipText("Click to remove the selected attribute");
         bnDeleteAttribute.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -823,9 +832,11 @@ public final class FileExporterSettingsPanel extends JPanel {
         jScrollPane1.setViewportView(lsAttributeList);
 
         lbRuleName.setText("Rule Name");
+        lbRuleName.setFont(lbRuleName.getFont().deriveFont(lbRuleName.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         lbSaveRuleHelper.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbSaveRuleHelper.setText("To save, a rule must have a name and at least one condition.");
+        lbSaveRuleHelper.setFont(lbSaveRuleHelper.getFont().deriveFont(lbSaveRuleHelper.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         dateTimePicker.setToolTipText("Choose a date and time");
 
@@ -847,28 +858,25 @@ public final class FileExporterSettingsPanel extends JPanel {
                                 .addComponent(bnSaveRule, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnEditRuleLayout.createSequentialGroup()
                                 .addGroup(pnEditRuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(comboBoxArtifactName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbArtifact))
+                                .addGap(18, 18, 18)
+                                .addGroup(pnEditRuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnEditRuleLayout.createSequentialGroup()
-                                        .addGroup(pnEditRuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(comboBoxArtifactName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lbArtifact))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(pnEditRuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(pnEditRuleLayout.createSequentialGroup()
-                                                .addComponent(comboBoxAttributeName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(comboBoxValueType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lbAttribute)))
-                                    .addGroup(pnEditRuleLayout.createSequentialGroup()
-                                        .addComponent(bnAddAttribute, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bnDeleteAttribute))
-                                    .addGroup(pnEditRuleLayout.createSequentialGroup()
-                                        .addComponent(comboBoxAttributeComparison, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(dateTimePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tbAttributeValue, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addComponent(comboBoxAttributeName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(comboBoxValueType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lbAttribute)))
+                            .addGroup(pnEditRuleLayout.createSequentialGroup()
+                                .addComponent(bnAddAttribute, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bnDeleteAttribute))
+                            .addGroup(pnEditRuleLayout.createSequentialGroup()
+                                .addComponent(comboBoxAttributeComparison, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dateTimePicker, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tbAttributeValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(pnEditRuleLayout.createSequentialGroup()
                         .addGroup(pnEditRuleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cbMimeType)
@@ -939,11 +947,12 @@ public final class FileExporterSettingsPanel extends JPanel {
                             .addComponent(cbAttributeType)
                             .addComponent(lbArtifact))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
         bnBrowseReportDirectory.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.BrowseText")); // NOI18N
+        bnBrowseReportDirectory.setFont(bnBrowseReportDirectory.getFont().deriveFont(bnBrowseReportDirectory.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnBrowseReportDirectory.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.BrowseReportTooltip_1")); // NOI18N
         bnBrowseReportDirectory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -957,16 +966,18 @@ public final class FileExporterSettingsPanel extends JPanel {
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
         trRuleList.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         trRuleList.setName("trRuleList"); // NOI18N
-        trRuleList.setShowsRootHandles(true);
         trRuleList.setToolTipText("This tree shows the rules to collect files for automatic file export");
         ruleListScrollPane.setViewportView(trRuleList);
         trRuleList.getAccessibleContext().setAccessibleParent(ruleListScrollPane);
 
         lbFiles.setText("Files Folder");
+        lbFiles.setFont(lbFiles.getFont().deriveFont(lbFiles.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         lbReports.setText("Reports Folder");
+        lbReports.setFont(lbReports.getFont().deriveFont(lbReports.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         bnBrowseRootDirectory.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.BrowseText")); // NOI18N
+        bnBrowseRootDirectory.setFont(bnBrowseRootDirectory.getFont().deriveFont(bnBrowseRootDirectory.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnBrowseRootDirectory.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.BrowseRootOutputFolder_1")); // NOI18N
         bnBrowseRootDirectory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1013,12 +1024,13 @@ public final class FileExporterSettingsPanel extends JPanel {
                     .addComponent(lbReports))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ruleListScrollPane)
+                    .addComponent(ruleListScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
                     .addComponent(pnEditRule, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         cbEnableFileExport.setText("Enable File Export");
+        cbEnableFileExport.setFont(cbEnableFileExport.getFont().deriveFont(cbEnableFileExport.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         cbEnableFileExport.setToolTipText("Select to enable File Export");
         cbEnableFileExport.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1028,6 +1040,7 @@ public final class FileExporterSettingsPanel extends JPanel {
 
         bnNewRule.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/experimental/images/plus-icon.png"))); // NOI18N
         bnNewRule.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.NewText")); // NOI18N
+        bnNewRule.setFont(bnNewRule.getFont().deriveFont(bnNewRule.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnNewRule.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.NewRuleTooltip_1")); // NOI18N
         bnNewRule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1038,6 +1051,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         bnDeleteRule.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/sleuthkit/autopsy/experimental/images/minus-icon.png"))); // NOI18N
         bnDeleteRule.setText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.DeleteText")); // NOI18N
         bnDeleteRule.setEnabled(false);
+        bnDeleteRule.setFont(bnDeleteRule.getFont().deriveFont(bnDeleteRule.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnDeleteRule.setToolTipText(org.openide.util.NbBundle.getMessage(FileExporterSettingsPanel.class, "FileExporterSettingsPanel.DeleteTooltip_1")); // NOI18N
         bnDeleteRule.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1046,6 +1060,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         bnClose.setText("Close");
+        bnClose.setFont(bnClose.getFont().deriveFont(bnClose.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         bnClose.setToolTipText("Close the settings panel");
         bnClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1054,6 +1069,7 @@ public final class FileExporterSettingsPanel extends JPanel {
         });
 
         lbExplanation.setText("File Export occurs after ingest has completed, automatically exporting files matching the rules specified below. Individual components of the rule are ANDed together.");
+        lbExplanation.setFont(lbExplanation.getFont().deriveFont(lbExplanation.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -1074,7 +1090,7 @@ public final class FileExporterSettingsPanel extends JPanel {
                 .addComponent(bnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1051, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1351, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1084,7 +1100,7 @@ public final class FileExporterSettingsPanel extends JPanel {
                     .addComponent(cbEnableFileExport)
                     .addComponent(lbExplanation))
                 .addGap(7, 7, 7)
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)
                 .addGap(1, 1, 1)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bnDeleteRule)

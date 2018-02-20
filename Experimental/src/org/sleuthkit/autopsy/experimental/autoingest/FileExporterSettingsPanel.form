@@ -43,7 +43,7 @@
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="mainPanel" pref="1051" max="32767" attributes="0"/>
+              <Component id="mainPanel" pref="1351" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -56,7 +56,7 @@
                   <Component id="lbExplanation" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-              <Component id="mainPanel" pref="455" max="32767" attributes="0"/>
+              <Component id="mainPanel" pref="457" max="32767" attributes="0"/>
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="bnDeleteRule" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -125,7 +125,7 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ruleListScrollPane" max="32767" attributes="0"/>
+                      <Component id="ruleListScrollPane" pref="376" max="32767" attributes="0"/>
                       <Component id="pnEditRule" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -173,37 +173,32 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="bnSaveRule" min="-2" pref="101" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="comboBoxArtifactName" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="lbArtifact" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <Component id="comboBoxAttributeName" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="comboBoxValueType" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="lbAttribute" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="bnAddAttribute" min="-2" pref="117" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="bnDeleteAttribute" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="comboBoxAttributeComparison" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="dateTimePicker" min="-2" pref="306" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="tbAttributeValue" pref="158" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="comboBoxArtifactName" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbArtifact" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="comboBoxAttributeName" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="comboBoxValueType" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lbAttribute" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="bnAddAttribute" min="-2" pref="117" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="bnDeleteAttribute" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="comboBoxAttributeComparison" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="dateTimePicker" min="-2" pref="306" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="tbAttributeValue" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -295,7 +290,7 @@
                                   <Component id="lbArtifact" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" pref="187" max="32767" attributes="0"/>
+                              <Component id="jScrollPane1" pref="162" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -327,6 +322,11 @@
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.MimetypeText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="cbMimeType" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.MimetypeCheckboxTooltip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
@@ -339,6 +339,11 @@
               <Properties>
                 <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                   <SpinnerModel initial="1024" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="spFileSizeValue" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.FileSizeValueToolTip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -362,6 +367,11 @@
               <Properties>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.FileSize" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="cbFileSize" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.FileSize_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -428,6 +438,11 @@
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.SaveText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
                 <Property name="enabled" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="bnSaveRule" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
                   <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.SaveTooltip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
                 </Property>
@@ -500,6 +515,11 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Add Attribute"/>
                 <Property name="enabled" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="bnAddAttribute" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Click to add an attribute to the current rule"/>
               </Properties>
               <Events>
@@ -523,6 +543,11 @@
             <Component class="javax.swing.JCheckBox" name="cbAttributeType">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Attributes"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="cbAttributeType" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Select to include artifact/attribute pairs in the rule"/>
               </Properties>
               <Events>
@@ -532,17 +557,32 @@
             <Component class="javax.swing.JLabel" name="lbArtifact">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Artifact"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="lbArtifact" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbAttribute">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Attribute"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="lbAttribute" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="bnDeleteAttribute">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Delete Attribute"/>
                 <Property name="enabled" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="bnDeleteAttribute" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Click to remove the selected attribute"/>
               </Properties>
               <Events>
@@ -573,12 +613,22 @@
             <Component class="javax.swing.JLabel" name="lbRuleName">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Rule Name"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="lbRuleName" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbSaveRuleHelper">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="4"/>
                 <Property name="text" type="java.lang.String" value="To save, a rule must have a name and at least one condition."/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+                  <FontInfo relative="true">
+                    <Font bold="false" component="lbSaveRuleHelper" property="font" relativeSize="false" size="11"/>
+                  </FontInfo>
+                </Property>
               </Properties>
             </Component>
             <Component class="com.github.lgooddatepicker.components.DateTimePicker" name="dateTimePicker">
@@ -595,6 +645,11 @@
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.BrowseText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="bnBrowseReportDirectory" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.BrowseReportTooltip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -627,7 +682,6 @@
                   <TreeModel code=""/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="trRuleList" noResource="true"/>
-                <Property name="showsRootHandles" type="boolean" value="true"/>
                 <Property name="toolTipText" type="java.lang.String" value="This tree shows the rules to collect files for automatic file export"/>
               </Properties>
               <AccessibilityProperties>
@@ -641,17 +695,32 @@
         <Component class="javax.swing.JLabel" name="lbFiles">
           <Properties>
             <Property name="text" type="java.lang.String" value="Files Folder"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbFiles" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lbReports">
           <Properties>
             <Property name="text" type="java.lang.String" value="Reports Folder"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="lbReports" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="bnBrowseRootDirectory">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.BrowseText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+              <FontInfo relative="true">
+                <Font bold="false" component="bnBrowseRootDirectory" property="font" relativeSize="false" size="11"/>
+              </FontInfo>
             </Property>
             <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
               <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.BrowseRootOutputFolder_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -666,6 +735,11 @@
     <Component class="javax.swing.JCheckBox" name="cbEnableFileExport">
       <Properties>
         <Property name="text" type="java.lang.String" value="Enable File Export"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="cbEnableFileExport" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Select to enable File Export"/>
       </Properties>
       <Events>
@@ -679,6 +753,11 @@
         </Property>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.NewText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnNewRule" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
         </Property>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.NewRuleTooltip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
@@ -697,6 +776,11 @@
           <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.DeleteText" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnDeleteRule" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/sleuthkit/autopsy/experimental/autoingest/Bundle.properties" key="FileExporterSettingsPanel.DeleteTooltip_1" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>
         </Property>
@@ -708,6 +792,11 @@
     <Component class="javax.swing.JButton" name="bnClose">
       <Properties>
         <Property name="text" type="java.lang.String" value="Close"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnClose" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value="Close the settings panel"/>
       </Properties>
       <Events>
@@ -717,6 +806,11 @@
     <Component class="javax.swing.JLabel" name="lbExplanation">
       <Properties>
         <Property name="text" type="java.lang.String" value="File Export occurs after ingest has completed, automatically exporting files matching the rules specified below. Individual components of the rule are ANDed together."/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbExplanation" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

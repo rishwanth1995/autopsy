@@ -1256,6 +1256,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
         completedTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         completedScrollPane.setViewportView(completedTable);
 
+        bnCancelJob.setFont(bnCancelJob.getFont().deriveFont(bnCancelJob.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnCancelJob, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnCancelJob.text")); // NOI18N
         bnCancelJob.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnCancelJob.toolTipText")); // NOI18N
         bnCancelJob.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1267,6 +1268,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnDeleteCase.setFont(bnDeleteCase.getFont().deriveFont(bnDeleteCase.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnDeleteCase, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnDeleteCase.text")); // NOI18N
         bnDeleteCase.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnDeleteCase.toolTipText")); // NOI18N
         bnDeleteCase.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1278,15 +1280,16 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
-        lbPending.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbPending.setFont(lbPending.getFont().deriveFont(lbPending.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbPending, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.lbPending.text")); // NOI18N
 
-        lbRunning.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbRunning.setFont(lbRunning.getFont().deriveFont(lbRunning.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbRunning, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.lbRunning.text")); // NOI18N
 
-        lbCompleted.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbCompleted.setFont(lbCompleted.getFont().deriveFont(lbCompleted.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbCompleted, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.lbCompleted.text")); // NOI18N
 
+        bnRefresh.setFont(bnRefresh.getFont().deriveFont(bnRefresh.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnRefresh, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnRefresh.text")); // NOI18N
         bnRefresh.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnRefresh.toolTipText")); // NOI18N
         bnRefresh.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1298,6 +1301,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnCancelModule.setFont(bnCancelModule.getFont().deriveFont(bnCancelModule.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnCancelModule, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnCancelModule.text")); // NOI18N
         bnCancelModule.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnCancelModule.toolTipText")); // NOI18N
         bnCancelModule.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1309,6 +1313,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnExit.setFont(bnExit.getFont().deriveFont(bnExit.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnExit, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnExit.text")); // NOI18N
         bnExit.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnExit.toolTipText")); // NOI18N
         bnExit.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1320,6 +1325,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnOptions.setFont(bnOptions.getFont().deriveFont(bnOptions.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOptions, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnOptions.text")); // NOI18N
         bnOptions.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnOptions.toolTipText")); // NOI18N
         bnOptions.setEnabled(false);
@@ -1332,6 +1338,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnShowProgress.setFont(bnShowProgress.getFont().deriveFont(bnShowProgress.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnShowProgress, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnShowProgress.text")); // NOI18N
         bnShowProgress.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnShowProgress.toolTipText")); // NOI18N
         bnShowProgress.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1343,6 +1350,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnPause.setFont(bnPause.getFont().deriveFont(bnPause.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnPause, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPause.text")); // NOI18N
         bnPause.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPause.toolTipText")); // NOI18N
         bnPause.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1354,6 +1362,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnPrioritizeCase.setFont(bnPrioritizeCase.getFont().deriveFont(bnPrioritizeCase.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnPrioritizeCase, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPrioritizeCase.text")); // NOI18N
         bnPrioritizeCase.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPrioritizeCase.toolTipText")); // NOI18N
         bnPrioritizeCase.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1365,6 +1374,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnShowCaseLog.setFont(bnShowCaseLog.getFont().deriveFont(bnShowCaseLog.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnShowCaseLog, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnShowCaseLog.text")); // NOI18N
         bnShowCaseLog.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnShowCaseLog.toolTipText")); // NOI18N
         bnShowCaseLog.setMaximumSize(new java.awt.Dimension(162, 23));
@@ -1377,13 +1387,14 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
         });
 
         tbStatusMessage.setEditable(false);
-        tbStatusMessage.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbStatusMessage.setFont(tbStatusMessage.getFont().deriveFont(tbStatusMessage.getFont().getStyle() | java.awt.Font.BOLD, 12));
         tbStatusMessage.setText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.tbStatusMessage.text")); // NOI18N
         tbStatusMessage.setBorder(null);
 
-        lbStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbStatus.setFont(lbStatus.getFont().deriveFont(lbStatus.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbStatus, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.lbStatus.text")); // NOI18N
 
+        bnPrioritizeJob.setFont(bnPrioritizeJob.getFont().deriveFont(bnPrioritizeJob.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnPrioritizeJob, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPrioritizeJob.text")); // NOI18N
         bnPrioritizeJob.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPrioritizeJob.toolTipText")); // NOI18N
         bnPrioritizeJob.setActionCommand(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnPrioritizeJob.actionCommand")); // NOI18N
@@ -1396,14 +1407,15 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
-        lbServicesStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbServicesStatus.setFont(lbServicesStatus.getFont().deriveFont(lbServicesStatus.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbServicesStatus, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.lbServicesStatus.text")); // NOI18N
 
         tbServicesStatusMessage.setEditable(false);
-        tbServicesStatusMessage.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbServicesStatusMessage.setFont(tbServicesStatusMessage.getFont().deriveFont(tbServicesStatusMessage.getFont().getStyle() | java.awt.Font.BOLD, 12));
         tbServicesStatusMessage.setText(org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.tbServicesStatusMessage.text")); // NOI18N
         tbServicesStatusMessage.setBorder(null);
 
+        bnOpenLogDir.setFont(bnOpenLogDir.getFont().deriveFont(bnOpenLogDir.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnOpenLogDir, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnOpenLogDir.text")); // NOI18N
         bnOpenLogDir.setMaximumSize(new java.awt.Dimension(162, 23));
         bnOpenLogDir.setMinimumSize(new java.awt.Dimension(162, 23));
@@ -1414,6 +1426,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnClusterMetrics.setFont(bnClusterMetrics.getFont().deriveFont(bnClusterMetrics.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnClusterMetrics, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnClusterMetrics.text")); // NOI18N
         bnClusterMetrics.setMaximumSize(new java.awt.Dimension(162, 23));
         bnClusterMetrics.setMinimumSize(new java.awt.Dimension(162, 23));
@@ -1424,6 +1437,7 @@ public final class AutoIngestControlPanel extends JPanel implements Observer {
             }
         });
 
+        bnReprocessJob.setFont(bnReprocessJob.getFont().deriveFont(bnReprocessJob.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(bnReprocessJob, org.openide.util.NbBundle.getMessage(AutoIngestControlPanel.class, "AutoIngestControlPanel.bnReprocessJob.text")); // NOI18N
         bnReprocessJob.setMaximumSize(new java.awt.Dimension(162, 23));
         bnReprocessJob.setMinimumSize(new java.awt.Dimension(162, 23));

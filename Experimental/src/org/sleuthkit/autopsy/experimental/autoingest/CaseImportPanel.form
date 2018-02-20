@@ -95,7 +95,7 @@
                                               <Component id="tbDeleteWarning" min="-2" pref="478" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="34" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -169,7 +169,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="tbBottomNotification" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="172" max="32767" attributes="0"/>
+              <EmptySpace pref="176" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -177,8 +177,10 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lbDbConnection">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbDbConnection" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Database"/>
         <Property name="toolTipText" type="java.lang.String" value="Set database credentials via &apos;Options&apos;"/>
@@ -188,8 +190,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="picDbStatus">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="picDbStatus" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="lbDbConnection"/>
@@ -201,8 +205,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbCaseDestination">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbCaseDestination" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Case Destination"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -210,8 +216,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbCaseSource">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbCaseSource" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="lbCaseSource"/>
@@ -223,16 +231,20 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbCaption">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="1"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="true" component="lbCaption" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Import single-user cases to multi-user cases"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lbImageDestination">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbImageDestination" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Image Destination"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -240,8 +252,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbImageSource">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbImageSource" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Image Source"/>
         <Property name="focusable" type="boolean" value="false"/>
@@ -249,6 +263,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="bnStart">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnStart" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="Start"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -258,6 +277,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="bnCancel">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnCancel" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="Cancel"/>
         <Property name="enabled" type="boolean" value="false"/>
       </Properties>
@@ -267,6 +291,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="bnShowLog">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnShowLog" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="Show Log"/>
       </Properties>
       <Events>
@@ -275,6 +304,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="bnBrowseCaseSource">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnBrowseCaseSource" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="Browse"/>
       </Properties>
       <Events>
@@ -283,6 +317,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="bnBrowseImageSource">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="bnBrowseImageSource" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="Browse"/>
       </Properties>
       <Events>
@@ -361,8 +400,10 @@
     <Component class="javax.swing.JTextField" name="tbBottomNotification">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="tbBottomNotification" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="tbNotification"/>
@@ -392,8 +433,10 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="cbCopyImages">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="cbCopyImages" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Copy images"/>
       </Properties>
@@ -404,8 +447,10 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="cbDeleteCase">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="cbDeleteCase" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Delete original case"/>
       </Properties>
@@ -415,8 +460,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbProgressBar">
       <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="lbProgressBar" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="text" type="java.lang.String" value="Progress"/>
       </Properties>
@@ -424,8 +471,10 @@
     <Component class="javax.swing.JTextField" name="tbInputNotification">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="tbInputNotification" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Input box"/>
@@ -437,8 +486,10 @@
     <Component class="javax.swing.JTextField" name="tbOutputNotification">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="12" style="0"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="tbOutputNotification" property="font" relativeSize="false" size="12"/>
+          </FontInfo>
         </Property>
         <Property name="horizontalAlignment" type="int" value="4"/>
         <Property name="text" type="java.lang.String" value="Output box"/>
@@ -450,6 +501,11 @@
     <Component class="javax.swing.JTextField" name="tbDeleteWarning">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.editors2.FontEditor">
+          <FontInfo relative="true">
+            <Font bold="false" component="tbDeleteWarning" property="font" relativeSize="false" size="11"/>
+          </FontInfo>
+        </Property>
         <Property name="text" type="java.lang.String" value="delete warning"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>

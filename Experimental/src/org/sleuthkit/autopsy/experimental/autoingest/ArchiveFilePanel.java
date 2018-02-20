@@ -110,8 +110,10 @@ class ArchiveFilePanel extends JPanel implements DocumentListener {
         setMinimumSize(new java.awt.Dimension(0, 65));
         setPreferredSize(new java.awt.Dimension(403, 65));
 
+        pathLabel.setFont(pathLabel.getFont().deriveFont(pathLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(pathLabel, org.openide.util.NbBundle.getMessage(ArchiveFilePanel.class, "ArchiveFilePanel.pathLabel.text")); // NOI18N
 
+        browseButton.setFont(browseButton.getFont().deriveFont(browseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(browseButton, org.openide.util.NbBundle.getMessage(ArchiveFilePanel.class, "ArchiveFilePanel.browseButton.text")); // NOI18N
         browseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +123,7 @@ class ArchiveFilePanel extends JPanel implements DocumentListener {
 
         pathTextField.setText(org.openide.util.NbBundle.getMessage(ArchiveFilePanel.class, "ArchiveFilePanel.pathTextField.text")); // NOI18N
 
+        errorLabel.setFont(errorLabel.getFont().deriveFont(errorLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         errorLabel.setForeground(new java.awt.Color(255, 0, 0));
         org.openide.awt.Mnemonics.setLocalizedText(errorLabel, org.openide.util.NbBundle.getMessage(ArchiveFilePanel.class, "ArchiveFilePanel.errorLabel.text")); // NOI18N
 
@@ -137,7 +140,7 @@ class ArchiveFilePanel extends JPanel implements DocumentListener {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pathLabel)
                     .addComponent(errorLabel))
-                .addGap(0, 277, Short.MAX_VALUE))
+                .addGap(0, 274, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

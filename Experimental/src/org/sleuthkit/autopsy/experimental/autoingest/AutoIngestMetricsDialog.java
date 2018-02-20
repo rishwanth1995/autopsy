@@ -155,6 +155,7 @@ final class AutoIngestMetricsDialog extends javax.swing.JDialog {
         setResizable(false);
 
         org.openide.awt.Mnemonics.setLocalizedText(closeButton, org.openide.util.NbBundle.getMessage(AutoIngestMetricsDialog.class, "AutoIngestMetricsDialog.closeButton.text")); // NOI18N
+        closeButton.setFont(closeButton.getFont().deriveFont(closeButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeButtonActionPerformed(evt);
@@ -168,6 +169,7 @@ final class AutoIngestMetricsDialog extends javax.swing.JDialog {
         jScrollPane1.setViewportView(reportTextArea);
 
         org.openide.awt.Mnemonics.setLocalizedText(metricsButton, org.openide.util.NbBundle.getMessage(AutoIngestMetricsDialog.class, "AutoIngestMetricsDialog.metricsButton.text")); // NOI18N
+        metricsButton.setFont(metricsButton.getFont().deriveFont(metricsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         metricsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 metricsButtonActionPerformed(evt);
@@ -175,6 +177,7 @@ final class AutoIngestMetricsDialog extends javax.swing.JDialog {
         });
 
         org.openide.awt.Mnemonics.setLocalizedText(startingDataLabel, org.openide.util.NbBundle.getMessage(AutoIngestMetricsDialog.class, "AutoIngestMetricsDialog.startingDataLabel.text")); // NOI18N
+        startingDataLabel.setFont(startingDataLabel.getFont().deriveFont(startingDataLabel.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
 
         datePicker.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestMetricsDialog.class, "AutoIngestMetricsDialog.datePicker.toolTipText")); // NOI18N
 

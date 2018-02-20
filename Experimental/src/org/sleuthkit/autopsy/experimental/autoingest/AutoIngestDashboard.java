@@ -709,15 +709,16 @@ final class AutoIngestDashboard extends JPanel implements Observer {
         completedTable.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         completedScrollPane.setViewportView(completedTable);
 
-        lbPending.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbPending.setFont(lbPending.getFont().deriveFont(lbPending.getFont().getStyle() | java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbPending, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.lbPending.text")); // NOI18N
 
-        lbRunning.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbRunning.setFont(lbRunning.getFont().deriveFont(lbRunning.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbRunning, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.lbRunning.text")); // NOI18N
 
-        lbCompleted.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbCompleted.setFont(lbCompleted.getFont().deriveFont(lbCompleted.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbCompleted, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.lbCompleted.text")); // NOI18N
 
+        refreshButton.setFont(refreshButton.getFont().deriveFont(refreshButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(refreshButton, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.refreshButton.text")); // NOI18N
         refreshButton.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.refreshButton.toolTipText")); // NOI18N
         refreshButton.addActionListener(new java.awt.event.ActionListener() {
@@ -726,14 +727,15 @@ final class AutoIngestDashboard extends JPanel implements Observer {
             }
         });
 
-        lbServicesStatus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbServicesStatus.setFont(lbServicesStatus.getFont().deriveFont(lbServicesStatus.getFont().getStyle() & ~java.awt.Font.BOLD, 14));
         org.openide.awt.Mnemonics.setLocalizedText(lbServicesStatus, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.lbServicesStatus.text")); // NOI18N
 
         tbServicesStatusMessage.setEditable(false);
-        tbServicesStatusMessage.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        tbServicesStatusMessage.setFont(tbServicesStatusMessage.getFont().deriveFont(tbServicesStatusMessage.getFont().getStyle() | java.awt.Font.BOLD, 12));
         tbServicesStatusMessage.setText(org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.tbServicesStatusMessage.text")); // NOI18N
         tbServicesStatusMessage.setBorder(null);
 
+        prioritizeJobButton.setFont(prioritizeJobButton.getFont().deriveFont(prioritizeJobButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(prioritizeJobButton, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.prioritizeJobButton.text")); // NOI18N
         prioritizeJobButton.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.prioritizeJobButton.toolTipText")); // NOI18N
         prioritizeJobButton.setEnabled(false);
@@ -743,6 +745,7 @@ final class AutoIngestDashboard extends JPanel implements Observer {
             }
         });
 
+        prioritizeCaseButton.setFont(prioritizeCaseButton.getFont().deriveFont(prioritizeCaseButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(prioritizeCaseButton, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.prioritizeCaseButton.text")); // NOI18N
         prioritizeCaseButton.setToolTipText(org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.prioritizeCaseButton.toolTipText")); // NOI18N
         prioritizeCaseButton.setEnabled(false);
@@ -752,6 +755,7 @@ final class AutoIngestDashboard extends JPanel implements Observer {
             }
         });
 
+        clusterMetricsButton.setFont(clusterMetricsButton.getFont().deriveFont(clusterMetricsButton.getFont().getStyle() & ~java.awt.Font.BOLD, 11));
         org.openide.awt.Mnemonics.setLocalizedText(clusterMetricsButton, org.openide.util.NbBundle.getMessage(AutoIngestDashboard.class, "AutoIngestDashboard.clusterMetricsButton.text")); // NOI18N
         clusterMetricsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
