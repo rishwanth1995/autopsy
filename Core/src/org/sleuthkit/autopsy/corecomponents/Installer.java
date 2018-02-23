@@ -18,7 +18,6 @@
  */
 package org.sleuthkit.autopsy.corecomponents;
 
-import java.awt.Font;
 import java.awt.Insets;
 import java.util.Map;
 import java.util.TreeMap;
@@ -119,16 +118,6 @@ public class Installer extends ModuleInstall {
         });
     }
     
-    public static void setUIFont (javax.swing.plaf.FontUIResource f){
-    java.util.Enumeration keys = UIManager.getLookAndFeelDefaults().keys();
-    while (keys.hasMoreElements()) {
-      Object key = keys.nextElement();
-      Object value = UIManager.getLookAndFeelDefaults().get(key);
-      if (value instanceof javax.swing.plaf.FontUIResource)
-        UIManager.getLookAndFeelDefaults().put(key, f);
-      }
-    } 
-    
     private void setModuleSettings(String value) {
         if (ModuleSettings.configExists("timeline")) {
             ModuleSettings.setConfigSetting("timeline", "enable_timeline", value);
@@ -141,12 +130,11 @@ public class Installer extends ModuleInstall {
     private void setUnixLookAndFeel(){
         try {
             UIManager.put("swing.boldMetal", Boolean.FALSE);
-            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
-            setUIFont (new javax.swing.plaf.FontUIResource(Font.DIALOG,Font.PLAIN,11));
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
             setModuleSettings("true");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             logger.log(Level.WARNING, "Error setting crossplatform look-and-feel, setting default look-and-feel",ex);
             setModuleSettings("false");
         }
     }
-}
+            }
