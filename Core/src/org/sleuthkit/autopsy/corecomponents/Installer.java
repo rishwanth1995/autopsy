@@ -18,7 +18,12 @@
  */
 package org.sleuthkit.autopsy.corecomponents;
 
+import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.Insets;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Level;
@@ -29,6 +34,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.UnsupportedLookAndFeelException;
 import org.netbeans.swing.tabcontrol.plaf.DefaultTabbedContainerUI;
 import org.openide.modules.ModuleInstall;
+import org.openide.util.Exceptions;
 import org.openide.windows.WindowManager;
 import org.sleuthkit.autopsy.casemodule.StartupWindowProvider;
 import org.sleuthkit.autopsy.coreutils.Logger;
@@ -91,7 +97,7 @@ public class Installer extends ModuleInstall {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             logger.log(Level.WARNING, "Error setting OS-X look-and-feel", ex); //NON-NLS
-    }
+}
 
         // Store the keys that deal with menu items
         final String[] UI_MENU_ITEM_KEYS = new String[]{"MenuBarUI",}; //NON-NLS    
@@ -118,6 +124,16 @@ public class Installer extends ModuleInstall {
         });
     }
     
+    public static void setUIFont (javax.swing.plaf.FontUIResource f){
+    java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
+    while (keys.hasMoreElements()) {
+      Object key = keys.nextElement();
+      Object value = UIManager.getDefaults().get(key);
+      if (value instanceof javax.swing.plaf.FontUIResource)
+        UIManager.put(key, f);
+      }
+    } 
+    
     private void setModuleSettings(String value) {
         if (ModuleSettings.configExists("timeline")) {
             ModuleSettings.setConfigSetting("timeline", "enable_timeline", value);
@@ -130,7 +146,8 @@ public class Installer extends ModuleInstall {
     private void setUnixLookAndFeel(){
         try {
             UIManager.put("swing.boldMetal", Boolean.FALSE);
-            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+            setUIFont (new javax.swing.plaf.FontUIResource("DejaVu Sans Condensed", Font.PLAIN, 11));
             setModuleSettings("true");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             logger.log(Level.WARNING, "Error setting crossplatform look-and-feel, setting default look-and-feel",ex);
