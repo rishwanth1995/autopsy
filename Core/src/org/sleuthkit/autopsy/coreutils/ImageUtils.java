@@ -122,10 +122,12 @@ public class ImageUtils {
         boolean openCVLoadedTemp;
         try {
             System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-            if (System.getProperty("os.arch").equals("amd64") || System.getProperty("os.arch").equals("x86_64")) { //NON-NLS
-                System.loadLibrary("opencv_ffmpeg248_64"); //NON-NLS
-            } else {
-                System.loadLibrary("opencv_ffmpeg248"); //NON-NLS
+            if (PlatformUtil.isWindowsOS()) {
+                if (System.getProperty("os.arch").equals("amd64") || System.getProperty("os.arch").equals("x86_64")) { //NON-NLS
+                    System.loadLibrary("opencv_ffmpeg248_64"); //NON-NLS
+                } else {
+                    System.loadLibrary("opencv_ffmpeg248"); //NON-NLS
+                }
             }
 
             openCVLoadedTemp = true;
@@ -133,7 +135,7 @@ public class ImageUtils {
             openCVLoadedTemp = false;
             LOGGER.log(Level.SEVERE, "OpenCV Native code library failed to load", e); //NON-NLS
             //TODO: show warning bubble
-
+            MessageNotifyUtil.Notify.show("Open CV", "OpenCV Native code library failed to load, see log for more details", MessageNotifyUtil.MessageType.ERROR);
         }
 
         OPEN_CV_LOADED = openCVLoadedTemp;
