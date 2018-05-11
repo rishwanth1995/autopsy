@@ -134,8 +134,7 @@ public class ImageUtils {
         } catch (UnsatisfiedLinkError e) {
             openCVLoadedTemp = false;
             LOGGER.log(Level.SEVERE, "OpenCV Native code library failed to load", e); //NON-NLS
-            //TODO: show warning bubble
-            MessageNotifyUtil.Notify.show("Open CV", "OpenCV Native code library failed to load, see log for more details", MessageNotifyUtil.MessageType.ERROR);
+            MessageNotifyUtil.Notify.show("Open CV", "OpenCV native library failed to load, see log for more details", MessageNotifyUtil.MessageType.WARNING);
         }
 
         OPEN_CV_LOADED = openCVLoadedTemp;
@@ -387,7 +386,7 @@ public class ImageUtils {
     private static File getCachedThumbnailLocation(long fileID) {
         return cacheFileMap.computeIfAbsent(fileID, id -> {
             try {
-                String cacheDirectory = Case.getOpenCase().getCacheDirectory();
+                String cacheDirectory = Case.getCurrentCaseThrows().getCacheDirectory();
                 return Paths.get(cacheDirectory, "thumbnails", fileID + ".png").toFile(); //NON-NLS
             } catch (NoCurrentCaseException e) {
                 LOGGER.log(Level.WARNING, "Could not get cached thumbnail location.  No case is open."); //NON-NLS
