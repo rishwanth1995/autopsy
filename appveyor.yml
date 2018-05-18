@@ -44,7 +44,9 @@ build_script:
   - cmd: ant dist-PostgreSQL
   - ps: popd
   - cd %APPVEYOR_BUILD_FOLDER%
-  - cmd: ant -q build
+  - cmd: ant clean
+  - cmd: ant build
+  - dir %APPVEYOR_BUILD_FOLDER%\build\cluster\modules\ext
   - cd Core
   - cmd: ant -q test
   - cd ..
