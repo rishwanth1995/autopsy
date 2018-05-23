@@ -58,6 +58,7 @@ import org.sleuthkit.autopsy.casemodule.services.TagsManager;
 import org.sleuthkit.autopsy.coreutils.EscapeUtil;
 import org.sleuthkit.autopsy.coreutils.ImageUtils;
 import org.sleuthkit.autopsy.coreutils.Logger;
+import org.sleuthkit.autopsy.coreutils.Version;
 import org.sleuthkit.autopsy.datamodel.ContentUtils.ExtractFscContentVisitor;
 import org.sleuthkit.autopsy.ingest.IngestManager;
 import org.sleuthkit.datamodel.AbstractFile;
@@ -1093,6 +1094,7 @@ class ReportHTML implements TableReportModule {
             summary.append("<div class=\"title\">\n"); //NON-NLS
             summary.append(writeSummaryCaseDetails());
             summary.append(writeSummaryImageInfo());
+            summary.append(writeSummarySoftwareAndIngestInfo());
             if (generatorLogoSet) {
                 summary.append("<div class=\"left\">\n"); //NON-NLS
                 summary.append("<img src=\"generator_logo.png\" />\n"); //NON-NLS
@@ -1111,6 +1113,10 @@ class ReportHTML implements TableReportModule {
             logger.log(Level.SEVERE, "Did not recognize encoding when writing summary.hmtl."); //NON-NLS
         } catch (IOException ex) {
             logger.log(Level.SEVERE, "Error creating Writer for summary.html."); //NON-NLS
+        } catch (NoCurrentCaseException ex) {
+            Exceptions.printStackTrace(ex);
+        } catch (TskCoreException ex) {
+            Exceptions.printStackTrace(ex);
         } finally {
             try {
                 if (out != null) {
@@ -1192,12 +1198,13 @@ class ReportHTML implements TableReportModule {
         return summary;
     }
     
-    private StringBuilder writeSummarySoftwareAndIngestInfo(StringBuilder summary) throws NoCurrentCaseException, TskCoreException {
+    private StringBuilder writeSummarySoftwareAndIngestInfo() throws NoCurrentCaseException, TskCoreException {
+        StringBuilder summary = new StringBuilder();
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
         summary.append("<div class=\"info\">\n");
         summary.append("<table>\n");
-        summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName"))
-                .append("</td><td>").append("").append("</td></tr>\n");
+        summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.autopsyVersion"))
+                .append("</td><td>").append(Version.getVersion()).append("</td></tr>\n");
         summary.append("<table>\n");
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ListModuleHeading"));
         Map<Long,IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
@@ -1241,7 +1248,7 @@ class ReportHTML implements TableReportModule {
         int jobnumber = 1;
         if(ingestJobs != null){
             for(IngestJobInfo ingestJob: ingestJobs){
-                summary.append("<h3>Job "+ jobnumber+"</h3>\n");
+                summary.append("<h3>Job "+ jobnumber+":</h3>\n");
                 summary.append("<table>\n");
                 summary.append("<tr><td>").append("Data Source:")
                 .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
@@ -1256,6 +1263,7 @@ class ReportHTML implements TableReportModule {
                 }
                 summary.append("</ul>\n");
                 summary.append("<hr>");
+                jobnumber++;
             }
         }
         return summary;
