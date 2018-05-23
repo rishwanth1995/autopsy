@@ -40,6 +40,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -47,6 +49,7 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import javax.imageio.ImageIO;
 import org.openide.filesystems.FileUtil;
+import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
 import org.sleuthkit.autopsy.casemodule.Case;
 import org.sleuthkit.autopsy.casemodule.NoCurrentCaseException;
@@ -63,6 +66,8 @@ import org.sleuthkit.datamodel.BlackboardArtifact.ARTIFACT_TYPE;
 import org.sleuthkit.datamodel.Content;
 import org.sleuthkit.datamodel.ContentTag;
 import org.sleuthkit.datamodel.Image;
+import org.sleuthkit.datamodel.IngestJobInfo;
+import org.sleuthkit.datamodel.IngestModuleInfo;
 import org.sleuthkit.datamodel.SleuthkitCase;
 import org.sleuthkit.datamodel.TskCoreException;
 import org.sleuthkit.datamodel.TskData;
@@ -1066,16 +1071,6 @@ class ReportHTML implements TableReportModule {
             Date date = new Date();
             String datetime = datetimeFormat.format(date);
 
-            String caseName = currentCase.getDisplayName();
-            String caseNumber = currentCase.getNumber();
-            String examiner = currentCase.getExaminer();
-            int imagecount;
-            try {
-                imagecount = currentCase.getDataSources().size();
-            } catch (TskCoreException ex) {
-                imagecount = 0;
-            }
-
             StringBuilder summary = new StringBuilder();
             boolean running = false;
             if (IngestManager.getInstance().isIngestRunning()) {
@@ -1084,7 +1079,6 @@ class ReportHTML implements TableReportModule {
 
             final String reportTitle = reportBranding.getReportTitle();
             final String reportFooter = reportBranding.getReportFooter();
-            final boolean agencyLogoSet = reportBranding.getAgencyLogoPath() != null && !reportBranding.getAgencyLogoPath().isEmpty();
             final boolean generatorLogoSet = reportBranding.getGeneratorLogoPath() != null && !reportBranding.getGeneratorLogoPath().isEmpty();
 
             summary.append("<div id=\"wrapper\">\n"); //NON-NLS
@@ -1094,55 +1088,8 @@ class ReportHTML implements TableReportModule {
             summary.append("<p class=\"subheadding\">").append( //NON-NLS
                     NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.reportGenOn.text", datetime)).append("</p>\n"); //NON-NLS
             summary.append("<div class=\"title\">\n"); //NON-NLS
-            if (agencyLogoSet) {
-                summary.append("<div class=\"left\">\n"); //NON-NLS
-                summary.append("<img src=\"");
-                summary.append(Paths.get(reportBranding.getAgencyLogoPath()).getFileName().toString());
-                summary.append("\" />\n"); //NON-NLS
-                summary.append("</div>\n"); //NON-NLS
-            }
-            final String align = agencyLogoSet ? "right" : "left"; //NON-NLS NON-NLS
-            summary.append("<div class=\"").append(align).append("\">\n"); //NON-NLS
-            summary.append("<table>\n"); //NON-NLS
-            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName")) //NON-NLS
-                    .append("</td><td>").append(caseName).append("</td></tr>\n"); //NON-NLS NON-NLS
-            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseNum")) //NON-NLS
-                    .append("</td><td>").append(!caseNumber.isEmpty() ? caseNumber : NbBundle //NON-NLS
-                    .getMessage(this.getClass(), "ReportHTML.writeSum.noCaseNum")).append("</td></tr>\n"); //NON-NLS
-            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.examiner")).append("</td><td>") //NON-NLS
-                    .append(!examiner.isEmpty() ? examiner : NbBundle
-                            .getMessage(this.getClass(), "ReportHTML.writeSum.noExaminer"))
-                    .append("</td></tr>\n"); //NON-NLS
-            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.numImages")) //NON-NLS
-                    .append("</td><td>").append(imagecount).append("</td></tr>\n"); //NON-NLS
-            summary.append("</table>\n"); //NON-NLS
-            summary.append("</div>\n"); //NON-NLS
-            summary.append("<div class=\"clear\"></div>\n"); //NON-NLS
-            summary.append("</div>\n"); //NON-NLS
-            summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.imageInfoHeading"));
-            summary.append("<div class=\"info\">\n"); //NON-NLS
-            try {
-                for (Content c : currentCase.getDataSources()) {
-                    summary.append("<p>").append(c.getName()).append("</p>\n"); //NON-NLS
-                    if (c instanceof Image) {
-                        Image img = (Image) c;
-
-                        summary.append("<table>\n"); //NON-NLS
-                        summary.append("<tr><td>").append( //NON-NLS
-                                NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.timezone"))
-                                .append("</td><td>").append(img.getTimeZone()).append("</td></tr>\n"); //NON-NLS
-                        for (String imgPath : img.getPaths()) {
-                            summary.append("<tr><td>").append( //NON-NLS
-                                    NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.path"))
-                                    .append("</td><td>").append(imgPath).append("</td></tr>\n"); //NON-NLS
-                        }
-                        summary.append("</table>\n"); //NON-NLS
-                    }
-                }
-            } catch (TskCoreException ex) {
-                logger.log(Level.WARNING, "Unable to get image information for the HTML report."); //NON-NLS
-            }
-            summary.append("</div>\n"); //NON-NLS
+            summary.append(writeSummaryCaseDetails(summary));
+            summary.append(writeSummaryImageInfo(summary));
             if (generatorLogoSet) {
                 summary.append("<div class=\"left\">\n"); //NON-NLS
                 summary.append("<img src=\"generator_logo.png\" />\n"); //NON-NLS
@@ -1171,6 +1118,143 @@ class ReportHTML implements TableReportModule {
             }
         }
     }
+    
+    private StringBuilder writeSummaryCaseDetails(StringBuilder summary){
+        
+        String caseName = currentCase.getDisplayName();
+        String caseNumber = currentCase.getNumber();
+        String examiner = currentCase.getExaminer();
+        final boolean agencyLogoSet = reportBranding.getAgencyLogoPath() != null && !reportBranding.getAgencyLogoPath().isEmpty();
+        int imagecount;
+        try {
+            imagecount = currentCase.getDataSources().size();
+        } catch (TskCoreException ex) {
+            imagecount = 0;
+        }
+        summary.append("<div class=\"title\">\n"); //NON-NLS
+            if (agencyLogoSet) {
+                summary.append("<div class=\"left\">\n"); //NON-NLS
+                summary.append("<img src=\"");
+                summary.append(Paths.get(reportBranding.getAgencyLogoPath()).getFileName().toString());
+                summary.append("\" />\n"); //NON-NLS
+                summary.append("</div>\n"); //NON-NLS
+            }
+            final String align = agencyLogoSet ? "right" : "left"; //NON-NLS NON-NLS
+            summary.append("<div class=\"").append(align).append("\">\n"); //NON-NLS
+            summary.append("<table>\n"); //NON-NLS
+            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName")) //NON-NLS
+                    .append("</td><td>").append(caseName).append("</td></tr>\n"); //NON-NLS NON-NLS
+            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseNum")) //NON-NLS
+                    .append("</td><td>").append(!caseNumber.isEmpty() ? caseNumber : NbBundle //NON-NLS
+                    .getMessage(this.getClass(), "ReportHTML.writeSum.noCaseNum")).append("</td></tr>\n"); //NON-NLS
+            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.examiner")).append("</td><td>") //NON-NLS
+                    .append(!examiner.isEmpty() ? examiner : NbBundle
+                            .getMessage(this.getClass(), "ReportHTML.writeSum.noExaminer"))
+                    .append("</td></tr>\n"); //NON-NLS
+            summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.numImages")) //NON-NLS
+                    .append("</td><td>").append(imagecount).append("</td></tr>\n"); //NON-NLS
+            summary.append("</table>\n"); //NON-NLS
+            summary.append("</div>\n"); //NON-NLS
+            summary.append("<div class=\"clear\"></div>\n"); //NON-NLS
+            summary.append("</div>\n"); //NON-NLS
+            return summary;
+    }
+    
+    private StringBuilder writeSummaryImageInfo(StringBuilder summary) {
+        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.imageInfoHeading"));
+        summary.append("<div class=\"info\">\n"); //NON-NLS
+        try {
+            for (Content c : currentCase.getDataSources()) {
+                summary.append("<p>").append(c.getName()).append("</p>\n"); //NON-NLS
+                if (c instanceof Image) {
+                    Image img = (Image) c;
+
+                    summary.append("<table>\n"); //NON-NLS
+                    summary.append("<tr><td>").append( //NON-NLS
+                            NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.timezone"))
+                            .append("</td><td>").append(img.getTimeZone()).append("</td></tr>\n"); //NON-NLS
+                    for (String imgPath : img.getPaths()) {
+                        summary.append("<tr><td>").append( //NON-NLS
+                                NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.path"))
+                                .append("</td><td>").append(imgPath).append("</td></tr>\n"); //NON-NLS
+                    }
+                    summary.append("</table>\n"); //NON-NLS
+                }
+            }
+        } catch (TskCoreException ex) {
+            logger.log(Level.WARNING, "Unable to get image information for the HTML report."); //NON-NLS
+        }
+        summary.append("</div>\n"); //NON-NLS
+        return summary;
+    }
+    
+//    private StringBuilder writeSummarySoftwareAndIngestInfo(StringBuilder summary) throws NoCurrentCaseException, TskCoreException {
+//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
+//        summary.append("<div class=\"left\">\n");
+//        summary.append("<table>\n");
+//        summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName"))
+//                .append("</td><td>").append("").append("</td></tr>\n");
+//        summary.append("<table>\n");
+//        summary.append("</div>\n");
+//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
+//        Map<Long,IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
+//        SleuthkitCase skCase = Case.getCurrentCaseThrows().getSleuthkitCase();
+//        List<IngestJobInfo> ingestJobs = null;
+//        try {
+//            ingestJobs = skCase.getIngestJobs();
+//            for(IngestJobInfo ingestJob: ingestJobs){
+//                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
+//                for(IngestModuleInfo ingestModule: ingestModules){
+//                    if(!moduleInfoHashMap.containsKey(ingestModule.getIngestModuleId()))
+//                        moduleInfoHashMap.put(ingestModule.getIngestModuleId(), ingestModule);
+//                }
+//            }
+//        } catch (TskCoreException ex) {
+//            Exceptions.printStackTrace(ex);
+//        }
+//        TreeMap<String,String> modules = new TreeMap<>();
+//        Iterator it;
+//        it = moduleInfoHashMap.entrySet().iterator();
+//        while (it.hasNext()) {
+//            Map.Entry pair = (Map.Entry) it.next();
+//            IngestModuleInfo moduleinfo = (IngestModuleInfo) pair.getValue();
+//            modules.put(moduleinfo.getDisplayName(), moduleinfo.getVersion());
+//            it.remove(); // avoids a ConcurrentModificationException
+//        }
+//        it = modules.entrySet().iterator();
+//        summary.append("<table>\n"); //NON-NLS
+//        summary.append("<tr><th>").append("Module Name")
+//                .append("</th><th>").append("Module Version").append("</th></tr>\n");
+//        while (it.hasNext()) {
+//            Map.Entry pair = (Map.Entry) it.next();
+//            summary.append("<tr><td>").append(pair.getKey())
+//                .append("</td><td>").append(pair.getValue()).append("</td></tr>\n");
+//            it.remove(); // avoids a ConcurrentModificationException
+//        }
+//        summary.append("</table>\n");
+//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
+//        int jobnumber = 1;
+//        if(ingestJobs != null){
+//            for(IngestJobInfo ingestJob: ingestJobs){
+//                summary.append("<h3>Job "+ jobnumber+"</h3>\n");
+//                summary.append("<table>\n");
+//                summary.append("<tr><td>").append("Data Source")
+//                .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
+//                summary.append("<tr><td>").append("Status")
+//                .append("</td><td>").append(ingestJob.getStatus()).append("</td></tr>\n");
+//                summary.append("</table>\n");
+//                summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
+//                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
+//                summary.append("<ul>\n")
+//                for(IngestModuleInfo ingestModule: ingestModules){
+//                    summary.append("<tr><td>").append;                    
+//                }
+//                summary.append("</ul>\n");
+//            }
+//        }
+//        return summary;
+//    }
+//    
 
     private String prepareThumbnail(AbstractFile file) {
         BufferedImage bufferedThumb = ImageUtils.getThumbnail(file, ImageUtils.ICON_SIZE_MEDIUM);
