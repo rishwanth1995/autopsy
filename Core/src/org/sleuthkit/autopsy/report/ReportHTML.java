@@ -1054,7 +1054,10 @@ class ReportHTML implements TableReportModule {
             head.append("h1 { color: #07A; font-size: 36px; line-height: 42px; font-weight: normal; margin: 0px; border-bottom: 1px solid #81B9DB; }\n"); //NON-NLS
             head.append("h1 span { color: #F00; display: block; font-size: 16px; font-weight: bold; line-height: 22px;}\n"); //NON-NLS
             head.append("h2 { padding: 0 0 3px 0; margin: 0px; color: #07A; font-weight: normal; border-bottom: 1px dotted #81B9DB; }\n"); //NON-NLS
-            head.append("table td { padding-right: 25px; }\n"); //NON-NLS
+            head.append("h3 { padding: 5 0 3px 0; margin: 0px; color: #07A; font-weight: normal; }\n");
+            head.append("h4 { padding: 0 0 3px 0; margin: 0px; color: #07A; font-weight: normal; }\n");
+            head.append("table td { padding: 5px 25px 5px 0px; }\n"); //NON-NLS
+            head.append("table th { padding: 5px 25px 5px 0px; text-align: left; }\n");
             head.append("p.subheadding { padding: 0px; margin: 0px; font-size: 11px; color: #B5B5B5; }\n"); //NON-NLS
             head.append(".title { width: 660px; margin-bottom: 50px; }\n"); //NON-NLS
             head.append(".left { float: left; width: 250px; margin-top: 20px; text-align: center; }\n"); //NON-NLS
@@ -1062,7 +1065,7 @@ class ReportHTML implements TableReportModule {
             head.append(".right { float: right; width: 385px; margin-top: 25px; font-size: 14px; }\n"); //NON-NLS
             head.append(".clear { clear: both; }\n"); //NON-NLS
             head.append(".info p { padding: 3px 10px; background: #e5e5e5; color: #777; font-size: 12px; font-weight: bold; text-shadow: #e9f9fd 0 1px 0; border-top: 1px solid #dedede; border-bottom: 2px solid #dedede; }\n"); //NON-NLS
-            head.append(".info table { margin: 0 25px 20px 25px; }\n"); //NON-NLS
+            head.append(".info table { margin: 10px 25px 20px 25px; }\n"); //NON-NLS
             head.append("</style>\n"); //NON-NLS
             head.append("</head>\n<body>\n"); //NON-NLS
             out.write(head.toString());
@@ -1088,8 +1091,8 @@ class ReportHTML implements TableReportModule {
             summary.append("<p class=\"subheadding\">").append( //NON-NLS
                     NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.reportGenOn.text", datetime)).append("</p>\n"); //NON-NLS
             summary.append("<div class=\"title\">\n"); //NON-NLS
-            summary.append(writeSummaryCaseDetails(summary));
-            summary.append(writeSummaryImageInfo(summary));
+            summary.append(writeSummaryCaseDetails());
+            summary.append(writeSummaryImageInfo());
             if (generatorLogoSet) {
                 summary.append("<div class=\"left\">\n"); //NON-NLS
                 summary.append("<img src=\"generator_logo.png\" />\n"); //NON-NLS
@@ -1119,8 +1122,8 @@ class ReportHTML implements TableReportModule {
         }
     }
     
-    private StringBuilder writeSummaryCaseDetails(StringBuilder summary){
-        
+    private StringBuilder writeSummaryCaseDetails(){
+        StringBuilder summary = new StringBuilder();
         String caseName = currentCase.getDisplayName();
         String caseNumber = currentCase.getNumber();
         String examiner = currentCase.getExaminer();
@@ -1160,7 +1163,8 @@ class ReportHTML implements TableReportModule {
             return summary;
     }
     
-    private StringBuilder writeSummaryImageInfo(StringBuilder summary) {
+    private StringBuilder writeSummaryImageInfo() {
+        StringBuilder summary = new StringBuilder();
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.imageInfoHeading"));
         summary.append("<div class=\"info\">\n"); //NON-NLS
         try {
@@ -1188,72 +1192,74 @@ class ReportHTML implements TableReportModule {
         return summary;
     }
     
-//    private StringBuilder writeSummarySoftwareAndIngestInfo(StringBuilder summary) throws NoCurrentCaseException, TskCoreException {
-//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
-//        summary.append("<div class=\"left\">\n");
-//        summary.append("<table>\n");
-//        summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName"))
-//                .append("</td><td>").append("").append("</td></tr>\n");
-//        summary.append("<table>\n");
-//        summary.append("</div>\n");
-//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
-//        Map<Long,IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
-//        SleuthkitCase skCase = Case.getCurrentCaseThrows().getSleuthkitCase();
-//        List<IngestJobInfo> ingestJobs = null;
-//        try {
-//            ingestJobs = skCase.getIngestJobs();
-//            for(IngestJobInfo ingestJob: ingestJobs){
-//                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
-//                for(IngestModuleInfo ingestModule: ingestModules){
-//                    if(!moduleInfoHashMap.containsKey(ingestModule.getIngestModuleId()))
-//                        moduleInfoHashMap.put(ingestModule.getIngestModuleId(), ingestModule);
-//                }
-//            }
-//        } catch (TskCoreException ex) {
-//            Exceptions.printStackTrace(ex);
-//        }
-//        TreeMap<String,String> modules = new TreeMap<>();
-//        Iterator it;
-//        it = moduleInfoHashMap.entrySet().iterator();
-//        while (it.hasNext()) {
-//            Map.Entry pair = (Map.Entry) it.next();
-//            IngestModuleInfo moduleinfo = (IngestModuleInfo) pair.getValue();
-//            modules.put(moduleinfo.getDisplayName(), moduleinfo.getVersion());
-//            it.remove(); // avoids a ConcurrentModificationException
-//        }
-//        it = modules.entrySet().iterator();
-//        summary.append("<table>\n"); //NON-NLS
-//        summary.append("<tr><th>").append("Module Name")
-//                .append("</th><th>").append("Module Version").append("</th></tr>\n");
-//        while (it.hasNext()) {
-//            Map.Entry pair = (Map.Entry) it.next();
-//            summary.append("<tr><td>").append(pair.getKey())
-//                .append("</td><td>").append(pair.getValue()).append("</td></tr>\n");
-//            it.remove(); // avoids a ConcurrentModificationException
-//        }
-//        summary.append("</table>\n");
-//        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
-//        int jobnumber = 1;
-//        if(ingestJobs != null){
-//            for(IngestJobInfo ingestJob: ingestJobs){
-//                summary.append("<h3>Job "+ jobnumber+"</h3>\n");
-//                summary.append("<table>\n");
-//                summary.append("<tr><td>").append("Data Source")
-//                .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
-//                summary.append("<tr><td>").append("Status")
-//                .append("</td><td>").append(ingestJob.getStatus()).append("</td></tr>\n");
-//                summary.append("</table>\n");
-//                summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
-//                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
-//                summary.append("<ul>\n")
-//                for(IngestModuleInfo ingestModule: ingestModules){
-//                    summary.append("<tr><td>").append;                    
-//                }
-//                summary.append("</ul>\n");
-//            }
-//        }
-//        return summary;
-//    }
+    private StringBuilder writeSummarySoftwareAndIngestInfo(StringBuilder summary) throws NoCurrentCaseException, TskCoreException {
+        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
+        summary.append("<div class=\"info\">\n");
+        summary.append("<table>\n");
+        summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.caseName"))
+                .append("</td><td>").append("").append("</td></tr>\n");
+        summary.append("<table>\n");
+        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ListModuleHeading"));
+        Map<Long,IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
+        SleuthkitCase skCase = Case.getCurrentCaseThrows().getSleuthkitCase();
+        List<IngestJobInfo> ingestJobs = null;
+        try {
+            ingestJobs = skCase.getIngestJobs();
+            for(IngestJobInfo ingestJob: ingestJobs){
+                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
+                for(IngestModuleInfo ingestModule: ingestModules){
+                    if(!moduleInfoHashMap.containsKey(ingestModule.getIngestModuleId()))
+                        moduleInfoHashMap.put(ingestModule.getIngestModuleId(), ingestModule);
+                }
+            }
+        } catch (TskCoreException ex) {
+            Exceptions.printStackTrace(ex);
+        }
+        TreeMap<String,String> modules = new TreeMap<>();
+        Iterator it;
+        it = moduleInfoHashMap.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            IngestModuleInfo moduleinfo = (IngestModuleInfo) pair.getValue();
+            modules.put(moduleinfo.getDisplayName(), moduleinfo.getVersion());
+            it.remove(); // avoids a ConcurrentModificationException
+        }
+        it = modules.entrySet().iterator();
+        summary.append("<table>\n"); //NON-NLS
+        summary.append("<tr><th>").append("Module Name")
+                .append("</th><th>").append("Module Version").append("</th></tr>\n");
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            summary.append("<tr><td>").append(pair.getKey())
+                .append("</td><td>").append(pair.getValue()).append("</td></tr>\n");
+            it.remove(); // avoids a ConcurrentModificationException
+        }
+        summary.append("</table>\n");
+        summary.append("</div>\n");
+        summary.append("<div class=\"clear\"></div>\n"); //NON-NLS
+        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ingestHistoryHeading"));
+        int jobnumber = 1;
+        if(ingestJobs != null){
+            for(IngestJobInfo ingestJob: ingestJobs){
+                summary.append("<h3>Job "+ jobnumber+"</h3>\n");
+                summary.append("<table>\n");
+                summary.append("<tr><td>").append("Data Source:")
+                .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
+                summary.append("<tr><td>").append("Status:")
+                .append("</td><td>").append(ingestJob.getStatus()).append("</td></tr>\n");
+                summary.append("</table>\n");
+                summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.modulesEnabledHeading"));
+                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
+                summary.append("<ul>\n");
+                for(IngestModuleInfo ingestModule: ingestModules){
+                    summary.append("<li>"+ingestModule.getDisplayName()+"</li>");                    
+                }
+                summary.append("</ul>\n");
+                summary.append("<hr>");
+            }
+        }
+        return summary;
+    }
 //    
 
     private String prepareThumbnail(AbstractFile file) {
