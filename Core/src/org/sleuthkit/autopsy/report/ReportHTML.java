@@ -1064,6 +1064,7 @@ class ReportHTML implements TableReportModule {
             head.append(".left img { max-width: 250px; max-height: 250px; min-width: 200px; min-height: 200px; }\n"); //NON-NLS
             head.append(".right { float: right; width: 385px; margin-top: 25px; font-size: 14px; }\n"); //NON-NLS
             head.append(".clear { clear: both; }\n"); //NON-NLS
+            head.append(".info { padding: 10px 0;}\n");
             head.append(".info p { padding: 3px 10px; background: #e5e5e5; color: #777; font-size: 12px; font-weight: bold; text-shadow: #e9f9fd 0 1px 0; border-top: 1px solid #dedede; border-bottom: 2px solid #dedede; }\n"); //NON-NLS
             head.append(".info table { margin: 10px 25px 10px 25px; }\n"); //NON-NLS
             head.append("</style>\n"); //NON-NLS
@@ -1079,7 +1080,8 @@ class ReportHTML implements TableReportModule {
             if (IngestManager.getInstance().isIngestRunning()) {
                 running = true;
             }
-
+            SleuthkitCase skCase = Case.getCurrentCaseThrows().getSleuthkitCase();
+            List<IngestJobInfo> ingestJobs = skCase.getIngestJobs();
             final String reportTitle = reportBranding.getReportTitle();
             final String reportFooter = reportBranding.getReportFooter();
             final boolean generatorLogoSet = reportBranding.getGeneratorLogoPath() != null && !reportBranding.getGeneratorLogoPath().isEmpty();
@@ -1093,7 +1095,8 @@ class ReportHTML implements TableReportModule {
             summary.append("<div class=\"title\">\n"); //NON-NLS
             summary.append(writeSummaryCaseDetails());
             summary.append(writeSummaryImageInfo());
-            summary.append(writeSummarySoftwareAndIngestInfo());
+            summary.append(writeSummarySoftwareInfo(skCase,ingestJobs));
+            summary.append(writeSummaryIngestHistoryInfo(skCase,ingestJobs));
             if (generatorLogoSet) {
                 summary.append("<div class=\"left\">\n"); //NON-NLS
                 summary.append("<img src=\"generator_logo.png\" />\n"); //NON-NLS
@@ -1112,10 +1115,8 @@ class ReportHTML implements TableReportModule {
             logger.log(Level.SEVERE, "Did not recognize encoding when writing summary.hmtl."); //NON-NLS
         } catch (IOException ex) {
             logger.log(Level.SEVERE, "Error creating Writer for summary.html."); //NON-NLS
-        } catch (NoCurrentCaseException ex) {
-            Exceptions.printStackTrace(ex);
-        } catch (TskCoreException ex) {
-            Exceptions.printStackTrace(ex);
+        } catch (NoCurrentCaseException | TskCoreException ex) {
+            logger.log(Level.WARNING, "Unable to get current sleuthkit Case for the HTML report.");
         } finally {
             try {
                 if (out != null) {
@@ -1197,70 +1198,71 @@ class ReportHTML implements TableReportModule {
         return summary;
     }
     
-    private StringBuilder writeSummarySoftwareAndIngestInfo() throws NoCurrentCaseException, TskCoreException {
+    private StringBuilder writeSummarySoftwareInfo(SleuthkitCase skCase, List<IngestJobInfo> ingestJobs) {
         StringBuilder summary = new StringBuilder();
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.softwareInfoHeading"));
         summary.append("<div class=\"info\">\n");
         summary.append("<table>\n");
         summary.append("<tr><td>").append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.autopsyVersion"))
                 .append("</td><td>").append(Version.getVersion()).append("</td></tr>\n");
-        summary.append("<table>\n");
+        summary.append("</table>\n");
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ListModuleHeading"));
-        Map<Long,IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
-        SleuthkitCase skCase = Case.getCurrentCaseThrows().getSleuthkitCase();
-        List<IngestJobInfo> ingestJobs = null;
-        try {
-            ingestJobs = skCase.getIngestJobs();
-            for(IngestJobInfo ingestJob: ingestJobs){
-                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
-                for(IngestModuleInfo ingestModule: ingestModules){
-                    if(!moduleInfoHashMap.containsKey(ingestModule.getIngestModuleId()))
-                        moduleInfoHashMap.put(ingestModule.getIngestModuleId(), ingestModule);
+        Map<Long, IngestModuleInfo> moduleInfoHashMap = new HashMap<>();
+        for (IngestJobInfo ingestJob : ingestJobs) {
+            List<IngestModuleInfo> ingestModules = ingestJob.getIngestModuleInfo();
+            for (IngestModuleInfo ingestModule : ingestModules) {
+                if (!moduleInfoHashMap.containsKey(ingestModule.getIngestModuleId())) {
+                    moduleInfoHashMap.put(ingestModule.getIngestModuleId(), ingestModule);
                 }
             }
-        } catch (TskCoreException ex) {
-            Exceptions.printStackTrace(ex);
         }
-        TreeMap<String,String> modules = new TreeMap<>();
-        for(IngestModuleInfo moduleinfo: moduleInfoHashMap.values()){
+        TreeMap<String, String> modules = new TreeMap<>();
+        for (IngestModuleInfo moduleinfo : moduleInfoHashMap.values()) {
             modules.put(moduleinfo.getDisplayName(), moduleinfo.getVersion());
         }
         summary.append("<table>\n"); //NON-NLS
         summary.append("<tr><th>").append("Module Name")
                 .append("</th><th>").append("Module Version").append("</th></tr>\n");
-        for(Map.Entry<String,String> module: modules.entrySet()){
+        for (Map.Entry<String, String> module : modules.entrySet()) {
             summary.append("<tr><td>").append(module.getKey())
-                .append("</td><td>").append(module.getValue()).append("</td></tr>\n");
+                    .append("</td><td>").append(module.getValue()).append("</td></tr>\n");
         }
         summary.append("</table>\n");
         summary.append("</div>\n");
         summary.append("<div class=\"clear\"></div>\n"); //NON-NLS
-        summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ingestHistoryHeading"));
-        summary.append("<div class=\"info\">\n");
-        int jobnumber = 1;
-        if(ingestJobs != null){
-            for(IngestJobInfo ingestJob: ingestJobs){
+        return summary;
+    }
+
+    private StringBuilder writeSummaryIngestHistoryInfo(SleuthkitCase skCase, List<IngestJobInfo> ingestJobs) {
+        StringBuilder summary = new StringBuilder();
+        try {
+            summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ingestHistoryHeading"));
+            summary.append("<div class=\"info\">\n");
+            int jobnumber = 1;
+
+            for (IngestJobInfo ingestJob : ingestJobs) {
                 summary.append("<h3>Job ").append(jobnumber).append(":</h3>\n");
                 summary.append("<table>\n");
                 summary.append("<tr><td>").append("Data Source:")
-                .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
+                        .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
                 summary.append("<tr><td>").append("Status:")
-                .append("</td><td>").append(ingestJob.getStatus()).append("</td></tr>\n");
+                        .append("</td><td>").append(ingestJob.getStatus()).append("</td></tr>\n");
                 summary.append("</table>\n");
                 summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.modulesEnabledHeading"));
-                List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
+                List<IngestModuleInfo> ingestModules = ingestJob.getIngestModuleInfo();
                 summary.append("<ul>\n");
-                for(IngestModuleInfo ingestModule: ingestModules){
-                    summary.append("<li>").append(ingestModule.getDisplayName()).append("</li>");                    
+                for (IngestModuleInfo ingestModule : ingestModules) {
+                    summary.append("<li>").append(ingestModule.getDisplayName()).append("</li>");
                 }
                 summary.append("</ul>\n");
                 jobnumber++;
             }
+            summary.append("</div>\n");
+        } catch (TskCoreException ex) {
+            logger.log(Level.WARNING, "Unable to get ingest jobs for the HTML report.");
         }
-        summary.append("</div>\n");
         return summary;
     }
-//    
 
     private String prepareThumbnail(AbstractFile file) {
         BufferedImage bufferedThumb = ImageUtils.getThumbnail(file, ImageUtils.ICON_SIZE_MEDIUM);
