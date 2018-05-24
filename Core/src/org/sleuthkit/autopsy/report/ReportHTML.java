@@ -1056,7 +1056,6 @@ class ReportHTML implements TableReportModule {
             head.append("h1 span { color: #F00; display: block; font-size: 16px; font-weight: bold; line-height: 22px;}\n"); //NON-NLS
             head.append("h2 { padding: 0 0 3px 0; margin: 0px; color: #07A; font-weight: normal; border-bottom: 1px dotted #81B9DB; }\n"); //NON-NLS
             head.append("h3 { padding: 5 0 3px 0; margin: 0px; color: #07A; font-weight: normal; }\n");
-            head.append("h4 { padding: 0 0 3px 0; margin: 0px; color: #07A; font-weight: normal; }\n");
             head.append("table td { padding: 5px 25px 5px 0px; }\n"); //NON-NLS
             head.append("table th { padding: 5px 25px 5px 0px; text-align: left; }\n");
             head.append("p.subheadding { padding: 0px; margin: 0px; font-size: 11px; color: #B5B5B5; }\n"); //NON-NLS
@@ -1066,7 +1065,7 @@ class ReportHTML implements TableReportModule {
             head.append(".right { float: right; width: 385px; margin-top: 25px; font-size: 14px; }\n"); //NON-NLS
             head.append(".clear { clear: both; }\n"); //NON-NLS
             head.append(".info p { padding: 3px 10px; background: #e5e5e5; color: #777; font-size: 12px; font-weight: bold; text-shadow: #e9f9fd 0 1px 0; border-top: 1px solid #dedede; border-bottom: 2px solid #dedede; }\n"); //NON-NLS
-            head.append(".info table { margin: 10px 25px 20px 25px; }\n"); //NON-NLS
+            head.append(".info table { margin: 10px 25px 10px 25px; }\n"); //NON-NLS
             head.append("</style>\n"); //NON-NLS
             head.append("</head>\n<body>\n"); //NON-NLS
             out.write(head.toString());
@@ -1223,32 +1222,25 @@ class ReportHTML implements TableReportModule {
             Exceptions.printStackTrace(ex);
         }
         TreeMap<String,String> modules = new TreeMap<>();
-        Iterator it;
-        it = moduleInfoHashMap.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            IngestModuleInfo moduleinfo = (IngestModuleInfo) pair.getValue();
+        for(IngestModuleInfo moduleinfo: moduleInfoHashMap.values()){
             modules.put(moduleinfo.getDisplayName(), moduleinfo.getVersion());
-            it.remove(); // avoids a ConcurrentModificationException
         }
-        it = modules.entrySet().iterator();
         summary.append("<table>\n"); //NON-NLS
         summary.append("<tr><th>").append("Module Name")
                 .append("</th><th>").append("Module Version").append("</th></tr>\n");
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            summary.append("<tr><td>").append(pair.getKey())
-                .append("</td><td>").append(pair.getValue()).append("</td></tr>\n");
-            it.remove(); // avoids a ConcurrentModificationException
+        for(Map.Entry<String,String> module: modules.entrySet()){
+            summary.append("<tr><td>").append(module.getKey())
+                .append("</td><td>").append(module.getValue()).append("</td></tr>\n");
         }
         summary.append("</table>\n");
         summary.append("</div>\n");
         summary.append("<div class=\"clear\"></div>\n"); //NON-NLS
         summary.append(NbBundle.getMessage(this.getClass(), "ReportHTML.writeSum.ingestHistoryHeading"));
+        summary.append("<div class=\"info\">\n");
         int jobnumber = 1;
         if(ingestJobs != null){
             for(IngestJobInfo ingestJob: ingestJobs){
-                summary.append("<h3>Job "+ jobnumber+":</h3>\n");
+                summary.append("<h3>Job ").append(jobnumber).append(":</h3>\n");
                 summary.append("<table>\n");
                 summary.append("<tr><td>").append("Data Source:")
                 .append("</td><td>").append(skCase.getContentById(ingestJob.getObjectId()).getName()).append("</td></tr>\n");
@@ -1259,13 +1251,13 @@ class ReportHTML implements TableReportModule {
                 List<IngestModuleInfo> ingestModules=ingestJob.getIngestModuleInfo();
                 summary.append("<ul>\n");
                 for(IngestModuleInfo ingestModule: ingestModules){
-                    summary.append("<li>"+ingestModule.getDisplayName()+"</li>");                    
+                    summary.append("<li>").append(ingestModule.getDisplayName()).append("</li>");                    
                 }
                 summary.append("</ul>\n");
-                summary.append("<hr>");
                 jobnumber++;
             }
         }
+        summary.append("</div>\n");
         return summary;
     }
 //    
